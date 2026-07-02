@@ -1,0 +1,7 @@
+# Country Compatibility Explorer - Dependency File
+# This application is built entirely using Python's zero-dependency standard library
+# (http.server, sqlite3, json, sys, os).
+#
+# No external packages are required to run the server or calculations.
+#
+# Python Version: >= 3.8
