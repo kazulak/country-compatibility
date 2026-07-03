@@ -4,7 +4,7 @@ An interactive, high-fidelity, and modular single-page web application to check 
 
 The repository is structured into two separate environments:
 1.  **`dev/` (Development Environment)**: Runs a zero-dependency Python server with SQLite databases (`country_compat.db` and `academic.db`) and Python compatibility calculation engines.
-2.  **`prod/` (Production Environment - Static Option B)**: A 100% static, client-side serverless build. The SQLite databases are exported to structured static JSON files, and the calculations are run directly in the browser's JavaScript engine. **Perfect for free hosting on GitHub Pages, Netlify, or Vercel.**
+2.  **`docs/` (Production Environment - Static Option B)**: A 100% static, client-side serverless build. The SQLite databases are exported to structured static JSON files, and the calculations are run directly in the browser's JavaScript engine. **Perfect for free hosting on GitHub Pages, Netlify, or Vercel.**
 
 ---
 
@@ -24,14 +24,14 @@ The repository is structured into two separate environments:
 │   ├── engine_academic.py # Python matching engine for academic data
 │   └── test_academic.py # Academic test runner
 │
-├── prod/             # Production static environment (100% Serverless)
+├── docs/             # Production static environment (100% Serverless / GitHub Pages target)
 │   ├── data/         # Static JSON database exports
 │   ├── js/           # Client-side compiled JavaScript calculators
 │   ├── life.html     # Expat Compass UI
 │   ├── academic.html # Academic Compass UI
 │   └── style.css     # CSS Stylesheet
 │
-├── build_prod.py     # Build script to compile dev/ into prod/
+├── build_prod.py     # Build script to compile dev/ into docs/
 ├── app_prod.py       # Production testing server (Port 3001)
 ├── Makefile          # Utility tasks
 ├── LICENSE           # Project License
@@ -84,7 +84,7 @@ python3 test_academic.py
 
 ---
 
-## 📦 Production Static Build (`prod/`)
+## 📦 Production Static Build (`docs/`)
 
 To compile the Python + SQLite environment into a 100% client-side serverless build:
 
@@ -94,9 +94,9 @@ Run the automated builder from the root directory:
 python3 build_prod.py
 ```
 This script will:
-*   Export raw data from SQLite databases to static JSON files in `prod/data/`.
+*   Export raw data from SQLite databases to static JSON files in `docs/data/`.
 *   Copy HTML and CSS files.
-*   Inject the compatibility engines (`engine.py` / `engine_academic.py`) directly into the production JavaScript files (`prod/js/app.js` and `prod/js/academic_app.js`) to run calculations in the browser.
+*   Inject the compatibility engines (`engine.py` / `engine_academic.py`) directly into the production JavaScript files (`docs/js/app.js` and `docs/js/academic_app.js`) to run calculations in the browser.
 
 ### 2. Test the Production Build Locally
 Run the production test server on Port 3001:
@@ -106,4 +106,4 @@ python3 app_prod.py
 Open **[http://localhost:3001/](http://localhost:3001/)** to verify the static build. Every slider change and quiz choice will recalculate instantly in the browser.
 
 ### 3. Deploy to the Internet
-To host it on the internet (e.g. via GitHub Pages), simply commit and push the contents of the `prod/` folder, or deploy the folder directly on Vercel, Netlify, or Cloudflare Pages.
+To host it on the internet via **GitHub Pages**, simply commit and push the repository to GitHub. Go to your repository settings -> Pages, and choose to build/deploy from the `/docs` folder of the `main` branch. It will host the site completely for free.

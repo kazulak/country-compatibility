@@ -12,7 +12,7 @@ import shutil
 def main():
     root_dir = os.path.dirname(os.path.abspath(__file__))
     dev_dir = os.path.join(root_dir, "dev")
-    prod_dir = os.path.join(root_dir, "prod")
+    prod_dir = os.path.join(root_dir, "docs")
     
     # 1. Add dev_dir to sys.path so we can import from database modules
     sys.path.insert(0, dev_dir)
@@ -71,7 +71,7 @@ def main():
 
     print("⚙️ Compiling serverless client-side JS files...")
 
-    # 6. Read and compile dev/js/app.js -> prod/js/app.js
+    # 6. Read and compile dev/js/app.js -> docs/js/app.js
     try:
         with open(os.path.join(dev_dir, "js", "app.js"), "r", encoding="utf-8") as f:
             app_js_content = f.read()
@@ -289,12 +289,12 @@ function rankLocations(locationsList, preferences) {
         app_js_content += engine_js
         with open(os.path.join(prod_dir, "js", "app.js"), "w", encoding="utf-8") as f:
             f.write(app_js_content)
-        print("✅ Compiled prod/js/app.js")
+        print("✅ Compiled docs/js/app.js")
     except Exception as e:
-        print(f"Error compiling prod/js/app.js: {e}")
+        print(f"Error compiling docs/js/app.js: {e}")
         sys.exit(1)
 
-    # 7. Read and compile dev/js/academic_app.js -> prod/js/academic_app.js
+    # 7. Read and compile dev/js/academic_app.js -> docs/js/academic_app.js
     try:
         with open(os.path.join(dev_dir, "js", "academic_app.js"), "r", encoding="utf-8") as f:
             acad_js_content = f.read()
@@ -493,12 +493,12 @@ function rankEntities(entitiesList, preferences) {
         acad_js_content += engine_acad_js
         with open(os.path.join(prod_dir, "js", "academic_app.js"), "w", encoding="utf-8") as f:
             f.write(acad_js_content)
-        print("✅ Compiled prod/js/academic_app.js")
+        print("✅ Compiled docs/js/academic_app.js")
     except Exception as e:
-        print(f"Error compiling prod/js/academic_app.js: {e}")
+        print(f"Error compiling docs/js/academic_app.js: {e}")
         sys.exit(1)
 
-    print("\n🎉 Build successful! Production files are ready in prod/ directory.")
+    print("\n🎉 Build successful! Production files are ready in docs/ directory.")
 
 if __name__ == "__main__":
     main()

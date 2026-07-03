@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Country Compatibility Explorer - Production Static Server
-Serves the prod/ directory static files on Port 3001 for local testing.
+Serves the docs/ directory static files on Port 3001 for local testing.
 """
 
 import os
@@ -28,7 +28,7 @@ def run_server():
     server_address = ('', PORT)
     # Target the prod directory relative to this script
     root_dir = os.path.dirname(os.path.abspath(__file__))
-    os.chdir(os.path.join(root_dir, "prod"))
+    os.chdir(os.path.join(root_dir, "docs"))
     
     try:
         httpd = HTTPServer(server_address, ProdHTTPRequestHandler)
