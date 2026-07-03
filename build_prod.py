@@ -62,9 +62,10 @@ def main():
     # 5. Copy HTML/CSS files
     try:
         shutil.copy2(os.path.join(dev_dir, "life.html"), os.path.join(prod_dir, "life.html"))
+        shutil.copy2(os.path.join(dev_dir, "life.html"), os.path.join(prod_dir, "index.html"))
         shutil.copy2(os.path.join(dev_dir, "academic.html"), os.path.join(prod_dir, "academic.html"))
         shutil.copy2(os.path.join(dev_dir, "style.css"), os.path.join(prod_dir, "style.css"))
-        print("✅ Copied life.html, academic.html, and style.css")
+        print("✅ Copied life.html (and as index.html), academic.html, and style.css")
     except Exception as e:
         print(f"Error copying HTML/CSS: {e}")
         sys.exit(1)
