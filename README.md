@@ -1,22 +1,49 @@
-# Country Compatibility Explorer (Python Backend Edition)
+# Country & Academic Compatibility Explorer
 
-An interactive, high-fidelity, and modular single-page web application to check your compatibility with a country for moving. The tool evaluates 70 of the most popular expat and digital nomad destinations across 26 granular, high-quality metrics.
+An interactive, high-fidelity, and modular single-page web application to check moving compatibility with countries and academic groups/universities.
 
-All business logic, database queries, and compatibility calculations are written in **Python**. The frontend uses a minimal, easy-to-read Javascript layer solely to fetch calculations from Python and render the user interface.
+The repository is structured into two separate environments:
+1.  **`dev/` (Development Environment)**: Runs a zero-dependency Python server with SQLite databases (`country_compat.db` and `academic.db`) and Python compatibility calculation engines.
+2.  **`prod/` (Production Environment - Static Option B)**: A 100% static, client-side serverless build. The SQLite databases are exported to structured static JSON files, and the calculations are run directly in the browser's JavaScript engine. **Perfect for free hosting on GitHub Pages, Netlify, or Vercel.**
 
-## ✨ New Features
-1. **Interactive Tooltips**: Click the `(i)` icon next to any metric to instantly display a callout box explaining the scoring scope and criteria.
-2. **Advanced Section Toggles**: Each section features a toggle switch. When turned **off**, advanced metrics are hidden and ignored by the engine (their weight defaults to 0). Turning it **on** enables micro-customization for precise alignment.
+---
+
+## 🏗️ Folder Structure
+
+```
+├── dev/              # Development environment (Python + SQLite)
+│   ├── data/         # Academic domains JSON schema
+│   ├── js/           # Frontend controller scripts (making backend fetch requests)
+│   ├── app.py        # Development Python server (Port 3000)
+│   ├── init_db.py    # Database seeder (creates country_compat.db)
+│   ├── db_sqlite.py  # SQLite Data Access Object for expat data
+│   ├── engine.py     # Python matching engine for expat data
+│   ├── test.py       # Expat engine test runner
+│   ├── init_db_academic.py # Academic database seeder (creates academic.db)
+│   ├── db_sqlite_academic.py # Academic Data Access Object
+│   ├── engine_academic.py # Python matching engine for academic data
+│   └── test_academic.py # Academic test runner
+│
+├── prod/             # Production static environment (100% Serverless)
+│   ├── data/         # Static JSON database exports
+│   ├── js/           # Client-side compiled JavaScript calculators
+│   ├── life.html     # Expat Compass UI
+│   ├── academic.html # Academic Compass UI
+│   └── style.css     # CSS Stylesheet
+│
+├── build_prod.py     # Build script to compile dev/ into prod/
+├── app_prod.py       # Production testing server (Port 3001)
+├── Makefile          # Utility tasks
+├── LICENSE           # Project License
+└── README.md         # This documentation
+```
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Python 3.8 or higher. No external libraries (like Flask or FastAPI) are required — it runs purely on Python's built-in libraries.
-
 ### 1. Set Up the Virtual Environment
-Create and activate a Python virtual environment to isolate dependencies:
+Create and activate a Python virtual environment to isolate python dependencies:
 ```bash
 # Create the virtual environment
 python3 -m venv .venv
@@ -25,67 +52,58 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 2. Initialize the Database
-Build and seed the SQLite database file `country_compat.db` with 70 countries and 26 metrics:
+---
+
+## 🛠️ Development Workflow (`dev/`)
+
+The development environment allows you to easily edit data schemas, database contents, and algorithms in Python.
+
+### 1. Seed Databases
+If you want to re-seed or rebuild the SQLite databases, run:
 ```bash
-# Make sure virtualenv is active, then seed:
-python3 init_db.py
+cd dev
+python3 init_db.py           # Seeds 120 countries and 2400 cities
+python3 init_db_academic.py  # Seeds 200+ universities and 300+ research groups
 ```
 
-### 3. Launch the Server
-Start the Python web server in the virtual environment:
+### 2. Run the Development Server
+Start the development server (runs calculations on the Python backend):
 ```bash
-# Start the server
+cd dev
 python3 app.py
 ```
-Or run directly without active activation:
-```bash
-.venv/bin/python3 app.py
-```
+This runs the development site at: **[http://localhost:3000/](http://localhost:3000/)**
 
-This will spin up the server at: **[http://localhost:3000/](http://localhost:3000/)**
-
-### 4. Run Validation Tests
-To run schema checks on the database and verify the accuracy of the matching engine:
+### 3. Run Validation Tests
+Verify the database schema checks and engine calculation rules:
 ```bash
+cd dev
 python3 test.py
+python3 test_academic.py
 ```
-Or:
+
+---
+
+## 📦 Production Static Build (`prod/`)
+
+To compile the Python + SQLite environment into a 100% client-side serverless build:
+
+### 1. Run the Build Script
+Run the automated builder from the root directory:
 ```bash
-.venv/bin/python3 test.py
+python3 build_prod.py
 ```
+This script will:
+*   Export raw data from SQLite databases to static JSON files in `prod/data/`.
+*   Copy HTML and CSS files.
+*   Inject the compatibility engines (`engine.py` / `engine_academic.py`) directly into the production JavaScript files (`prod/js/app.js` and `prod/js/academic_app.js`) to run calculations in the browser.
 
----
-
-## 🏗️ Code Architecture
-
+### 2. Test the Production Build Locally
+Run the production test server on Port 3001:
+```bash
+python3 app_prod.py
 ```
-├── .venv/           # Python isolated virtual environment
-├── index.html       # Minimalist semantic markup and sidebar controls
-├── style.css        # Premium, Swiss-style dark mode styling
-├── app.py           # Zero-dependency Python server (serves static files & handles POST /api/rank)
-├── init_db.py       # SQL Schema creator and database seeder (for 70 countries)
-├── db_sqlite.py     # SQLite data access layer querying country_compat.db
-├── country_compat.db# Generated SQLite database file
-├── engine.py        # Python matching algorithm & calculations formulas
-├── test.py          # Database and compatibility engine validation test runner
-└── js/
-    └── app.js       # Minimalist client controller (gathers inputs, fetches /api/rank, renders DOM)
-```
+Open **[http://localhost:3001/](http://localhost:3001/)** to verify the static build. Every slider change and quiz choice will recalculate instantly in the browser.
 
-- **[db_sqlite.py](file:///home/tom/repos/country-compatibility/db_sqlite.py)**: SQLite interface query module. Rebuilds location dictionary trees dynamically on requests.
-- **[engine.py](file:///home/tom/repos/country-compatibility/engine.py)**: Evaluates user preferences. Separates metrics into **Maximize** metrics (e.g. safety, healthcare) and **Match-Preference** metrics (e.g. temperature, cost of living), computing weighted compatibility averages.
-- **[js/app.js](file:///home/tom/repos/country-compatibility/js/app.js)**: Reads sliders, turns off advanced weights when section toggles are off, posts to `/api/rank`, and renders rankings.
-
----
-
-## 📐 Compatibility Engine Algorithm
-
-For a set of user preferences with weights $w_m$ and preferred targets $t_m$:
-
-- **Maximize Metrics**: The compatibility score $s_{l, m}$ evaluates to:
-  $$s_{l, m} = \frac{C_{l, m}}{10}$$
-- **Preference Metrics**: The compatibility score $s_{l, m}$ evaluates to:
-  $$s_{l, m} = 1 - \frac{|t_m - C_{l, m}|}{10}$$
-- **Overall Compatibility Score**:
-  $$S_l = \left( \frac{\sum_{m} w_m \cdot s_{l, m}}{\sum_{m} w_m} \right) \times 100\%$$
+### 3. Deploy to the Internet
+To host it on the internet (e.g. via GitHub Pages), simply commit and push the contents of the `prod/` folder, or deploy the folder directly on Vercel, Netlify, or Cloudflare Pages.

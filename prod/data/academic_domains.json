@@ -1,0 +1,57 @@
+{
+  "Natural Sciences": {
+    "Mathematics": ["Pure Mathematics", "Applied Mathematics", "Computational Mathematics"],
+    "Physics": ["Quantum Computing", "Optics", "Condensed Matter", "Astrophysics", "Particle Physics"],
+    "Chemistry": ["Organic", "Inorganic", "Physical", "Analytical", "Polymer Science"],
+    "Earth Sciences": ["Geology", "Geophysics", "Geochemistry", "Paleontology"],
+    "Geography": ["Physical Geography", "Human Geography", "Area Studies"],
+    "Ecology": ["Biodiversity Conservation", "Ecosystem Dynamics"],
+    "Oceanography": ["Marine Biology", "Physical Oceanography"],
+    "Atmospheric Science": ["Meteorology", "Climatology"]
+  },
+  "Engineering & Technology": {
+    "Computer Science & Engineering": ["Artificial Intelligence", "Robotics", "Software Engineering", "Cybersecurity"],
+    "Electrical & Electronic Engineering": ["Microelectronics", "Telecommunications", "Automation & Control"],
+    "Mechanical Engineering": ["Thermodynamics", "Mechatronics", "Aerospace Engineering"],
+    "Materials Science": ["Nanoscience & Nanotechnology", "Metallurgy", "Biomaterials"],
+    "Civil & Structural Engineering": ["Water Resources", "Transportation Engineering", "Urban Planning"],
+    "Chemical Engineering": ["Catalysis", "Process Engineering", "Textile Science"],
+    "Energy Science": ["Renewable Energy", "Nuclear Engineering", "Power Systems"],
+    "Environmental Engineering": ["Remote Sensing", "Waste Management", "Pollution Control"]
+  },
+  "Life Sciences": {
+    "Biological Sciences": ["Genetics", "Biochemistry", "Microbiology", "Evolutionary Biology"],
+    "Human Biological Sciences": ["Physiology", "Anatomy", "Neuroscience"],
+    "Agricultural Sciences": ["Agronomy", "Horticulture", "Plant Pathology"],
+    "Veterinary Sciences": ["Animal Physiology", "Veterinary Pathology"]
+  },
+  "Medical Sciences": {
+    "Clinical Medicine": ["Oncology", "Cardiology", "Immunology", "Neurology"],
+    "Public Health": ["Epidemiology", "Global Health", "Occupational Health"],
+    "Pharmacy & Pharmaceutical Sciences": ["Pharmacology", "Toxicology", "Drug Discovery"],
+    "Dentistry & Oral Sciences": ["Periodontology", "Orthodontics"],
+    "Nursing": ["Clinical Nursing", "Midwifery", "Gerontological Nursing"],
+    "Medical Technology": ["Medical Imaging", "Biomedical Engineering", "Clinical Laboratory Science"]
+  },
+  "Social Sciences": {
+    "Economics & Finance": ["Macroeconomics", "Behavioral Economics", "Corporate Finance"],
+    "Psychology": ["Cognitive Psychology", "Clinical Psychology", "Developmental Psychology"],
+    "Political Sciences": ["International Relations", "Comparative Politics", "Public Administration"],
+    "Law": ["International Law", "Constitutional Law", "Corporate Law"],
+    "Sociology": ["Criminology", "Demography", "Social Anthropology"],
+    "Business & Management": ["Business Administration", "Marketing", "Hospitality & Tourism"],
+    "Education": ["Pedagogy", "Educational Psychology", "Special Education"],
+    "Communication": ["Media Studies", "Journalism", "Public Relations"],
+    "Library & Information Science": ["Data Curation", "Archival Science", "Information Retrieval"]
+  },
+  "Arts & Humanities (Extended Domain)": {
+    "Languages & Linguistics": ["Syntax", "Sociolinguistics", "Translation Studies", "Applied Linguistics"],
+    "History": ["Ancient History", "Modern History", "Archaeology", "Cultural History"],
+    "Philosophy": ["Ethics", "Metaphysics", "Epistemology", "Logic"],
+    "Literature": ["Comparative Literature", "Poetry", "Literary Theory"],
+    "Fine Arts": ["Art History", "Painting", "Sculpture", "Digital Arts"],
+    "Performing Arts": ["Musicology", "Theater Studies", "Dance Studies"],
+    "Architecture & Design": ["Architectural History", "Industrial Design", "Interior Architecture"],
+    "Theology & Religious Studies": ["Comparative Religion", "Biblical Studies", "Theology"]
+  }
+}
