@@ -8,7 +8,14 @@
  *   rows:      [{ country, score }] for the countries currently ranked
  *   onSelect:  called with country.id when a dataset country is clicked
  */
-const D3_URL = "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { escapeHTML } from "./engine.js";
+
+// Only the d3 modules the map uses (the full d3 bundle pulls ~45 files). Versions match what
+// d3-zoom@3.0.0 imports, so selection/transition are one shared instance and transitions work.
+const D3_MODULES = [
+  "d3-selection@3.0.0", "d3-transition@3.0.1", "d3-zoom@3.0.0",
+  "d3-geo@3.1.1", "d3-array@3.2.4", "d3-scale@4.0.2", "d3-scale-chromatic@3.1.0",
+].map(m => `https://cdn.jsdelivr.net/npm/${m}/+esm`);
 const TOPOJSON_URL = "https://cdn.jsdelivr.net/npm/topojson-client@3/+esm";
 const ATLAS_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
 
@@ -24,8 +31,8 @@ let libsPromise = null;
 function loadLibs() {
   if (!libsPromise) {
     libsPromise = (async () => {
-      const [d3, topojson, topo] = await Promise.all([
-        import(D3_URL),
+      const [d3Parts, topojson, topo] = await Promise.all([
+        Promise.all(D3_MODULES.map(url => import(url))),
         import(TOPOJSON_URL),
         fetch(ATLAS_URL).then(r => {
           if (!r.ok) throw new Error(`Map data: HTTP ${r.status}`);
@@ -34,6 +41,7 @@ function loadLibs() {
       ]);
       const features = topojson.feature(topo, topo.objects.countries).features
         .filter(f => f.properties?.name !== "Antarctica");
+      const d3 = Object.assign({}, ...d3Parts);
       return { d3, features };
     })();
     libsPromise.catch(() => { libsPromise = null; }); // allow retry on next map creation
@@ -57,7 +65,7 @@ export function createWorldMap(container, { countries = [], onSelect = () => {} 
     api.update();
   }).catch(err => {
     console.error("Map failed to load:", err);
-    container.innerHTML = `<div class="map-status map-error" role="alert">Could not load the map (${String(err.message || err)}).
+    container.innerHTML = `<div class="map-status map-error" role="alert">Could not load the map (${escapeHTML(err.message || err)}).
       The country list still works. <button type="button" class="btn secondary map-retry">Retry</button></div>`;
     container.querySelector(".map-retry")?.addEventListener("click", () => {
       const fresh = createWorldMap(container, { countries, onSelect });

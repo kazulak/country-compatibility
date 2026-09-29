@@ -38,15 +38,18 @@ export function scoreMetrics(metrics, metricDefs, prefs) {
   }
 
   breakdown.sort((a, b) => b.metricScore - a.metricScore);
-  const score = totalWeight > 0 ? Math.round((weighted / totalWeight) * 100) : 100;
+  // Nothing requested at all: everything matches equally (100). Something requested but no data
+  // for any of it: null ("no data"), so data-less items can't outrank real matches.
+  const requested = Object.values(prefs).some(p => Number(p.importance) > 0);
+  const score = totalWeight > 0 ? Math.round((weighted / totalWeight) * 100) : requested ? null : 100;
   return { score, breakdown };
 }
 
-// Returns [{ item, score, breakdown }] sorted by score desc, then name asc.
+// Returns [{ item, score, breakdown }] sorted by score desc (null scores last), then name asc.
 export function rank(items, getMetrics, metricDefs, prefs) {
   return items
     .map(item => ({ item, ...scoreMetrics(getMetrics(item), metricDefs, prefs) }))
-    .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name));
+    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || a.item.name.localeCompare(b.item.name));
 }
 
 export async function loadJSON(path) {
@@ -62,7 +65,13 @@ export function escapeHTML(text) {
 }
 
 export function matchClass(score) {
+  if (score == null) return "match-none";
   return score >= 75 ? "match-high" : score >= 50 ? "match-medium" : "match-low";
+}
+
+// "83%", or "n/a" when nothing you asked for has data.
+export function scoreText(score) {
+  return score == null ? "n/a" : `${score}%`;
 }
 
 export function debounce(fn, ms = 150) {

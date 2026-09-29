@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country Compass</title>
   <meta name="description" content="A just-for-fun country matcher: set your priorities and see which of 20 hand-written country profiles fit. Most scores are subjective estimates; 7 of 32 metrics use World Bank data.">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Country Compass">
+  <meta property="og:description" content="A just-for-fun country matcher: set your priorities and see which of 20 hand-written country profiles fit. Most scores are subjective estimates; 7 of 32 metrics use World Bank data.">
+  <meta property="og:url" content="https://kazulak.github.io/country-compatibility/">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <div class="app-container">
@@ -70,13 +75,13 @@
                 <span class="slider-val" id="val-warm_weather">6</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-warm_weather-0" name="imp-warm_weather" value="0" hidden>
+                <input type="radio" id="imp-warm_weather-0" name="imp-warm_weather" value="0">
                 <label for="imp-warm_weather-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-warm_weather-3" name="imp-warm_weather" value="3" hidden>
+                <input type="radio" id="imp-warm_weather-3" name="imp-warm_weather" value="3">
                 <label for="imp-warm_weather-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-warm_weather-6" name="imp-warm_weather" value="6" checked hidden>
+                <input type="radio" id="imp-warm_weather-6" name="imp-warm_weather" value="6" checked>
                 <label for="imp-warm_weather-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-warm_weather-10" name="imp-warm_weather" value="10" hidden>
+                <input type="radio" id="imp-warm_weather-10" name="imp-warm_weather" value="10">
                 <label for="imp-warm_weather-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -100,13 +105,13 @@
                 <span class="slider-val" id="val-seasonal_variety">5</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-seasonal_variety-0" name="imp-seasonal_variety" value="0" checked hidden>
+                <input type="radio" id="imp-seasonal_variety-0" name="imp-seasonal_variety" value="0" checked>
                 <label for="imp-seasonal_variety-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-seasonal_variety-3" name="imp-seasonal_variety" value="3" hidden>
+                <input type="radio" id="imp-seasonal_variety-3" name="imp-seasonal_variety" value="3">
                 <label for="imp-seasonal_variety-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-seasonal_variety-6" name="imp-seasonal_variety" value="6" hidden>
+                <input type="radio" id="imp-seasonal_variety-6" name="imp-seasonal_variety" value="6">
                 <label for="imp-seasonal_variety-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-seasonal_variety-10" name="imp-seasonal_variety" value="10" hidden>
+                <input type="radio" id="imp-seasonal_variety-10" name="imp-seasonal_variety" value="10">
                 <label for="imp-seasonal_variety-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -126,13 +131,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-nature_mountains-0" name="imp-nature_mountains" value="0" checked hidden>
+                <input type="radio" id="imp-nature_mountains-0" name="imp-nature_mountains" value="0" checked>
                 <label for="imp-nature_mountains-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-nature_mountains-3" name="imp-nature_mountains" value="3" hidden>
+                <input type="radio" id="imp-nature_mountains-3" name="imp-nature_mountains" value="3">
                 <label for="imp-nature_mountains-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-nature_mountains-6" name="imp-nature_mountains" value="6" hidden>
+                <input type="radio" id="imp-nature_mountains-6" name="imp-nature_mountains" value="6">
                 <label for="imp-nature_mountains-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-nature_mountains-10" name="imp-nature_mountains" value="10" hidden>
+                <input type="radio" id="imp-nature_mountains-10" name="imp-nature_mountains" value="10">
                 <label for="imp-nature_mountains-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -152,13 +157,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-nature_lakes_rivers-0" name="imp-nature_lakes_rivers" value="0" checked hidden>
+                <input type="radio" id="imp-nature_lakes_rivers-0" name="imp-nature_lakes_rivers" value="0" checked>
                 <label for="imp-nature_lakes_rivers-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-nature_lakes_rivers-3" name="imp-nature_lakes_rivers" value="3" hidden>
+                <input type="radio" id="imp-nature_lakes_rivers-3" name="imp-nature_lakes_rivers" value="3">
                 <label for="imp-nature_lakes_rivers-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-nature_lakes_rivers-6" name="imp-nature_lakes_rivers" value="6" hidden>
+                <input type="radio" id="imp-nature_lakes_rivers-6" name="imp-nature_lakes_rivers" value="6">
                 <label for="imp-nature_lakes_rivers-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-nature_lakes_rivers-10" name="imp-nature_lakes_rivers" value="10" hidden>
+                <input type="radio" id="imp-nature_lakes_rivers-10" name="imp-nature_lakes_rivers" value="10">
                 <label for="imp-nature_lakes_rivers-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -178,13 +183,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-nature_sea_beaches-0" name="imp-nature_sea_beaches" value="0" checked hidden>
+                <input type="radio" id="imp-nature_sea_beaches-0" name="imp-nature_sea_beaches" value="0" checked>
                 <label for="imp-nature_sea_beaches-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-nature_sea_beaches-3" name="imp-nature_sea_beaches" value="3" hidden>
+                <input type="radio" id="imp-nature_sea_beaches-3" name="imp-nature_sea_beaches" value="3">
                 <label for="imp-nature_sea_beaches-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-nature_sea_beaches-6" name="imp-nature_sea_beaches" value="6" hidden>
+                <input type="radio" id="imp-nature_sea_beaches-6" name="imp-nature_sea_beaches" value="6">
                 <label for="imp-nature_sea_beaches-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-nature_sea_beaches-10" name="imp-nature_sea_beaches" value="10" hidden>
+                <input type="radio" id="imp-nature_sea_beaches-10" name="imp-nature_sea_beaches" value="10">
                 <label for="imp-nature_sea_beaches-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -204,13 +209,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-nature_forests_greenery-0" name="imp-nature_forests_greenery" value="0" checked hidden>
+                <input type="radio" id="imp-nature_forests_greenery-0" name="imp-nature_forests_greenery" value="0" checked>
                 <label for="imp-nature_forests_greenery-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-nature_forests_greenery-3" name="imp-nature_forests_greenery" value="3" hidden>
+                <input type="radio" id="imp-nature_forests_greenery-3" name="imp-nature_forests_greenery" value="3">
                 <label for="imp-nature_forests_greenery-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-nature_forests_greenery-6" name="imp-nature_forests_greenery" value="6" hidden>
+                <input type="radio" id="imp-nature_forests_greenery-6" name="imp-nature_forests_greenery" value="6">
                 <label for="imp-nature_forests_greenery-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-nature_forests_greenery-10" name="imp-nature_forests_greenery" value="10" hidden>
+                <input type="radio" id="imp-nature_forests_greenery-10" name="imp-nature_forests_greenery" value="10">
                 <label for="imp-nature_forests_greenery-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -237,13 +242,13 @@
                   <span class="slider-val" id="val-humidity_level">5</span>
                 </div>
                 <div class="importance-select">
-                  <input type="radio" id="imp-humidity_level-0" name="imp-humidity_level" value="0" checked hidden>
+                  <input type="radio" id="imp-humidity_level-0" name="imp-humidity_level" value="0" checked>
                   <label for="imp-humidity_level-0" class="importance-pill">Off</label>
-                  <input type="radio" id="imp-humidity_level-3" name="imp-humidity_level" value="3" hidden>
+                  <input type="radio" id="imp-humidity_level-3" name="imp-humidity_level" value="3">
                   <label for="imp-humidity_level-3" class="importance-pill">Low</label>
-                  <input type="radio" id="imp-humidity_level-6" name="imp-humidity_level" value="6" hidden>
+                  <input type="radio" id="imp-humidity_level-6" name="imp-humidity_level" value="6">
                   <label for="imp-humidity_level-6" class="importance-pill">Med</label>
-                  <input type="radio" id="imp-humidity_level-10" name="imp-humidity_level" value="10" hidden>
+                  <input type="radio" id="imp-humidity_level-10" name="imp-humidity_level" value="10">
                   <label for="imp-humidity_level-10" class="importance-pill">High</label>
                 </div>
               </div>
@@ -263,13 +268,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-air_quality-0" name="imp-air_quality" value="0" checked hidden>
+                  <input type="radio" id="imp-air_quality-0" name="imp-air_quality" value="0" checked>
                   <label for="imp-air_quality-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-air_quality-3" name="imp-air_quality" value="3" hidden>
+                  <input type="radio" id="imp-air_quality-3" name="imp-air_quality" value="3">
                   <label for="imp-air_quality-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-air_quality-6" name="imp-air_quality" value="6" hidden>
+                  <input type="radio" id="imp-air_quality-6" name="imp-air_quality" value="6">
                   <label for="imp-air_quality-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-air_quality-10" name="imp-air_quality" value="10" hidden>
+                  <input type="radio" id="imp-air_quality-10" name="imp-air_quality" value="10">
                   <label for="imp-air_quality-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -289,13 +294,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-sunshine_hours-0" name="imp-sunshine_hours" value="0" checked hidden>
+                  <input type="radio" id="imp-sunshine_hours-0" name="imp-sunshine_hours" value="0" checked>
                   <label for="imp-sunshine_hours-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-sunshine_hours-3" name="imp-sunshine_hours" value="3" hidden>
+                  <input type="radio" id="imp-sunshine_hours-3" name="imp-sunshine_hours" value="3">
                   <label for="imp-sunshine_hours-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-sunshine_hours-6" name="imp-sunshine_hours" value="6" hidden>
+                  <input type="radio" id="imp-sunshine_hours-6" name="imp-sunshine_hours" value="6">
                   <label for="imp-sunshine_hours-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-sunshine_hours-10" name="imp-sunshine_hours" value="10" hidden>
+                  <input type="radio" id="imp-sunshine_hours-10" name="imp-sunshine_hours" value="10">
                   <label for="imp-sunshine_hours-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -333,13 +338,13 @@
                 <span class="slider-val" id="val-cost_of_living">4</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-cost_of_living-0" name="imp-cost_of_living" value="0" hidden>
+                <input type="radio" id="imp-cost_of_living-0" name="imp-cost_of_living" value="0">
                 <label for="imp-cost_of_living-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-cost_of_living-3" name="imp-cost_of_living" value="3" hidden>
+                <input type="radio" id="imp-cost_of_living-3" name="imp-cost_of_living" value="3">
                 <label for="imp-cost_of_living-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-cost_of_living-6" name="imp-cost_of_living" value="6" checked hidden>
+                <input type="radio" id="imp-cost_of_living-6" name="imp-cost_of_living" value="6" checked>
                 <label for="imp-cost_of_living-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-cost_of_living-10" name="imp-cost_of_living" value="10" hidden>
+                <input type="radio" id="imp-cost_of_living-10" name="imp-cost_of_living" value="10">
                 <label for="imp-cost_of_living-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -359,13 +364,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-housing_affordability-0" name="imp-housing_affordability" value="0" checked hidden>
+                <input type="radio" id="imp-housing_affordability-0" name="imp-housing_affordability" value="0" checked>
                 <label for="imp-housing_affordability-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-housing_affordability-3" name="imp-housing_affordability" value="3" hidden>
+                <input type="radio" id="imp-housing_affordability-3" name="imp-housing_affordability" value="3">
                 <label for="imp-housing_affordability-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-housing_affordability-6" name="imp-housing_affordability" value="6" hidden>
+                <input type="radio" id="imp-housing_affordability-6" name="imp-housing_affordability" value="6">
                 <label for="imp-housing_affordability-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-housing_affordability-10" name="imp-housing_affordability" value="10" hidden>
+                <input type="radio" id="imp-housing_affordability-10" name="imp-housing_affordability" value="10">
                 <label for="imp-housing_affordability-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -389,13 +394,13 @@
                 <span class="slider-val" id="val-tax_burden">5</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-tax_burden-0" name="imp-tax_burden" value="0" checked hidden>
+                <input type="radio" id="imp-tax_burden-0" name="imp-tax_burden" value="0" checked>
                 <label for="imp-tax_burden-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-tax_burden-3" name="imp-tax_burden" value="3" hidden>
+                <input type="radio" id="imp-tax_burden-3" name="imp-tax_burden" value="3">
                 <label for="imp-tax_burden-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-tax_burden-6" name="imp-tax_burden" value="6" hidden>
+                <input type="radio" id="imp-tax_burden-6" name="imp-tax_burden" value="6">
                 <label for="imp-tax_burden-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-tax_burden-10" name="imp-tax_burden" value="10" hidden>
+                <input type="radio" id="imp-tax_burden-10" name="imp-tax_burden" value="10">
                 <label for="imp-tax_burden-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -415,13 +420,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-visa_difficulty-0" name="imp-visa_difficulty" value="0" checked hidden>
+                <input type="radio" id="imp-visa_difficulty-0" name="imp-visa_difficulty" value="0" checked>
                 <label for="imp-visa_difficulty-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-visa_difficulty-3" name="imp-visa_difficulty" value="3" hidden>
+                <input type="radio" id="imp-visa_difficulty-3" name="imp-visa_difficulty" value="3">
                 <label for="imp-visa_difficulty-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-visa_difficulty-6" name="imp-visa_difficulty" value="6" hidden>
+                <input type="radio" id="imp-visa_difficulty-6" name="imp-visa_difficulty" value="6">
                 <label for="imp-visa_difficulty-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-visa_difficulty-10" name="imp-visa_difficulty" value="10" hidden>
+                <input type="radio" id="imp-visa_difficulty-10" name="imp-visa_difficulty" value="10">
                 <label for="imp-visa_difficulty-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -444,13 +449,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-childcare_education_cost-0" name="imp-childcare_education_cost" value="0" checked hidden>
+                  <input type="radio" id="imp-childcare_education_cost-0" name="imp-childcare_education_cost" value="0" checked>
                   <label for="imp-childcare_education_cost-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-childcare_education_cost-3" name="imp-childcare_education_cost" value="3" hidden>
+                  <input type="radio" id="imp-childcare_education_cost-3" name="imp-childcare_education_cost" value="3">
                   <label for="imp-childcare_education_cost-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-childcare_education_cost-6" name="imp-childcare_education_cost" value="6" hidden>
+                  <input type="radio" id="imp-childcare_education_cost-6" name="imp-childcare_education_cost" value="6">
                   <label for="imp-childcare_education_cost-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-childcare_education_cost-10" name="imp-childcare_education_cost" value="10" hidden>
+                  <input type="radio" id="imp-childcare_education_cost-10" name="imp-childcare_education_cost" value="10">
                   <label for="imp-childcare_education_cost-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -470,13 +475,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-dining_food_cost-0" name="imp-dining_food_cost" value="0" checked hidden>
+                  <input type="radio" id="imp-dining_food_cost-0" name="imp-dining_food_cost" value="0" checked>
                   <label for="imp-dining_food_cost-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-dining_food_cost-3" name="imp-dining_food_cost" value="3" hidden>
+                  <input type="radio" id="imp-dining_food_cost-3" name="imp-dining_food_cost" value="3">
                   <label for="imp-dining_food_cost-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-dining_food_cost-6" name="imp-dining_food_cost" value="6" hidden>
+                  <input type="radio" id="imp-dining_food_cost-6" name="imp-dining_food_cost" value="6">
                   <label for="imp-dining_food_cost-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-dining_food_cost-10" name="imp-dining_food_cost" value="10" hidden>
+                  <input type="radio" id="imp-dining_food_cost-10" name="imp-dining_food_cost" value="10">
                   <label for="imp-dining_food_cost-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -496,13 +501,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-childcare_quality-0" name="imp-childcare_quality" value="0" checked hidden>
+                  <input type="radio" id="imp-childcare_quality-0" name="imp-childcare_quality" value="0" checked>
                   <label for="imp-childcare_quality-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-childcare_quality-3" name="imp-childcare_quality" value="3" hidden>
+                  <input type="radio" id="imp-childcare_quality-3" name="imp-childcare_quality" value="3">
                   <label for="imp-childcare_quality-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-childcare_quality-6" name="imp-childcare_quality" value="6" hidden>
+                  <input type="radio" id="imp-childcare_quality-6" name="imp-childcare_quality" value="6">
                   <label for="imp-childcare_quality-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-childcare_quality-10" name="imp-childcare_quality" value="10" hidden>
+                  <input type="radio" id="imp-childcare_quality-10" name="imp-childcare_quality" value="10">
                   <label for="imp-childcare_quality-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -540,13 +545,13 @@
                 <span class="slider-val" id="val-pace_of_life">4</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-pace_of_life-0" name="imp-pace_of_life" value="0" checked hidden>
+                <input type="radio" id="imp-pace_of_life-0" name="imp-pace_of_life" value="0" checked>
                 <label for="imp-pace_of_life-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-pace_of_life-3" name="imp-pace_of_life" value="3" hidden>
+                <input type="radio" id="imp-pace_of_life-3" name="imp-pace_of_life" value="3">
                 <label for="imp-pace_of_life-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-pace_of_life-6" name="imp-pace_of_life" value="6" hidden>
+                <input type="radio" id="imp-pace_of_life-6" name="imp-pace_of_life" value="6">
                 <label for="imp-pace_of_life-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-pace_of_life-10" name="imp-pace_of_life" value="10" hidden>
+                <input type="radio" id="imp-pace_of_life-10" name="imp-pace_of_life" value="10">
                 <label for="imp-pace_of_life-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -566,13 +571,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-safety-0" name="imp-safety" value="0" hidden>
+                <input type="radio" id="imp-safety-0" name="imp-safety" value="0">
                 <label for="imp-safety-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-safety-3" name="imp-safety" value="3" hidden>
+                <input type="radio" id="imp-safety-3" name="imp-safety" value="3">
                 <label for="imp-safety-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-safety-6" name="imp-safety" value="6" hidden>
+                <input type="radio" id="imp-safety-6" name="imp-safety" value="6">
                 <label for="imp-safety-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-safety-10" name="imp-safety" value="10" checked hidden>
+                <input type="radio" id="imp-safety-10" name="imp-safety" value="10" checked>
                 <label for="imp-safety-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -592,13 +597,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-healthcare_quality-0" name="imp-healthcare_quality" value="0" checked hidden>
+                <input type="radio" id="imp-healthcare_quality-0" name="imp-healthcare_quality" value="0" checked>
                 <label for="imp-healthcare_quality-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-healthcare_quality-3" name="imp-healthcare_quality" value="3" hidden>
+                <input type="radio" id="imp-healthcare_quality-3" name="imp-healthcare_quality" value="3">
                 <label for="imp-healthcare_quality-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-healthcare_quality-6" name="imp-healthcare_quality" value="6" hidden>
+                <input type="radio" id="imp-healthcare_quality-6" name="imp-healthcare_quality" value="6">
                 <label for="imp-healthcare_quality-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-healthcare_quality-10" name="imp-healthcare_quality" value="10" hidden>
+                <input type="radio" id="imp-healthcare_quality-10" name="imp-healthcare_quality" value="10">
                 <label for="imp-healthcare_quality-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -618,13 +623,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-english_barrier-0" name="imp-english_barrier" value="0" checked hidden>
+                <input type="radio" id="imp-english_barrier-0" name="imp-english_barrier" value="0" checked>
                 <label for="imp-english_barrier-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-english_barrier-3" name="imp-english_barrier" value="3" hidden>
+                <input type="radio" id="imp-english_barrier-3" name="imp-english_barrier" value="3">
                 <label for="imp-english_barrier-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-english_barrier-6" name="imp-english_barrier" value="6" hidden>
+                <input type="radio" id="imp-english_barrier-6" name="imp-english_barrier" value="6">
                 <label for="imp-english_barrier-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-english_barrier-10" name="imp-english_barrier" value="10" hidden>
+                <input type="radio" id="imp-english_barrier-10" name="imp-english_barrier" value="10">
                 <label for="imp-english_barrier-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -647,13 +652,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-social_tolerance-0" name="imp-social_tolerance" value="0" checked hidden>
+                  <input type="radio" id="imp-social_tolerance-0" name="imp-social_tolerance" value="0" checked>
                   <label for="imp-social_tolerance-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-social_tolerance-3" name="imp-social_tolerance" value="3" hidden>
+                  <input type="radio" id="imp-social_tolerance-3" name="imp-social_tolerance" value="3">
                   <label for="imp-social_tolerance-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-social_tolerance-6" name="imp-social_tolerance" value="6" hidden>
+                  <input type="radio" id="imp-social_tolerance-6" name="imp-social_tolerance" value="6">
                   <label for="imp-social_tolerance-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-social_tolerance-10" name="imp-social_tolerance" value="10" hidden>
+                  <input type="radio" id="imp-social_tolerance-10" name="imp-social_tolerance" value="10">
                   <label for="imp-social_tolerance-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -673,13 +678,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-bureaucracy_difficulty-0" name="imp-bureaucracy_difficulty" value="0" checked hidden>
+                  <input type="radio" id="imp-bureaucracy_difficulty-0" name="imp-bureaucracy_difficulty" value="0" checked>
                   <label for="imp-bureaucracy_difficulty-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-bureaucracy_difficulty-3" name="imp-bureaucracy_difficulty" value="3" hidden>
+                  <input type="radio" id="imp-bureaucracy_difficulty-3" name="imp-bureaucracy_difficulty" value="3">
                   <label for="imp-bureaucracy_difficulty-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-bureaucracy_difficulty-6" name="imp-bureaucracy_difficulty" value="6" hidden>
+                  <input type="radio" id="imp-bureaucracy_difficulty-6" name="imp-bureaucracy_difficulty" value="6">
                   <label for="imp-bureaucracy_difficulty-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-bureaucracy_difficulty-10" name="imp-bureaucracy_difficulty" value="10" hidden>
+                  <input type="radio" id="imp-bureaucracy_difficulty-10" name="imp-bureaucracy_difficulty" value="10">
                   <label for="imp-bureaucracy_difficulty-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -699,13 +704,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-foreigner_friendliness-0" name="imp-foreigner_friendliness" value="0" checked hidden>
+                  <input type="radio" id="imp-foreigner_friendliness-0" name="imp-foreigner_friendliness" value="0" checked>
                   <label for="imp-foreigner_friendliness-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-foreigner_friendliness-3" name="imp-foreigner_friendliness" value="3" hidden>
+                  <input type="radio" id="imp-foreigner_friendliness-3" name="imp-foreigner_friendliness" value="3">
                   <label for="imp-foreigner_friendliness-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-foreigner_friendliness-6" name="imp-foreigner_friendliness" value="6" hidden>
+                  <input type="radio" id="imp-foreigner_friendliness-6" name="imp-foreigner_friendliness" value="6">
                   <label for="imp-foreigner_friendliness-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-foreigner_friendliness-10" name="imp-foreigner_friendliness" value="10" hidden>
+                  <input type="radio" id="imp-foreigner_friendliness-10" name="imp-foreigner_friendliness" value="10">
                   <label for="imp-foreigner_friendliness-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -725,13 +730,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-happiness_index-0" name="imp-happiness_index" value="0" checked hidden>
+                  <input type="radio" id="imp-happiness_index-0" name="imp-happiness_index" value="0" checked>
                   <label for="imp-happiness_index-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-happiness_index-3" name="imp-happiness_index" value="3" hidden>
+                  <input type="radio" id="imp-happiness_index-3" name="imp-happiness_index" value="3">
                   <label for="imp-happiness_index-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-happiness_index-6" name="imp-happiness_index" value="6" hidden>
+                  <input type="radio" id="imp-happiness_index-6" name="imp-happiness_index" value="6">
                   <label for="imp-happiness_index-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-happiness_index-10" name="imp-happiness_index" value="10" hidden>
+                  <input type="radio" id="imp-happiness_index-10" name="imp-happiness_index" value="10">
                   <label for="imp-happiness_index-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -765,13 +770,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-walkability_transit-0" name="imp-walkability_transit" value="0" checked hidden>
+                <input type="radio" id="imp-walkability_transit-0" name="imp-walkability_transit" value="0" checked>
                 <label for="imp-walkability_transit-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-walkability_transit-3" name="imp-walkability_transit" value="3" hidden>
+                <input type="radio" id="imp-walkability_transit-3" name="imp-walkability_transit" value="3">
                 <label for="imp-walkability_transit-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-walkability_transit-6" name="imp-walkability_transit" value="6" hidden>
+                <input type="radio" id="imp-walkability_transit-6" name="imp-walkability_transit" value="6">
                 <label for="imp-walkability_transit-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-walkability_transit-10" name="imp-walkability_transit" value="10" hidden>
+                <input type="radio" id="imp-walkability_transit-10" name="imp-walkability_transit" value="10">
                 <label for="imp-walkability_transit-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -791,13 +796,13 @@
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
-                <input type="radio" id="imp-internet_speed-0" name="imp-internet_speed" value="0" checked hidden>
+                <input type="radio" id="imp-internet_speed-0" name="imp-internet_speed" value="0" checked>
                 <label for="imp-internet_speed-0" class="importance-pill" style="flex: 1;">Off</label>
-                <input type="radio" id="imp-internet_speed-3" name="imp-internet_speed" value="3" hidden>
+                <input type="radio" id="imp-internet_speed-3" name="imp-internet_speed" value="3">
                 <label for="imp-internet_speed-3" class="importance-pill" style="flex: 1;">Low</label>
-                <input type="radio" id="imp-internet_speed-6" name="imp-internet_speed" value="6" hidden>
+                <input type="radio" id="imp-internet_speed-6" name="imp-internet_speed" value="6">
                 <label for="imp-internet_speed-6" class="importance-pill" style="flex: 1;">Med</label>
-                <input type="radio" id="imp-internet_speed-10" name="imp-internet_speed" value="10" hidden>
+                <input type="radio" id="imp-internet_speed-10" name="imp-internet_speed" value="10">
                 <label for="imp-internet_speed-10" class="importance-pill" style="flex: 1;">High</label>
               </div>
             </div>
@@ -821,13 +826,13 @@
                 <span class="slider-val" id="val-work_culture">4</span>
               </div>
               <div class="importance-select">
-                <input type="radio" id="imp-work_culture-0" name="imp-work_culture" value="0" checked hidden>
+                <input type="radio" id="imp-work_culture-0" name="imp-work_culture" value="0" checked>
                 <label for="imp-work_culture-0" class="importance-pill">Off</label>
-                <input type="radio" id="imp-work_culture-3" name="imp-work_culture" value="3" hidden>
+                <input type="radio" id="imp-work_culture-3" name="imp-work_culture" value="3">
                 <label for="imp-work_culture-3" class="importance-pill">Low</label>
-                <input type="radio" id="imp-work_culture-6" name="imp-work_culture" value="6" hidden>
+                <input type="radio" id="imp-work_culture-6" name="imp-work_culture" value="6">
                 <label for="imp-work_culture-6" class="importance-pill">Med</label>
-                <input type="radio" id="imp-work_culture-10" name="imp-work_culture" value="10" hidden>
+                <input type="radio" id="imp-work_culture-10" name="imp-work_culture" value="10">
                 <label for="imp-work_culture-10" class="importance-pill">High</label>
               </div>
             </div>
@@ -850,13 +855,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-road_quality-0" name="imp-road_quality" value="0" checked hidden>
+                  <input type="radio" id="imp-road_quality-0" name="imp-road_quality" value="0" checked>
                   <label for="imp-road_quality-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-road_quality-3" name="imp-road_quality" value="3" hidden>
+                  <input type="radio" id="imp-road_quality-3" name="imp-road_quality" value="3">
                   <label for="imp-road_quality-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-road_quality-6" name="imp-road_quality" value="6" hidden>
+                  <input type="radio" id="imp-road_quality-6" name="imp-road_quality" value="6">
                   <label for="imp-road_quality-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-road_quality-10" name="imp-road_quality" value="10" hidden>
+                  <input type="radio" id="imp-road_quality-10" name="imp-road_quality" value="10">
                   <label for="imp-road_quality-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -876,13 +881,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-local_job_market-0" name="imp-local_job_market" value="0" checked hidden>
+                  <input type="radio" id="imp-local_job_market-0" name="imp-local_job_market" value="0" checked>
                   <label for="imp-local_job_market-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-local_job_market-3" name="imp-local_job_market" value="3" hidden>
+                  <input type="radio" id="imp-local_job_market-3" name="imp-local_job_market" value="3">
                   <label for="imp-local_job_market-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-local_job_market-6" name="imp-local_job_market" value="6" hidden>
+                  <input type="radio" id="imp-local_job_market-6" name="imp-local_job_market" value="6">
                   <label for="imp-local_job_market-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-local_job_market-10" name="imp-local_job_market" value="10" hidden>
+                  <input type="radio" id="imp-local_job_market-10" name="imp-local_job_market" value="10">
                   <label for="imp-local_job_market-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -902,13 +907,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-ease_of_doing_business-0" name="imp-ease_of_doing_business" value="0" checked hidden>
+                  <input type="radio" id="imp-ease_of_doing_business-0" name="imp-ease_of_doing_business" value="0" checked>
                   <label for="imp-ease_of_doing_business-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-ease_of_doing_business-3" name="imp-ease_of_doing_business" value="3" hidden>
+                  <input type="radio" id="imp-ease_of_doing_business-3" name="imp-ease_of_doing_business" value="3">
                   <label for="imp-ease_of_doing_business-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-ease_of_doing_business-6" name="imp-ease_of_doing_business" value="6" hidden>
+                  <input type="radio" id="imp-ease_of_doing_business-6" name="imp-ease_of_doing_business" value="6">
                   <label for="imp-ease_of_doing_business-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-ease_of_doing_business-10" name="imp-ease_of_doing_business" value="10" hidden>
+                  <input type="radio" id="imp-ease_of_doing_business-10" name="imp-ease_of_doing_business" value="10">
                   <label for="imp-ease_of_doing_business-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -945,13 +950,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-phd_stipend_ppp-0" name="imp-phd_stipend_ppp" value="0" checked hidden>
+                  <input type="radio" id="imp-phd_stipend_ppp-0" name="imp-phd_stipend_ppp" value="0" checked>
                   <label for="imp-phd_stipend_ppp-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-phd_stipend_ppp-3" name="imp-phd_stipend_ppp" value="3" hidden>
+                  <input type="radio" id="imp-phd_stipend_ppp-3" name="imp-phd_stipend_ppp" value="3">
                   <label for="imp-phd_stipend_ppp-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-phd_stipend_ppp-6" name="imp-phd_stipend_ppp" value="6" hidden>
+                  <input type="radio" id="imp-phd_stipend_ppp-6" name="imp-phd_stipend_ppp" value="6">
                   <label for="imp-phd_stipend_ppp-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-phd_stipend_ppp-10" name="imp-phd_stipend_ppp" value="10" hidden>
+                  <input type="radio" id="imp-phd_stipend_ppp-10" name="imp-phd_stipend_ppp" value="10">
                   <label for="imp-phd_stipend_ppp-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -971,13 +976,13 @@
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
-                  <input type="radio" id="imp-academic_satisfaction-0" name="imp-academic_satisfaction" value="0" checked hidden>
+                  <input type="radio" id="imp-academic_satisfaction-0" name="imp-academic_satisfaction" value="0" checked>
                   <label for="imp-academic_satisfaction-0" class="importance-pill" style="flex: 1;">Off</label>
-                  <input type="radio" id="imp-academic_satisfaction-3" name="imp-academic_satisfaction" value="3" hidden>
+                  <input type="radio" id="imp-academic_satisfaction-3" name="imp-academic_satisfaction" value="3">
                   <label for="imp-academic_satisfaction-3" class="importance-pill" style="flex: 1;">Low</label>
-                  <input type="radio" id="imp-academic_satisfaction-6" name="imp-academic_satisfaction" value="6" hidden>
+                  <input type="radio" id="imp-academic_satisfaction-6" name="imp-academic_satisfaction" value="6">
                   <label for="imp-academic_satisfaction-6" class="importance-pill" style="flex: 1;">Med</label>
-                  <input type="radio" id="imp-academic_satisfaction-10" name="imp-academic_satisfaction" value="10" hidden>
+                  <input type="radio" id="imp-academic_satisfaction-10" name="imp-academic_satisfaction" value="10">
                   <label for="imp-academic_satisfaction-10" class="importance-pill" style="flex: 1;">High</label>
                 </div>
               </div>
@@ -1043,10 +1048,10 @@
 
   <!-- Quiz Modal -->
   <div id="quiz-modal" class="modal-overlay" hidden>
-    <div class="modal-card">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="quiz-title">
       <header class="modal-header">
-        <h2>📝 Persona Quiz</h2>
-        <button type="button" class="close-modal-btn" id="close-quiz-btn" aria-label="Close modal">&times;</button>
+        <h2 id="quiz-title">📝 Persona Quiz</h2>
+        <button type="button" class="close-modal-btn" id="close-quiz-btn" aria-label="Close quiz">&times;</button>
       </header>
       
       <div class="modal-body">
@@ -1069,6 +1074,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/life.js?v=8"></script>
+  <script type="module" src="js/life.js?v=9"></script>
 </body>
 </html>
