@@ -1,109 +1,72 @@
-# Country & Academic Compatibility Explorer
+# Country & University Compass
 
-An interactive, high-fidelity, and modular single-page web application to check moving compatibility with countries and academic groups/universities.
+A small, just-for-fun static website: move a few sliders and it ranks countries (and a list of well-known universities) by how well they match your preferences.
 
-The repository is structured into two separate environments:
-1.  **`dev/` (Development Environment)**: Runs a zero-dependency Python server with SQLite databases (`country_compat.db` and `academic.db`) and Python compatibility calculation engines.
-2.  **`docs/` (Production Environment - Static Option B)**: A 100% static, client-side serverless build. The SQLite databases are exported to structured static JSON files, and the calculations are run directly in the browser's JavaScript engine. **Perfect for free hosting on GitHub Pages, Netlify, or Vercel.**
+**Live site:** https://kazulak.github.io/country-compatibility/
 
----
+> **This is a toy, not a research tool.** The scores are subjective guesses written by hand, not measured data. Please read the [Limitations](#limitations) before taking anything here seriously.
 
-## 🏗️ Folder Structure
+## Pages
+
+- **Country Compass** (`docs/index.html`): ranks countries on 32 lifestyle metrics (climate, cost, safety, visas, work culture…), with persona presets and a short quiz.
+- **University Compass** (`docs/academic.html`): ranks 94 real universities using their approximate Shanghai (ARWU) rank plus the host country's scores.
+
+## Limitations
+
+**Country data**
+- All scores are **subjective 0–10 estimates** made by hand for this project, not statistics from any official source. Labels such as "Happiness" or "Safety" do not correspond to any official index.
+- Only **20 countries are "curated"**: their scores and text were written individually, around 2025. Visa and cost details may be out of date.
+- The other **100 countries are "template" countries.** Each one copies the scores and text of a generic regional template (e.g. "Mediterranean", "Gulf / Desert"). All countries sharing a template get *identical* scores, and the templates fit some countries badly. They were not researched individually and do not reflect current events such as conflicts, travel advisories or sanctions. They are hidden by default and marked "Template" in the UI.
+- Capitals, currencies and languages are real reference facts. City lists are just a few major cities. There are no city-level scores.
+
+**University data**
+- Only real universities are listed. There are **no research groups, departments or subject rankings**. An earlier version generated fictional research groups and universities; they have been removed.
+- ARWU ranks are **approximate**, recalled from roughly the 2023 edition and not re-verified. Positions beyond 100 are shown as bands. Check [shanghairanking.com](https://www.shanghairanking.com/) for real figures.
+- Every other university metric (stipend, visa ease, work-life balance, affordability, English, safety) is **copied from the host country's estimate**. Nothing describes the university itself. Hong Kong universities only use the rank, because there is no Hong Kong country entry.
+
+**In general**
+- The scoring model is a simple weighted average (see `docs/js/engine.js`). It isn't validated against anything.
+- Use this for inspiration and fun. For real decisions, use official government visa portals, travel advisories and the institutions themselves.
+
+## Project structure
 
 ```
-├── dev/              # Development environment (Python + SQLite)
-│   ├── data/         # Academic domains JSON schema
-│   ├── js/           # Frontend controller scripts (making backend fetch requests)
-│   ├── app.py        # Development Python server (Port 3000)
-│   ├── init_db.py    # Database seeder (creates country_compat.db)
-│   ├── db_sqlite.py  # SQLite Data Access Object for expat data
-│   ├── engine.py     # Python matching engine for expat data
-│   ├── test.py       # Expat engine test runner
-│   ├── init_db_academic.py # Academic database seeder (creates academic.db)
-│   ├── db_sqlite_academic.py # Academic Data Access Object
-│   ├── engine_academic.py # Python matching engine for academic data
-│   └── test_academic.py # Academic test runner
-│
-├── docs/             # Production static environment (100% Serverless / GitHub Pages target)
-│   ├── data/         # Static JSON database exports
-│   ├── js/           # Client-side compiled JavaScript calculators
-│   ├── life.html     # Expat Compass UI
-│   ├── academic.html # Academic Compass UI
-│   └── style.css     # CSS Stylesheet
-│
-├── build_prod.py     # Build script to compile dev/ into docs/
-├── app_prod.py       # Production testing server (Port 3001)
-├── Makefile          # Utility tasks
-├── LICENSE           # Project License
-└── README.md         # This documentation
+docs/                    # the whole site (served by GitHub Pages from /docs)
+├── index.html           # Country Compass
+├── academic.html        # University Compass
+├── style.css
+├── js/
+│   ├── engine.js        # shared scoring + helpers
+│   ├── life.js          # country page
+│   └── academic.js      # university page
+└── data/
+    ├── countries.json   # source of truth: 20 curated countries, 100 template countries, templates
+    └── universities.json
+tests/test_data.py       # data integrity checks
 ```
 
----
+There is no build step and there are no dependencies. The JSON files *are* the data, so edit them directly.
 
-## 🚀 Getting Started
+## Running locally
 
-### 1. Set Up the Virtual Environment
-Create and activate a Python virtual environment to isolate python dependencies:
+The pages load JSON with `fetch`, so serve the folder over HTTP rather than opening the file directly:
+
 ```bash
-# Create the virtual environment
-python3 -m venv .venv
-
-# Activate the virtual environment
-source .venv/bin/activate
+python -m http.server 8000 -d docs
+# open http://localhost:8000/
 ```
 
----
+Run the data checks (Python 3.8+, standard library only):
 
-## 🛠️ Development Workflow (`dev/`)
-
-The development environment allows you to easily edit data schemas, database contents, and algorithms in Python.
-
-### 1. Seed Databases
-If you want to re-seed or rebuild the SQLite databases, run:
 ```bash
-cd dev
-python3 init_db.py           # Seeds 120 countries and 2400 cities
-python3 init_db_academic.py  # Seeds 200+ universities and 300+ research groups
+python -m unittest discover tests
 ```
 
-### 2. Run the Development Server
-Start the development server (runs calculations on the Python backend):
-```bash
-cd dev
-python3 app.py
-```
-This runs the development site at: **[http://localhost:3000/](http://localhost:3000/)**
+## Editing data
 
-### 3. Run Validation Tests
-Verify the database schema checks and engine calculation rules:
-```bash
-cd dev
-python3 test.py
-python3 test_academic.py
-```
+- **Improve a template country:** in `countries.json`, change its `"quality"` to `"curated"`, remove `"template"`, and add its own `summary`, `overview`, `visaInfo`, `pros`, `cons` and all 32 `metrics`. The tests check that nothing is missing.
+- **Metric direction:** most metrics are "higher is better". `visa_difficulty`, `english_barrier` and `bureaucracy_difficulty` store *difficulty* (higher is worse). The page inverts them for display. `cost_of_living`, `tax_burden`, `work_culture`, `pace_of_life`, `warm_weather`, `seasonal_variety` and `humidity_level` are compared against your slider target rather than maximised.
 
----
+## License
 
-## 📦 Production Static Build (`docs/`)
-
-To compile the Python + SQLite environment into a 100% client-side serverless build:
-
-### 1. Run the Build Script
-Run the automated builder from the root directory:
-```bash
-python3 build_prod.py
-```
-This script will:
-*   Export raw data from SQLite databases to static JSON files in `docs/data/`.
-*   Copy HTML and CSS files.
-*   Inject the compatibility engines (`engine.py` / `engine_academic.py`) directly into the production JavaScript files (`docs/js/app.js` and `docs/js/academic_app.js`) to run calculations in the browser.
-
-### 2. Test the Production Build Locally
-Run the production test server on Port 3001:
-```bash
-python3 app_prod.py
-```
-Open **[http://localhost:3001/](http://localhost:3001/)** to verify the static build. Every slider change and quiz choice will recalculate instantly in the browser.
-
-### 3. Deploy to the Internet
-To host it on the internet via **GitHub Pages**, simply commit and push the repository to GitHub. Go to your repository settings -> Pages, and choose to build/deploy from the `/docs` folder of the `main` branch. It will host the site completely for free.
+MIT, see [LICENSE](LICENSE).

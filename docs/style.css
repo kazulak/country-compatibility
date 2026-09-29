@@ -1455,3 +1455,76 @@ input[type=range]:disabled::-webkit-slider-thumb {
   font-weight: 400;
   padding: 4px 8px;
 }
+
+/* Data honesty: disclaimer banner, data-quality badges, notes */
+.disclaimer-banner {
+  border: 1px solid var(--accent-warning);
+  background: rgba(234, 179, 8, 0.08);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.disclaimer-banner strong {
+  color: var(--accent-warning);
+}
+
+.disclaimer-banner a {
+  color: var(--accent-warning);
+}
+
+.quality-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-focus);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.quality-badge.template {
+  border-color: var(--accent-warning);
+  color: var(--accent-warning);
+}
+
+.data-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  border-left: 2px solid var(--accent-warning);
+  padding: 6px 10px;
+  margin: 8px 0;
+}
+
+.template-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.template-toggle input {
+  margin-top: 2px;
+}
+
+.metric-source {
+  font-size: 10px;
+  color: var(--text-dark);
+}
+
+.detail-links {
+  margin: 12px 0;
+}
+
+.detail-links a {
+  color: var(--accent-blue);
+}

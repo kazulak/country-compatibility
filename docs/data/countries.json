@@ -1,0 +1,4016 @@
+{
+  "meta": {
+    "description": "Hand-made, subjective 0-10 scores for a fun side project. Not measured data.",
+    "curated": "Scores and text written by hand for this project (approx. 2025). Visa details may be outdated.",
+    "template": "No individual research. Scores and text are copied from a generic regional template and are identical for every country using that template.",
+    "facts": "Capital, currency and languages are real reference facts (checked 2026); city lists are a few major cities."
+  },
+  "templates": {
+    "temperate_europe": {
+      "label": "Temperate Europe",
+      "summary": "A stable nation with rich cultural history, balanced weather, and strong social structures.",
+      "overview": "Offers a highly functional lifestyle with distinct seasons. Cost of living is moderate-high, but public services, transit, and security are highly developed.",
+      "visaInfo": "Residency pathways are highly structured, usually requiring skilled labor sponsorship, education tracks, or regional citizenship.",
+      "pros": [
+        "Excellent public transportation options.",
+        "Rich cultural history and architecture.",
+        "Strong labor rights and work-life balance.",
+        "High public safety and security."
+      ],
+      "cons": [
+        "High personal income taxes.",
+        "Reserved social customs make integration slow.",
+        "Language barrier in smaller towns.",
+        "Relatively high cost of rental housing."
+      ],
+      "metrics": {
+        "warm_weather": 4,
+        "seasonal_variety": 8,
+        "nature_mountains": 5,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 3,
+        "nature_forests_greenery": 7,
+        "cost_of_living": 7,
+        "housing_affordability": 4,
+        "tax_burden": 8,
+        "visa_difficulty": 6,
+        "pace_of_life": 5,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 8,
+        "english_barrier": 3,
+        "walkability_transit": 8,
+        "internet_speed": 7,
+        "work_culture": 4,
+        "humidity_level": 5,
+        "air_quality": 8,
+        "sunshine_hours": 5,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 6,
+        "foreigner_friendliness": 7,
+        "road_quality": 8,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 6,
+        "academic_satisfaction": 7,
+        "happiness_index": 7,
+        "ease_of_doing_business": 7,
+        "childcare_quality": 7
+      }
+    },
+    "cold_europe": {
+      "label": "Northern Europe",
+      "summary": "A stable Northern nation known for pristine nature, high social trust, and progressive welfare models.",
+      "overview": "Ideal for outdoor lovers who value silence, social trust, and high infrastructure quality. Living costs are high, and winters are long and dark.",
+      "visaInfo": "Structured residency tracks for specialists, students, and entrepreneurs. Path to permanent residency usually takes 4-5 years.",
+      "pros": [
+        "Extremely high social safety net and safety.",
+        "Flawless infrastructure and public services.",
+        "Pristine nature and forest access.",
+        "Very high English proficiency."
+      ],
+      "cons": [
+        "Long, dark, and freezing winters.",
+        "Very high cost of living and high taxation.",
+        "Reserved social environment.",
+        "High cost of services and dining."
+      ],
+      "metrics": {
+        "warm_weather": 2,
+        "seasonal_variety": 9,
+        "nature_mountains": 5,
+        "nature_lakes_rivers": 8,
+        "nature_sea_beaches": 4,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 8,
+        "housing_affordability": 4,
+        "tax_burden": 9,
+        "visa_difficulty": 6,
+        "pace_of_life": 4,
+        "social_tolerance": 9,
+        "safety": 9,
+        "healthcare_quality": 9,
+        "english_barrier": 2,
+        "walkability_transit": 8,
+        "internet_speed": 8,
+        "work_culture": 3,
+        "humidity_level": 4,
+        "air_quality": 9,
+        "sunshine_hours": 4,
+        "childcare_education_cost": 8,
+        "dining_food_cost": 3,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 7,
+        "road_quality": 9,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 7,
+        "academic_satisfaction": 8,
+        "happiness_index": 9,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 9
+      }
+    },
+    "eurasia_steppe_mountain": {
+      "label": "Steppe & Mountain",
+      "summary": "A vast land of dramatic steppes, high mountain ranges, and rich nomadic heritage.",
+      "overview": "Ideal for adventurous expats seeking a low cost of living, spectacular landscapes, and rugged nature. Public infrastructure varies, and winters are continental (very cold and windy).",
+      "visaInfo": "Visa procedures vary by nationality; many offer visa-free entry for tourism but require registration or local contracts for residency.",
+      "pros": [
+        "Spectacular, untouched nature (steppes, canyons, and peaks).",
+        "Very low cost of living and cheap daily expenses.",
+        "Warm hospitality and deep cultural traditions.",
+        "Low tax rates for personal and business income."
+      ],
+      "cons": [
+        "High language barrier (Russian or local languages are essential).",
+        "Cold, dry, and extremely windy continental winters.",
+        "Varying road quality and slower public administration.",
+        "Lower rankings for public healthcare and digital services."
+      ],
+      "metrics": {
+        "warm_weather": 3,
+        "seasonal_variety": 9,
+        "nature_mountains": 9,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 1,
+        "nature_forests_greenery": 4,
+        "cost_of_living": 3,
+        "housing_affordability": 7,
+        "tax_burden": 3,
+        "visa_difficulty": 6,
+        "pace_of_life": 4,
+        "social_tolerance": 5,
+        "safety": 7,
+        "healthcare_quality": 4,
+        "english_barrier": 8,
+        "walkability_transit": 5,
+        "internet_speed": 6,
+        "work_culture": 5,
+        "humidity_level": 3,
+        "air_quality": 6,
+        "sunshine_hours": 7,
+        "childcare_education_cost": 3,
+        "dining_food_cost": 3,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 8,
+        "road_quality": 4,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 4,
+        "academic_satisfaction": 5,
+        "happiness_index": 5,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 5
+      }
+    },
+    "warm_europe": {
+      "label": "Mediterranean",
+      "summary": "A Mediterranean-climate region offering rich culinary arts, beaches, and a relaxed lifestyle.",
+      "overview": "Highly popular for its slower pace of life, sunny weather, and coastal living. Rents are moderate, though local career opportunities are limited.",
+      "visaInfo": "Residency pathways are expat-friendly, featuring passive income tracks (like Golden Visas or non-lucrative tracks) and digital nomad options.",
+      "pros": [
+        "Warm, sunny climate and gorgeous coastlines.",
+        "Delicious and fresh Mediterranean diet.",
+        "Warm and communicative local culture.",
+        "Relaxed pace of life prioritizing leisure."
+      ],
+      "cons": [
+        "Slow, document-heavy public administration.",
+        "Lower average salaries and local job prospects.",
+        "High youth unemployment.",
+        "English is less spoken in administrative offices."
+      ],
+      "metrics": {
+        "warm_weather": 7,
+        "seasonal_variety": 6,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 5,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 5,
+        "cost_of_living": 6,
+        "housing_affordability": 5,
+        "tax_burden": 7,
+        "visa_difficulty": 4,
+        "pace_of_life": 3,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 8,
+        "english_barrier": 5,
+        "walkability_transit": 7,
+        "internet_speed": 8,
+        "work_culture": 4,
+        "humidity_level": 5,
+        "air_quality": 8,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 6,
+        "bureaucracy_difficulty": 8,
+        "foreigner_friendliness": 9,
+        "road_quality": 7,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 5,
+        "academic_satisfaction": 6,
+        "happiness_index": 7,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 7
+      }
+    },
+    "warm_island": {
+      "label": "Warm Island",
+      "summary": "An island nation offering beautiful beaches, tax efficiency, and an active international community.",
+      "overview": "Popular for digital nomads and business owners due to tax structures, sea views, and warm weather. Daily costs are moderate-high because of island import rates.",
+      "visaInfo": "Offers attractive residency schemes, including digital nomad visas, permanent residence through investment, and self-employment tracks.",
+      "pros": [
+        "Sunny climate and immediate beach accessibility.",
+        "Tax incentives for foreigners and digital nomads.",
+        "High English proficiency.",
+        "Relaxed island culture."
+      ],
+      "cons": [
+        "High cost of utilities and imported goods.",
+        "Limited public transit outside main towns.",
+        "Very hot and crowded during summer tourism seasons.",
+        "Limited local job market."
+      ],
+      "metrics": {
+        "warm_weather": 8,
+        "seasonal_variety": 4,
+        "nature_mountains": 3,
+        "nature_lakes_rivers": 2,
+        "nature_sea_beaches": 10,
+        "nature_forests_greenery": 4,
+        "cost_of_living": 7,
+        "housing_affordability": 4,
+        "tax_burden": 4,
+        "visa_difficulty": 3,
+        "pace_of_life": 3,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 7,
+        "english_barrier": 1,
+        "walkability_transit": 5,
+        "internet_speed": 8,
+        "work_culture": 4,
+        "humidity_level": 5,
+        "air_quality": 8,
+        "sunshine_hours": 9,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 5,
+        "bureaucracy_difficulty": 6,
+        "foreigner_friendliness": 9,
+        "road_quality": 8,
+        "local_job_market": 5,
+        "phd_stipend_ppp": 4,
+        "academic_satisfaction": 5,
+        "happiness_index": 7,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 6
+      }
+    },
+    "asia_tropical": {
+      "label": "Tropical Asia",
+      "summary": "A budget-friendly paradise known for tropical warmth, beaches, and rich culture.",
+      "overview": "Draws large numbers of remote workers and retirees. Cost of living is exceptionally low, food is excellent, and people are warm. Heavy traffic and hot seasons are standard.",
+      "visaInfo": "Offers digital nomad visas, retirement visas, or multiple-entry tourist visas, though paths to permanent residency/citizenship are very restricted.",
+      "pros": [
+        "Very low cost of living and affordable housing.",
+        "Extremely friendly locals and expat networks.",
+        "Tropical warmth and stunning beach destinations.",
+        "Incredibly cheap and delicious local food."
+      ],
+      "cons": [
+        "Air pollution and traffic congestion in metropolitan areas.",
+        "Humid, intense tropical heat and monsoons.",
+        "Slow and complex immigration bureaucracy.",
+        "Basic public healthcare outside capital cities."
+      ],
+      "metrics": {
+        "warm_weather": 9,
+        "seasonal_variety": 1,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 5,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 8,
+        "cost_of_living": 2,
+        "housing_affordability": 8,
+        "tax_burden": 3,
+        "visa_difficulty": 4,
+        "pace_of_life": 4,
+        "social_tolerance": 7,
+        "safety": 7,
+        "healthcare_quality": 6,
+        "english_barrier": 5,
+        "walkability_transit": 4,
+        "internet_speed": 8,
+        "work_culture": 5,
+        "humidity_level": 9,
+        "air_quality": 5,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 5,
+        "dining_food_cost": 9,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 9,
+        "road_quality": 6,
+        "local_job_market": 5,
+        "phd_stipend_ppp": 3,
+        "academic_satisfaction": 5,
+        "happiness_index": 6,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 5
+      }
+    },
+    "latam_tropical": {
+      "label": "Tropical (Latin America)",
+      "summary": "A warm region offering massive biodiversity, cultural warmth, and affordable living.",
+      "overview": "Appeals to those seeking slow-paced, nature-centric living. Cost of living is low-medium, and climates range from rainforest warmth to cooler mountain towns.",
+      "visaInfo": "Residency processes are accessible, offering pathways based on savings, property purchase, or digital nomad income.",
+      "pros": [
+        "Stunning biodiversity, rainforests, and coastlines.",
+        "Warm, expressive, and welcoming society.",
+        "Very affordable housing and daily costs.",
+        "Relaxed pace of life focusing on family and nature."
+      ],
+      "cons": [
+        "Varying safety conditions with some high-crime urban areas.",
+        "Potholed roads and slow transit outside capitals.",
+        "Heavy red tape and bureaucracy.",
+        "Local language is highly necessary for daily tasks."
+      ],
+      "metrics": {
+        "warm_weather": 9,
+        "seasonal_variety": 2,
+        "nature_mountains": 7,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 8,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 4,
+        "housing_affordability": 7,
+        "tax_burden": 4,
+        "visa_difficulty": 3,
+        "pace_of_life": 3,
+        "social_tolerance": 7,
+        "safety": 5,
+        "healthcare_quality": 7,
+        "english_barrier": 5,
+        "walkability_transit": 4,
+        "internet_speed": 7,
+        "work_culture": 4,
+        "humidity_level": 8,
+        "air_quality": 8,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 7,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 9,
+        "road_quality": 5,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 3,
+        "academic_satisfaction": 5,
+        "happiness_index": 7,
+        "ease_of_doing_business": 5,
+        "childcare_quality": 6
+      }
+    },
+    "desert_gulf": {
+      "label": "Gulf / Desert",
+      "summary": "An ultra-modern, tax-free desert hub boasting exceptional safety, high wages, and luxury infrastructure.",
+      "overview": "Very appealing to high-earning professionals and entrepreneurs. Features tax-free income, futuristic cities, and near-zero crime. Extremely hot summers are the main drawback.",
+      "visaInfo": "Offers Golden Visas for investors/talents and green visas for freelancers. Long-term citizenship is virtually impossible to obtain.",
+      "pros": [
+        "Zero personal income tax.",
+        "Remarkably high safety and public order.",
+        "Modern luxury infrastructure and global transit.",
+        "Highly English-friendly business environment."
+      ],
+      "cons": [
+        "Extreme summer heat waves (exceeding 45°C).",
+        "Very high cost of rents and high-end lifestyles.",
+        "Car-centric city design outside master-planned communities.",
+        "Strict local laws and social regulations."
+      ],
+      "metrics": {
+        "warm_weather": 10,
+        "seasonal_variety": 1,
+        "nature_mountains": 2,
+        "nature_lakes_rivers": 1,
+        "nature_sea_beaches": 6,
+        "nature_forests_greenery": 2,
+        "cost_of_living": 8,
+        "housing_affordability": 3,
+        "tax_burden": 1,
+        "visa_difficulty": 5,
+        "pace_of_life": 8,
+        "social_tolerance": 6,
+        "safety": 10,
+        "healthcare_quality": 8,
+        "english_barrier": 0,
+        "walkability_transit": 5,
+        "internet_speed": 9,
+        "work_culture": 8,
+        "humidity_level": 7,
+        "air_quality": 5,
+        "sunshine_hours": 10,
+        "childcare_education_cost": 4,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 4,
+        "foreigner_friendliness": 8,
+        "road_quality": 10,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 5,
+        "academic_satisfaction": 6,
+        "happiness_index": 6,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 6
+      }
+    }
+  },
+  "countries": [
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "quality": "curated",
+      "facts": {
+        "capital": "Lisbon",
+        "currency": "Euro (EUR)",
+        "languages": "Portuguese"
+      },
+      "cities": [
+        "Lisbon",
+        "Porto",
+        "Algarve",
+        "Braga",
+        "Coimbra",
+        "Aveiro",
+        "Faro",
+        "Funchal"
+      ],
+      "summary": "A sun-drenched Southern European nation popular for its relaxed pace of life, friendly locals, safety, and excellent coastline.",
+      "overview": "Portugal offers an exceptionally high quality of life, featuring mild winters, hot summers, and a welcoming society. The cost of living remains moderate compared to Northern Europe, although housing in major cities has become expensive in recent years.",
+      "visaInfo": "Portugal offers D8 Digital Nomad and D7 passive income visas, with an active path to citizenship after 5 years.",
+      "pros": [
+        "Incredibly high safety ranking and low crime rate.",
+        "Beautiful coastlines with world-class surfing.",
+        "Warm local culture and high English proficiency.",
+        "Very active expat and digital nomad communities."
+      ],
+      "cons": [
+        "Slow, paper-reliant government bureaucracy.",
+        "Low local salaries.",
+        "Rents and property prices have skyrocketed in Lisbon/Porto.",
+        "Older apartments lack proper central heating."
+      ],
+      "metrics": {
+        "warm_weather": 8,
+        "seasonal_variety": 4,
+        "nature_mountains": 4,
+        "nature_lakes_rivers": 5,
+        "nature_sea_beaches": 10,
+        "nature_forests_greenery": 5,
+        "cost_of_living": 5,
+        "housing_affordability": 4,
+        "tax_burden": 6,
+        "visa_difficulty": 3,
+        "pace_of_life": 3,
+        "social_tolerance": 8,
+        "safety": 9,
+        "healthcare_quality": 7,
+        "english_barrier": 3,
+        "walkability_transit": 7,
+        "internet_speed": 8,
+        "work_culture": 3,
+        "humidity_level": 4,
+        "air_quality": 8,
+        "sunshine_hours": 9,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 6,
+        "bureaucracy_difficulty": 8,
+        "foreigner_friendliness": 9,
+        "road_quality": 8,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 4,
+        "academic_satisfaction": 6,
+        "happiness_index": 6,
+        "ease_of_doing_business": 5,
+        "childcare_quality": 6
+      },
+      "personas": {
+        "phd": {
+          "summary": "Quiet European research environment with historic centers but modest stipend purchasing power.",
+          "overview": "For academic seekers, Portugal has historic institutions like Coimbra and Porto. However, university research budgets are limited, and national stipends typically average around €1,200/month, making it difficult to afford city rents.",
+          "pros": [
+            "Coimbra and Lisbon boast rich scholarly legacies.",
+            "Affordable cost of living outside major cities.",
+            "High safety index and excellent work-life balance."
+          ],
+          "cons": [
+            "Low doctoral salaries and research grants.",
+            "Bureaucratic and slow grant approvals."
+          ]
+        },
+        "family": {
+          "summary": "An exceptionally safe, sun-drenched coastal country with child-friendly communities.",
+          "overview": "Families will love Portugal's high public safety, warm local culture, and extensive beach activities. Public schools are decent, though private international schools in Lisbon/Algarve are highly sought after.",
+          "pros": [
+            "Extremely high safety ranking for families.",
+            "Highly welcoming and child-oriented social culture.",
+            "Subsidized public healthcare system."
+          ],
+          "cons": [
+            "Winter heating is virtually absent in traditional flats.",
+            "High housing rents in Lisbon and Porto."
+          ]
+        },
+        "entrepreneur": {
+          "summary": "A growing startup landscape with tech hubs in Lisbon, but complex bureaucracy.",
+          "overview": "While Web Summit makes Lisbon a prominent startup center, business owners must navigate complex taxation, rigid labor laws, and slow judicial contract enforcement.",
+          "pros": [
+            "Active startup culture and local incubation programs.",
+            "Relatively low developer wages.",
+            "Attractive nomad/business visas."
+          ],
+          "cons": [
+            "High corporate tax burden and confusing regulations.",
+            "Slow legal and administrative processes."
+          ]
+        },
+        "nomad": {
+          "summary": "A premier global hotspot for remote workers, boasting fast internet and coastal scenery.",
+          "overview": "Portugal offers an active digital nomad scene in Lisbon, Porto, and Madeira, supported by D8 nomad visas and collaborative workspaces.",
+          "pros": [
+            "Vast, welcoming English-speaking nomad communities.",
+            "World-class surfing and outdoor lifestyle.",
+            "D8 digital nomad visa is highly accessible."
+          ],
+          "cons": [
+            "Skyrocketing rents in Lisbon/Porto.",
+            "Slow immigration authority (AIMA) processing times."
+          ]
+        }
+      }
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "quality": "curated",
+      "facts": {
+        "capital": "Madrid",
+        "currency": "Euro (EUR)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Madrid",
+        "Barcelona",
+        "Valencia",
+        "Seville",
+        "Zaragoza",
+        "Malaga",
+        "Murcia",
+        "Palma de Mallorca"
+      ],
+      "summary": "A vibrant cultural powerhouse offering a balanced lifestyle, high-quality public healthcare, diverse landscapes, and delicious food.",
+      "overview": "Spain prioritizes work-life balance and social connections. From the green hills of Basque Country to the sunny shores of Andalusia, it offers a highly diverse climate and geography. Spain's infrastructure is top-notch, though regional differences are pronounced.",
+      "visaInfo": "Spain offers a Digital Nomad Visa (requires ~2,640 EUR/mo income and Beckham Law tax incentives) and a Non-Lucrative Visa for retirees.",
+      "pros": [
+        "Strong focus on work-life balance and social life.",
+        "World-class public and private healthcare.",
+        "Superb high-speed rail network.",
+        "Diverse microclimates."
+      ],
+      "cons": [
+        "High unemployment rates and low local wages.",
+        "Complex tax structure.",
+        "Bureaucracy is slow and requires local Spanish.",
+        "Intense summer heat in interior regions."
+      ],
+      "metrics": {
+        "warm_weather": 8,
+        "seasonal_variety": 6,
+        "nature_mountains": 7,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 6,
+        "cost_of_living": 6,
+        "housing_affordability": 5,
+        "tax_burden": 7,
+        "visa_difficulty": 4,
+        "pace_of_life": 4,
+        "social_tolerance": 9,
+        "safety": 8,
+        "healthcare_quality": 9,
+        "english_barrier": 5,
+        "walkability_transit": 8,
+        "internet_speed": 9,
+        "work_culture": 3,
+        "humidity_level": 5,
+        "air_quality": 8,
+        "sunshine_hours": 9,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 6,
+        "bureaucracy_difficulty": 8,
+        "foreigner_friendliness": 9,
+        "road_quality": 9,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 5,
+        "academic_satisfaction": 6,
+        "happiness_index": 7,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 7
+      }
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "quality": "curated",
+      "facts": {
+        "capital": "Berlin",
+        "currency": "Euro (EUR)",
+        "languages": "German"
+      },
+      "cities": [
+        "Berlin",
+        "Munich",
+        "Hamburg",
+        "Frankfurt",
+        "Cologne",
+        "Stuttgart",
+        "Dusseldorf",
+        "Dortmund"
+      ],
+      "summary": "A highly organized and stable European economic hub with excellent worker rights, pristine forests, and efficient public transport.",
+      "overview": "Germany is ideal for professionals seeking structural stability, strong labor protections, and a central location in Europe. The country features distinct seasonal shifts, beautiful forested hills, and vibrant cities. Society runs on rules, order, and respect for personal time.",
+      "visaInfo": "Germany does not have a simple passive income visa, but offers a Freelancer Visa ('Freiberufler'), Job Seeker Visas, and a highly streamlined EU Blue Card route for skilled professionals.",
+      "pros": [
+        "Exceptional worker rights, paid leave, and job security.",
+        "Extremely reliable train and public transit networks.",
+        "Strong focus on environmental sustainability.",
+        "Zero tuition fees at public universities."
+      ],
+      "cons": [
+        "High progressive income tax rates (up to 42%+).",
+        "Rigid social rules and difficulty in making close local friends.",
+        "Slow digital bureaucracy.",
+        "Winters are long, overcast, and grey."
+      ],
+      "metrics": {
+        "warm_weather": 4,
+        "seasonal_variety": 8,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 7,
+        "nature_sea_beaches": 3,
+        "nature_forests_greenery": 8,
+        "cost_of_living": 7,
+        "housing_affordability": 3,
+        "tax_burden": 9,
+        "visa_difficulty": 5,
+        "pace_of_life": 6,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 9,
+        "english_barrier": 4,
+        "walkability_transit": 9,
+        "internet_speed": 6,
+        "work_culture": 4,
+        "humidity_level": 4,
+        "air_quality": 8,
+        "sunshine_hours": 5,
+        "childcare_education_cost": 8,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 6,
+        "road_quality": 9,
+        "local_job_market": 8,
+        "phd_stipend_ppp": 7,
+        "academic_satisfaction": 7,
+        "happiness_index": 8,
+        "ease_of_doing_business": 7,
+        "childcare_quality": 8
+      },
+      "personas": {
+        "phd": {
+          "summary": "A premier European research powerhouse offering fully funded TV-L contracts.",
+          "overview": "Germany is highly attractive for PhD candidates, offering structured contracts (TV-L 13, 50% to 100%) with full social security benefits, state-of-the-art labs, and zero tuition fees.",
+          "pros": [
+            "TV-L university employment contracts include health insurance and pension.",
+            "Excellent funding for scientific infrastructure.",
+            "No tuition fees at public universities."
+          ],
+          "cons": [
+            "Highly hierarchical university structure.",
+            "Heavy administrative requirements outside the lab."
+          ]
+        },
+        "family": {
+          "summary": "Highly structured, child-friendly society with subsidized childcare (Kitas) and parks.",
+          "overview": "Germany offers exceptional family welfare (Kindergeld), highly subsidized daycare (Kitas), and safe, walk-friendly neighborhoods with plentiful green spaces.",
+          "pros": [
+            "Substantial monthly child allowance (Kindergeld).",
+            "Excellent, safe public parks and playgrounds.",
+            "Highly subsidized early education (Kitas)."
+          ],
+          "cons": [
+            "Extremely high progressive tax rates.",
+            "Long waiting lists for Kitaplatz daycare slots."
+          ]
+        },
+        "entrepreneur": {
+          "summary": "A stable, massive economic market but bogged down by paper-heavy bureaucracy.",
+          "overview": "While Berlin is a leading tech capital and Germany is a massive consumer market, starting a company (e.g. GmbH) requires strict notary processes and heavy compliance.",
+          "pros": [
+            "Access to Europe's largest customer market.",
+            "Strong VC funding networks in Berlin and Munich.",
+            "High-quality engineering talent pool."
+          ],
+          "cons": [
+            "Strict regulatory compliance and slow paperwork.",
+            "High progressive corporate and trade taxes."
+          ]
+        },
+        "nomad": {
+          "summary": "Great cultural hubs but limited digital nomad infrastructure and high tax risks.",
+          "overview": "While Berlin offers a creative atmosphere, Germany's strict tax residence rules and lack of a direct digital nomad visa make it less ideal for transient nomads.",
+          "pros": [
+            "Vibrant cultural and creative hubs in Berlin/Cologne.",
+            "Highly central location for exploring Europe.",
+            "Excellent train networks."
+          ],
+          "cons": [
+            "No official short-term digital nomad visa.",
+            "Strict tax laws regarding permanent establishments."
+          ]
+        }
+      }
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "quality": "curated",
+      "facts": {
+        "capital": "Tokyo",
+        "currency": "Japanese Yen (JPY)",
+        "languages": "Japanese"
+      },
+      "cities": [
+        "Tokyo",
+        "Osaka",
+        "Kyoto",
+        "Yokohama",
+        "Nagoya",
+        "Sapporo",
+        "Kobe",
+        "Fukuoka"
+      ],
+      "summary": "A fascinating blend of ancient traditions and futuristic cities, boasting unparalleled safety, cleanliness, and public transit.",
+      "overview": "Japan offers an exceptionally unique lifestyle characterized by deep cultural respect, immaculate streets, and delicious cuisine. While the cities are bustling and high-tech, the countryside offers peaceful mountains, hot springs, and cheap abandoned homes (akiya). Language and work culture barriers remain high.",
+      "visaInfo": "Japan recently introduced a 6-month Digital Nomad Visa (requires ¥10M/yr income, non-renewable). Stays usually require local employment, business investment, or marriage.",
+      "pros": [
+        "Arguably the safest country in the world.",
+        "Public transport is legendary for its punctuality and speed.",
+        "Exceptional food quality at every price point.",
+        "Stunning nature, volcanic hot springs, and ski slopes."
+      ],
+      "cons": [
+        "High language barrier; Japanese is essential for daily life.",
+        "Traditional corporate culture is notorious for long hours.",
+        "Foreigners face high initial apartment fees.",
+        "Prone to earthquakes and typhoons."
+      ],
+      "metrics": {
+        "warm_weather": 5,
+        "seasonal_variety": 9,
+        "nature_mountains": 9,
+        "nature_lakes_rivers": 7,
+        "nature_sea_beaches": 6,
+        "nature_forests_greenery": 8,
+        "cost_of_living": 6,
+        "housing_affordability": 5,
+        "tax_burden": 7,
+        "visa_difficulty": 8,
+        "pace_of_life": 8,
+        "social_tolerance": 6,
+        "safety": 10,
+        "healthcare_quality": 9,
+        "english_barrier": 8,
+        "walkability_transit": 10,
+        "internet_speed": 9,
+        "work_culture": 9,
+        "humidity_level": 6,
+        "air_quality": 8,
+        "sunshine_hours": 6,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 5,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 6,
+        "road_quality": 10,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 4,
+        "academic_satisfaction": 5,
+        "happiness_index": 6,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 6
+      }
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "quality": "curated",
+      "facts": {
+        "capital": "Ottawa",
+        "currency": "Canadian Dollar (CAD)",
+        "languages": "English, French"
+      },
+      "cities": [
+        "Toronto",
+        "Vancouver",
+        "Montreal",
+        "Calgary",
+        "Edmonton",
+        "Ottawa",
+        "Winnipeg",
+        "Quebec City"
+      ],
+      "summary": "A vast, progressive nation offering breathtaking alpine scenery, welcoming communities, and high safety, albeit with high living costs.",
+      "overview": "Canada is famous for its friendly people, massive wilderness, and multicultural cities. It is highly appealing for families and professionals seeking an open, safe, and progressive environment. However, severe winters and an ongoing housing crisis in major cities present real challenges.",
+      "visaInfo": "Canada operates the Express Entry system for skilled workers, prioritizing youth, education, and language skills. Tourists can work remotely for up to 6 months.",
+      "pros": [
+        "Incredible natural beauty, pristine lakes, and parks.",
+        "Highly multicultural and friendly social fabric.",
+        "Strong safety record.",
+        "Universal public healthcare system."
+      ],
+      "cons": [
+        "Extremely cold, harsh, and long winters.",
+        "Severe housing affordability crisis in Vancouver/Toronto.",
+        "High cost of goods and internal travel.",
+        "Lower salaries than the US."
+      ],
+      "metrics": {
+        "warm_weather": 2,
+        "seasonal_variety": 9,
+        "nature_mountains": 8,
+        "nature_lakes_rivers": 9,
+        "nature_sea_beaches": 5,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 8,
+        "housing_affordability": 2,
+        "tax_burden": 7,
+        "visa_difficulty": 5,
+        "pace_of_life": 5,
+        "social_tolerance": 9,
+        "safety": 8,
+        "healthcare_quality": 7,
+        "english_barrier": 0,
+        "walkability_transit": 6,
+        "internet_speed": 8,
+        "work_culture": 5,
+        "humidity_level": 3,
+        "air_quality": 9,
+        "sunshine_hours": 6,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 9,
+        "road_quality": 8,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 6,
+        "academic_satisfaction": 7,
+        "happiness_index": 8,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 7
+      }
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "quality": "curated",
+      "facts": {
+        "capital": "Canberra",
+        "currency": "Australian Dollar (AUD)",
+        "languages": "English"
+      },
+      "cities": [
+        "Sydney",
+        "Melbourne",
+        "Brisbane",
+        "Perth",
+        "Adelaide",
+        "Gold Coast",
+        "Canberra",
+        "Newcastle"
+      ],
+      "summary": "An outdoor lover's paradise with sunny weather, famous beaches, high wages, and a laid-back coastal lifestyle.",
+      "overview": "Australia offers a high-earning, active lifestyle centered around the ocean and nature. Its cities are consistently ranked among the world's most livable. The distance from the rest of the world and a high cost of living are the main tradeoffs.",
+      "visaInfo": "Australia has a strict visa regime. Options include the Working Holiday Visa (under 30/35s), Employer Nomination, and points-based Skilled Independent Visas.",
+      "pros": [
+        "Phenomenal weather, beaches, and outdoor lifestyle.",
+        "Very high minimum wage and strong local purchasing power.",
+        "Clean cities, low pollution, and solid healthcare.",
+        "English speaking makes integration seamless."
+      ],
+      "cons": [
+        "Geographically isolated; expensive international flights.",
+        "Housing is extremely expensive in Sydney/Melbourne.",
+        "High exposure to UV rays and extreme summer heat.",
+        "High cost of daily items, dining, and alcohol."
+      ],
+      "metrics": {
+        "warm_weather": 8,
+        "seasonal_variety": 5,
+        "nature_mountains": 5,
+        "nature_lakes_rivers": 4,
+        "nature_sea_beaches": 10,
+        "nature_forests_greenery": 6,
+        "cost_of_living": 8,
+        "housing_affordability": 2,
+        "tax_burden": 7,
+        "visa_difficulty": 7,
+        "pace_of_life": 4,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 9,
+        "english_barrier": 0,
+        "walkability_transit": 6,
+        "internet_speed": 6,
+        "work_culture": 4,
+        "humidity_level": 4,
+        "air_quality": 9,
+        "sunshine_hours": 9,
+        "childcare_education_cost": 5,
+        "dining_food_cost": 3,
+        "bureaucracy_difficulty": 6,
+        "foreigner_friendliness": 8,
+        "road_quality": 9,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 7,
+        "academic_satisfaction": 7,
+        "happiness_index": 8,
+        "ease_of_doing_business": 7,
+        "childcare_quality": 7
+      }
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "quality": "curated",
+      "facts": {
+        "capital": "Bangkok",
+        "currency": "Thai Baht (THB)",
+        "languages": "Thai"
+      },
+      "cities": [
+        "Bangkok",
+        "Chiang Mai",
+        "Phuket",
+        "Pattaya",
+        "Hua Hin",
+        "Surat Thani",
+        "Koh Samui",
+        "Chiang Rai"
+      ],
+      "summary": "A budget-friendly Southeast Asian gem known for its tropical warmth, rich culture, spectacular beaches, and exceptional food.",
+      "overview": "Thailand is a premier destination for digital nomads and retirees due to its incredibly low cost of living, friendly culture, and tropical climate. While cities like Bangkok are chaotic and polluted, they offer high-speed internet and modern amenities next to stunning historic sites.",
+      "visaInfo": "Thailand recently launched the Destination Thailand Visa (DTV) for remote workers, allowing 180-day stays (extendable) with a 5-year multi-entry validity.",
+      "pros": [
+        "Very low cost of living; luxury is highly affordable.",
+        "Superb and cheap local street food.",
+        "Warm, tropical climate year-round with beaches.",
+        "Renowned hospitality and friendliness."
+      ],
+      "cons": [
+        "High levels of air pollution (especially in Chiang Mai during burning season).",
+        "Chaotic traffic and low pedestrian walkability.",
+        "Tropical heat and humidity can be draining.",
+        "Public healthcare quality is variable."
+      ],
+      "metrics": {
+        "warm_weather": 10,
+        "seasonal_variety": 2,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 5,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 7,
+        "cost_of_living": 2,
+        "housing_affordability": 8,
+        "tax_burden": 3,
+        "visa_difficulty": 4,
+        "pace_of_life": 3,
+        "social_tolerance": 8,
+        "safety": 7,
+        "healthcare_quality": 8,
+        "english_barrier": 6,
+        "walkability_transit": 4,
+        "internet_speed": 8,
+        "work_culture": 4,
+        "humidity_level": 9,
+        "air_quality": 4,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 9,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 10,
+        "road_quality": 6,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 3,
+        "academic_satisfaction": 5,
+        "happiness_index": 6,
+        "ease_of_doing_business": 7,
+        "childcare_quality": 5
+      }
+    },
+    {
+      "id": "costa_rica",
+      "name": "Costa Rica",
+      "quality": "curated",
+      "facts": {
+        "capital": "San José",
+        "currency": "Costa Rican Colón (CRC)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "San Jose",
+        "Tamarindo",
+        "Jaco",
+        "Escazu",
+        "Alajuela",
+        "Cartago",
+        "Heredia",
+        "Puntarenas"
+      ],
+      "summary": "An eco-friendly Central American haven focused on biodiversity, 'Pura Vida' slow living, and tropical surf beaches.",
+      "overview": "Costa Rica is world-renowned for its conservation efforts, lush rainforests, and stable democracy. It offers a laid-back, nature-focused lifestyle that attracts surfers, yoga enthusiasts, and retirees. However, infrastructure can be rugged and import taxes make goods surprisingly expensive.",
+      "visaInfo": "Costa Rica offers a Rentista Visa (requires passive income) and a Digital Nomad Visa (requires $3,000/mo income) with tax exemption benefits.",
+      "pros": [
+        "Incredible biodiversity, rainforests, and two coastlines.",
+        "A peaceful, stable democracy with no active military.",
+        "Pura Vida lifestyle promotes happiness.",
+        "Excellent eco-tourism and sustainable living."
+      ],
+      "cons": [
+        "Pothole-heavy roads and slow transit between towns.",
+        "High cost of imported goods due to high duties.",
+        "Insects and humidity can be intense.",
+        "Slow-paced business and bureaucracy."
+      ],
+      "metrics": {
+        "warm_weather": 9,
+        "seasonal_variety": 2,
+        "nature_mountains": 7,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 5,
+        "housing_affordability": 6,
+        "tax_burden": 4,
+        "visa_difficulty": 3,
+        "pace_of_life": 2,
+        "social_tolerance": 8,
+        "safety": 7,
+        "healthcare_quality": 7,
+        "english_barrier": 4,
+        "walkability_transit": 3,
+        "internet_speed": 7,
+        "work_culture": 3,
+        "humidity_level": 8,
+        "air_quality": 9,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 7,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 9,
+        "road_quality": 5,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 3,
+        "academic_satisfaction": 5,
+        "happiness_index": 7,
+        "ease_of_doing_business": 5,
+        "childcare_quality": 6
+      }
+    },
+    {
+      "id": "finland",
+      "name": "Finland",
+      "quality": "curated",
+      "facts": {
+        "capital": "Helsinki",
+        "currency": "Euro (EUR)",
+        "languages": "Finnish, Swedish"
+      },
+      "cities": [
+        "Helsinki",
+        "Tampere",
+        "Turku",
+        "Oulu",
+        "Jyvaskyla",
+        "Lahti",
+        "Kuopio",
+        "Pori"
+      ],
+      "summary": "The world's happiest country, offering thick pine forests, thousands of lakes, high social trust, and top-tier public services.",
+      "overview": "Finland is the ultimate destination for those who value solitude, clean air, and pristine nature. It has high taxes but provides an unmatched social safety net, excellent education, and functional cities. The winters are dark and freezing, but the culture of sauna and summer cottages ('mökki') compensates.",
+      "visaInfo": "Finland offers residency for specialists, entrepreneurs, and students. Paths are highly structured, and permanent residency is accessible after 4 years.",
+      "pros": [
+        "Exceptional level of safety, low corruption, and social trust.",
+        "Unlimited access to nature through jokamiehenoikeus.",
+        "High-functioning public services.",
+        "Sauna culture is integrated into almost every home."
+      ],
+      "cons": [
+        "Dark, cold, and snowy winters with very few daylight hours.",
+        "Extremely high income and consumption taxes.",
+        "Finnish is one of the most difficult languages to learn.",
+        "Socially reserved culture; making friends takes time."
+      ],
+      "metrics": {
+        "warm_weather": 2,
+        "seasonal_variety": 9,
+        "nature_mountains": 2,
+        "nature_lakes_rivers": 10,
+        "nature_sea_beaches": 3,
+        "nature_forests_greenery": 10,
+        "cost_of_living": 7,
+        "housing_affordability": 5,
+        "tax_burden": 9,
+        "visa_difficulty": 5,
+        "pace_of_life": 4,
+        "social_tolerance": 9,
+        "safety": 10,
+        "healthcare_quality": 9,
+        "english_barrier": 2,
+        "walkability_transit": 8,
+        "internet_speed": 8,
+        "work_culture": 3,
+        "humidity_level": 4,
+        "air_quality": 10,
+        "sunshine_hours": 4,
+        "childcare_education_cost": 9,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 4,
+        "foreigner_friendliness": 7,
+        "road_quality": 9,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 8,
+        "academic_satisfaction": 9,
+        "happiness_index": 10,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 10
+      }
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "quality": "curated",
+      "facts": {
+        "capital": "Bern",
+        "currency": "Swiss Franc (CHF)",
+        "languages": "German, French, Italian, Romansh"
+      },
+      "cities": [
+        "Zurich",
+        "Geneva",
+        "Basel",
+        "Lausanne",
+        "Bern",
+        "Winterthur",
+        "Lucerne",
+        "St. Gallen"
+      ],
+      "summary": "An alpine paradise offering spectacular mountain peaks, extreme safety, clean cities, and premium salaries at a high cost.",
+      "overview": "Switzerland is a high-wealth, high-cleanliness country nestled in the heart of the Alps. It is ideal for individuals prioritizing safety, mountain sports, and financial stability. Almost everything runs with clockwork precision, but the social scene is notoriously private.",
+      "visaInfo": "Extremely restrictive requirements. Non-EU citizens must be highly skilled specialists with a local job offer, or be high-net-worth retirees negotiated on a lump-sum tax basis.",
+      "pros": [
+        "Stunning, pristine alpine scenery with unmatched hiking/skiing.",
+        "Extremely high salaries and low tax rates.",
+        "Flawless public transport system.",
+        "Safe, clean, and highly organized neighborhoods."
+      ],
+      "cons": [
+        "Astronomically high cost of living.",
+        "Very difficult for non-EU/EFTA citizens to obtain a work visa.",
+        "Strict rules and quiet hours.",
+        "Reserved social culture makes integration difficult."
+      ],
+      "metrics": {
+        "warm_weather": 3,
+        "seasonal_variety": 8,
+        "nature_mountains": 10,
+        "nature_lakes_rivers": 9,
+        "nature_sea_beaches": 0,
+        "nature_forests_greenery": 8,
+        "cost_of_living": 10,
+        "housing_affordability": 2,
+        "tax_burden": 4,
+        "visa_difficulty": 9,
+        "pace_of_life": 6,
+        "social_tolerance": 7,
+        "safety": 10,
+        "healthcare_quality": 9,
+        "english_barrier": 4,
+        "walkability_transit": 10,
+        "internet_speed": 9,
+        "work_culture": 6,
+        "humidity_level": 4,
+        "air_quality": 9,
+        "sunshine_hours": 6,
+        "childcare_education_cost": 4,
+        "dining_food_cost": 2,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 5,
+        "road_quality": 10,
+        "local_job_market": 8,
+        "phd_stipend_ppp": 10,
+        "academic_satisfaction": 8,
+        "happiness_index": 9,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 7
+      }
+    },
+    {
+      "id": "united_states",
+      "name": "United States",
+      "quality": "curated",
+      "facts": {
+        "capital": "Washington, D.C.",
+        "currency": "US Dollar (USD)",
+        "languages": "English"
+      },
+      "cities": [
+        "New York City",
+        "Los Angeles",
+        "Chicago",
+        "Houston",
+        "Phoenix",
+        "Philadelphia",
+        "San Antonio",
+        "San Diego"
+      ],
+      "summary": "A vast, highly diverse nation offering high professional wages, varied climates, and a car-centric consumer culture.",
+      "overview": "The United States is characterized by its economic dynamism, cultural influence, and geographical scale. From the deserts of Arizona to the forests of Oregon and cities of New York, lifestyles vary wildly. It offers the world's highest earning potential for skilled professionals, balanced by expensive healthcare.",
+      "visaInfo": "Very competitive and difficult visa system. Paths include H-1B, L-1, O-1, or investment (EB-5). No digital nomad visa.",
+      "pros": [
+        "Unmatched variety of climates, landscapes, and cities.",
+        "Very high salaries and strong entrepreneurial spirit.",
+        "Spacious homes and cheaper fuel/cars.",
+        "English speaking makes business and integration straightforward."
+      ],
+      "cons": [
+        "Highly car-dependent; poor public transit outside major cities.",
+        "Expensive, complex healthcare system tied to employment.",
+        "Significant political polarization.",
+        "Very limited statutory vacation days."
+      ],
+      "metrics": {
+        "warm_weather": 6,
+        "seasonal_variety": 7,
+        "nature_mountains": 8,
+        "nature_lakes_rivers": 8,
+        "nature_sea_beaches": 8,
+        "nature_forests_greenery": 8,
+        "cost_of_living": 8,
+        "housing_affordability": 4,
+        "tax_burden": 6,
+        "visa_difficulty": 8,
+        "pace_of_life": 8,
+        "social_tolerance": 7,
+        "safety": 5,
+        "healthcare_quality": 8,
+        "english_barrier": 0,
+        "walkability_transit": 4,
+        "internet_speed": 8,
+        "work_culture": 8,
+        "humidity_level": 5,
+        "air_quality": 7,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 5,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 8,
+        "road_quality": 8,
+        "local_job_market": 9,
+        "phd_stipend_ppp": 6,
+        "academic_satisfaction": 6,
+        "happiness_index": 7,
+        "ease_of_doing_business": 9,
+        "childcare_quality": 5
+      }
+    },
+    {
+      "id": "united_kingdom",
+      "name": "United Kingdom",
+      "quality": "curated",
+      "facts": {
+        "capital": "London",
+        "currency": "Pound Sterling (GBP)",
+        "languages": "English"
+      },
+      "cities": [
+        "London",
+        "Birmingham",
+        "Glasgow",
+        "Liverpool",
+        "Bristol",
+        "Manchester",
+        "Sheffield",
+        "Leeds"
+      ],
+      "summary": "A historic island nation with high cultural output, a temperate climate, and dynamic cities, though dealing with rising living costs.",
+      "overview": "The UK offers a rich historical backdrop, global cities like London, and beautiful countryside. It features a temperate maritime climate with frequent rain. While English makes communication instant, the country faces high costs, aging infrastructure, and housing shortages.",
+      "visaInfo": "Visa routes include the Skilled Worker Visa (requires sponsorship), Global Talent Visa, and Student Visas. No digital nomad visa.",
+      "pros": [
+        "Rich history, world-class cultural institutions.",
+        "No language barrier for English speakers; transport hub.",
+        "Strong job market in finance, tech, and creative industries.",
+        "Beautiful rolling hills and rugged coastlines."
+      ],
+      "cons": [
+        "Temperate but often overcast and rainy weather.",
+        "High cost of living and rent, especially in London.",
+        "Strain on public systems, including NHS wait times.",
+        "Complex post-Brexit visa regulations for Europeans."
+      ],
+      "metrics": {
+        "warm_weather": 4,
+        "seasonal_variety": 7,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 7,
+        "nature_sea_beaches": 6,
+        "nature_forests_greenery": 7,
+        "cost_of_living": 7,
+        "housing_affordability": 3,
+        "tax_burden": 7,
+        "visa_difficulty": 7,
+        "pace_of_life": 7,
+        "social_tolerance": 8,
+        "safety": 7,
+        "healthcare_quality": 7,
+        "english_barrier": 0,
+        "walkability_transit": 8,
+        "internet_speed": 8,
+        "work_culture": 6,
+        "humidity_level": 6,
+        "air_quality": 8,
+        "sunshine_hours": 4,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 6,
+        "foreigner_friendliness": 8,
+        "road_quality": 8,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 5,
+        "academic_satisfaction": 6,
+        "happiness_index": 7,
+        "ease_of_doing_business": 9,
+        "childcare_quality": 6
+      }
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "quality": "curated",
+      "facts": {
+        "capital": "Amsterdam",
+        "currency": "Euro (EUR)",
+        "languages": "Dutch"
+      },
+      "cities": [
+        "Amsterdam",
+        "Rotterdam",
+        "The Hague",
+        "Utrecht",
+        "Eindhoven",
+        "Tilburg",
+        "Groningen",
+        "Almere"
+      ],
+      "summary": "A flat, bicycle-first country offering excellent work-life balance, high English proficiency, and structured urban planning.",
+      "overview": "The Netherlands is famous for its flat landscape, canals, and cycling culture. It is an extremely bike-friendly, progressive society with a strong emphasis on family time. The main challenges are persistent rain, lack of terrain variety, and a severe housing shortage.",
+      "visaInfo": "Offers a 'Highly Skilled Migrant' visa, a unique Self-Employed/Freelance path under the Dutch-American Friendship Treaty (DAFT) for US citizens, and a 30% tax ruling for expat recruits.",
+      "pros": [
+        "World-class cycling infrastructure; cars are entirely optional.",
+        "Excellent work-life balance.",
+        "Superb English proficiency (over 90%).",
+        "Highly progressive and open-minded society."
+      ],
+      "cons": [
+        "Extremely flat geography (no mountains).",
+        "Severe housing shortage.",
+        "High income taxes and expensive mandatory health insurance.",
+        "Frequent grey, windy, and rainy winter weather."
+      ],
+      "metrics": {
+        "warm_weather": 4,
+        "seasonal_variety": 7,
+        "nature_mountains": 0,
+        "nature_lakes_rivers": 7,
+        "nature_sea_beaches": 5,
+        "nature_forests_greenery": 5,
+        "cost_of_living": 8,
+        "housing_affordability": 2,
+        "tax_burden": 8,
+        "visa_difficulty": 5,
+        "pace_of_life": 5,
+        "social_tolerance": 9,
+        "safety": 9,
+        "healthcare_quality": 8,
+        "english_barrier": 1,
+        "walkability_transit": 10,
+        "internet_speed": 9,
+        "work_culture": 3,
+        "humidity_level": 6,
+        "air_quality": 8,
+        "sunshine_hours": 5,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 4,
+        "foreigner_friendliness": 8,
+        "road_quality": 9,
+        "local_job_market": 7,
+        "phd_stipend_ppp": 8,
+        "academic_satisfaction": 8,
+        "happiness_index": 9,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 8
+      }
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "quality": "curated",
+      "facts": {
+        "capital": "Singapore",
+        "currency": "Singapore Dollar (SGD)",
+        "languages": "English, Malay, Mandarin, Tamil"
+      },
+      "cities": [
+        "Downtown Core",
+        "Jurong East",
+        "Tampines",
+        "Woodlands",
+        "Bedok",
+        "Hougang",
+        "Ang Mo Kio",
+        "Yishun"
+      ],
+      "summary": "An ultra-modern, hyper-efficient tropical city-state offering unmatched safety, business opportunities, and high living costs.",
+      "overview": "Singapore is a global financial hub situated in Southeast Asia. It is incredibly clean, safe, and efficient, but features a fast-paced corporate culture and year-round hot, humid weather. The cost of living is among the highest in the world, particularly for housing and cars.",
+      "visaInfo": "Visas include the Employment Pass (EP), Tech.Pass, and ONE Pass for top global talent. No digital nomad visa.",
+      "pros": [
+        "Near-zero crime rate; safety is practically absolute.",
+        "Efficient public transit, clean streets, and high-tech infrastructure.",
+        "Low personal income taxes.",
+        "Strategic travel hub for exploring the rest of Asia."
+      ],
+      "cons": [
+        "Extremely high cost of living (rent, cars, alcohol).",
+        "Constant tropical heat and humidity.",
+        "Work culture is highly demanding and competitive.",
+        "Small size leads to a feeling of confinement."
+      ],
+      "metrics": {
+        "warm_weather": 10,
+        "seasonal_variety": 0,
+        "nature_mountains": 1,
+        "nature_lakes_rivers": 4,
+        "nature_sea_beaches": 5,
+        "nature_forests_greenery": 6,
+        "cost_of_living": 10,
+        "housing_affordability": 1,
+        "tax_burden": 2,
+        "visa_difficulty": 7,
+        "pace_of_life": 9,
+        "social_tolerance": 6,
+        "safety": 10,
+        "healthcare_quality": 9,
+        "english_barrier": 0,
+        "walkability_transit": 10,
+        "internet_speed": 10,
+        "work_culture": 9,
+        "humidity_level": 10,
+        "air_quality": 7,
+        "sunshine_hours": 7,
+        "childcare_education_cost": 4,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 2,
+        "foreigner_friendliness": 7,
+        "road_quality": 10,
+        "local_job_market": 8,
+        "phd_stipend_ppp": 7,
+        "academic_satisfaction": 7,
+        "happiness_index": 7,
+        "ease_of_doing_business": 10,
+        "childcare_quality": 8
+      }
+    },
+    {
+      "id": "new_zealand",
+      "name": "New Zealand",
+      "quality": "curated",
+      "facts": {
+        "capital": "Wellington",
+        "currency": "New Zealand Dollar (NZD)",
+        "languages": "English, Māori"
+      },
+      "cities": [
+        "Auckland",
+        "Wellington",
+        "Christchurch",
+        "Hamilton",
+        "Tauranga",
+        "Dunedin",
+        "Palmerston North",
+        "Napier"
+      ],
+      "summary": "A spectacular, remote island nation offering majestic fjords, alpine hikes, low population density, and high safety.",
+      "overview": "New Zealand is a dream destination for lovers of the outdoors. It boasts epic landscapes, from volcanic pools to glaciers. The pace of life is relaxed and the society is welcoming. However, it is remote, and consumer goods are expensive.",
+      "visaInfo": "New Zealand uses a points-based Skilled Migrant Category. It also offers a Working Holiday Visa and specific Green List pathways for in-demand roles.",
+      "pros": [
+        "Unrivaled natural beauty (mountains, beaches, forests close together).",
+        "Laid-back, community-oriented, and friendly culture.",
+        "High safety index and very low population density.",
+        "Strong environmental protections."
+      ],
+      "cons": [
+        "Highly remote; long and expensive flights.",
+        "High cost of groceries and utilities due to isolation.",
+        "Wages are moderate relative to high house prices.",
+        "High UV index and volatile weather."
+      ],
+      "metrics": {
+        "warm_weather": 5,
+        "seasonal_variety": 7,
+        "nature_mountains": 9,
+        "nature_lakes_rivers": 9,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 8,
+        "housing_affordability": 3,
+        "tax_burden": 6,
+        "visa_difficulty": 6,
+        "pace_of_life": 3,
+        "social_tolerance": 9,
+        "safety": 9,
+        "healthcare_quality": 8,
+        "english_barrier": 0,
+        "walkability_transit": 5,
+        "internet_speed": 8,
+        "work_culture": 4,
+        "humidity_level": 4,
+        "air_quality": 10,
+        "sunshine_hours": 7,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 9,
+        "road_quality": 8,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 6,
+        "academic_satisfaction": 7,
+        "happiness_index": 8,
+        "ease_of_doing_business": 9,
+        "childcare_quality": 8
+      }
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "quality": "curated",
+      "facts": {
+        "capital": "Mexico City",
+        "currency": "Mexican Peso (MXN)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Mexico City",
+        "Guadalajara",
+        "Monterrey",
+        "Puebla",
+        "Tijuana",
+        "Leon",
+        "Juarez",
+        "Zapopan"
+      ],
+      "summary": "A culturally rich, warm, and highly affordable North American country popular for its beaches, food, and ease of residency.",
+      "overview": "Mexico is a top expat destination owing to its proximity to the US/Canada, low cost of living, and warm climate. It offers historic colonial towns, bustling metropolises, and beautiful coastlines. Safety varies dramatically by region, and bureaucracy can be tedious.",
+      "visaInfo": "Mexico offers a highly accessible Temporary Resident Visa (requires moderate monthly income/savings) and a Permanent Resident Visa.",
+      "pros": [
+        "Very low cost of living.",
+        "World-famous cuisine and deeply welcoming culture.",
+        "Warm, sunny weather and diverse landscapes.",
+        "Relatively easy temporary and permanent residency."
+      ],
+      "cons": [
+        "Significant safety and security variations by region.",
+        "Tap water is not safe to drink.",
+        "Slow bureaucracy.",
+        "Infrastructure can be unreliable in rural areas."
+      ],
+      "metrics": {
+        "warm_weather": 9,
+        "seasonal_variety": 3,
+        "nature_mountains": 6,
+        "nature_lakes_rivers": 5,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 6,
+        "cost_of_living": 3,
+        "housing_affordability": 7,
+        "tax_burden": 4,
+        "visa_difficulty": 2,
+        "pace_of_life": 3,
+        "social_tolerance": 7,
+        "safety": 4,
+        "healthcare_quality": 7,
+        "english_barrier": 5,
+        "walkability_transit": 5,
+        "internet_speed": 7,
+        "work_culture": 5,
+        "humidity_level": 6,
+        "air_quality": 6,
+        "sunshine_hours": 9,
+        "childcare_education_cost": 6,
+        "dining_food_cost": 8,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 10,
+        "road_quality": 5,
+        "local_job_market": 5,
+        "phd_stipend_ppp": 3,
+        "academic_satisfaction": 5,
+        "happiness_index": 7,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 5
+      }
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "quality": "curated",
+      "facts": {
+        "capital": "Rome",
+        "currency": "Euro (EUR)",
+        "languages": "Italian"
+      },
+      "cities": [
+        "Rome",
+        "Milan",
+        "Naples",
+        "Turin",
+        "Palermo",
+        "Genoa",
+        "Bologna",
+        "Florence"
+      ],
+      "summary": "The cradle of history, art, and gastronomy, offering a warm climate and slow-paced lifestyle, despite complex administration.",
+      "overview": "Italy offers a lifestyle centered on history, art, food, and family (la dolce vita). Geographically, it spans from the snow-capped Alps to the Mediterranean beaches of Sicily. While the cultural quality of life is unparalleled, finding local employment is very difficult, and administrative bureaucracy is legendary.",
+      "visaInfo": "Italy recently introduced a Digital Nomad Visa (for income above €28,000/yr). Other options include the Elective Residency Visa and Self-Employment Visa.",
+      "pros": [
+        "Incredible historical, culinary, and artistic heritage.",
+        "Beautiful, varied geography.",
+        "Slow-paced lifestyle that prioritizes leisure.",
+        "Reasonable cost of living in Southern regions."
+      ],
+      "cons": [
+        "Extremely slow, confusing, and frustrating bureaucracy.",
+        "Stagnant local job market with low wages.",
+        "High taxes and complex tax regulations.",
+        "English is not widely spoken in rural areas."
+      ],
+      "metrics": {
+        "warm_weather": 7,
+        "seasonal_variety": 7,
+        "nature_mountains": 8,
+        "nature_lakes_rivers": 8,
+        "nature_sea_beaches": 9,
+        "nature_forests_greenery": 6,
+        "cost_of_living": 6,
+        "housing_affordability": 5,
+        "tax_burden": 8,
+        "visa_difficulty": 5,
+        "pace_of_life": 3,
+        "social_tolerance": 8,
+        "safety": 8,
+        "healthcare_quality": 8,
+        "english_barrier": 6,
+        "walkability_transit": 7,
+        "internet_speed": 7,
+        "work_culture": 4,
+        "humidity_level": 5,
+        "air_quality": 7,
+        "sunshine_hours": 8,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 6,
+        "bureaucracy_difficulty": 8,
+        "foreigner_friendliness": 8,
+        "road_quality": 7,
+        "local_job_market": 4,
+        "phd_stipend_ppp": 5,
+        "academic_satisfaction": 6,
+        "happiness_index": 6,
+        "ease_of_doing_business": 5,
+        "childcare_quality": 7
+      }
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "quality": "curated",
+      "facts": {
+        "capital": "Paris",
+        "currency": "Euro (EUR)",
+        "languages": "French"
+      },
+      "cities": [
+        "Paris",
+        "Marseille",
+        "Lyon",
+        "Toulouse",
+        "Nice",
+        "Nantes",
+        "Montpellier",
+        "Strasbourg"
+      ],
+      "summary": "A culturally rich European hub with excellent public services, culinary traditions, and diverse landscapes, balanced by high taxes.",
+      "overview": "France offers an exceptional quality of life, emphasizing gastronomy, culture, and leisure. From the Alps to the French Riviera, it features diverse geography and climate. Public services, transit, and healthcare are top-tier, but the administrative processes are complex and tax rates are high.",
+      "visaInfo": "France offers a Talent Passport for tech/specialists, a Long-Stay Visitor Visa (for passive income, no local work), and an Entrepreneur/Liberal Profession visa.",
+      "pros": [
+        "Superb culture, arts, architecture, and culinary standards.",
+        "Excellent high-speed rail.",
+        "Outstanding healthcare system.",
+        "Diverse natural environments."
+      ],
+      "cons": [
+        "High personal income tax, wealth tax, and social security contributions.",
+        "Complex and rigid bureaucracy that requires speaking French.",
+        "Strikes can frequently disrupt public transit.",
+        "Stricter social etiquette and expectation to speak French."
+      ],
+      "metrics": {
+        "warm_weather": 6,
+        "seasonal_variety": 7,
+        "nature_mountains": 8,
+        "nature_lakes_rivers": 7,
+        "nature_sea_beaches": 8,
+        "nature_forests_greenery": 7,
+        "cost_of_living": 7,
+        "housing_affordability": 4,
+        "tax_burden": 8,
+        "visa_difficulty": 6,
+        "pace_of_life": 4,
+        "social_tolerance": 8,
+        "safety": 7,
+        "healthcare_quality": 9,
+        "english_barrier": 5,
+        "walkability_transit": 8,
+        "internet_speed": 8,
+        "work_culture": 4,
+        "humidity_level": 5,
+        "air_quality": 8,
+        "sunshine_hours": 6,
+        "childcare_education_cost": 7,
+        "dining_food_cost": 4,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 7,
+        "road_quality": 9,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 6,
+        "academic_satisfaction": 7,
+        "happiness_index": 7,
+        "ease_of_doing_business": 7,
+        "childcare_quality": 8
+      }
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "quality": "curated",
+      "facts": {
+        "capital": "Hanoi",
+        "currency": "Vietnamese Dong (VND)",
+        "languages": "Vietnamese"
+      },
+      "cities": [
+        "Ho Chi Minh City",
+        "Hanoi",
+        "Da Nang",
+        "Hai Phong",
+        "Can Tho",
+        "Bien Hoa",
+        "Nha Trang",
+        "Hue"
+      ],
+      "summary": "A rapidly growing, energetic Southeast Asian country offering a low cost of living, delicious food, and high expat popularity.",
+      "overview": "Vietnam is a dynamic, fast-moving country with a rich culture and stunning landscapes. The low cost of living allows for an affordable lifestyle. Traffic can be chaotic and long-term visa options are somewhat limited.",
+      "visaInfo": "Long-term stays are relatively difficult. There is no digital nomad visa. Most expats stay on 3-month tourist visas, business visas, or local employment.",
+      "pros": [
+        "Extremely low cost of living.",
+        "Delicious, fresh, and cheap street food.",
+        "Fast-growing economy with an energetic atmosphere.",
+        "Beautiful scenery, including beaches and mountains."
+      ],
+      "cons": [
+        "Heavy traffic and air pollution in Hanoi/HCM City.",
+        "Chaotic traffic makes scooter driving hazardous.",
+        "Bureaucratic corruption and lack of clear long-term visas.",
+        "Tap water is not drinkable."
+      ],
+      "metrics": {
+        "warm_weather": 9,
+        "seasonal_variety": 3,
+        "nature_mountains": 7,
+        "nature_lakes_rivers": 6,
+        "nature_sea_beaches": 8,
+        "nature_forests_greenery": 7,
+        "cost_of_living": 1,
+        "housing_affordability": 8,
+        "tax_burden": 4,
+        "visa_difficulty": 7,
+        "pace_of_life": 6,
+        "social_tolerance": 7,
+        "safety": 8,
+        "healthcare_quality": 6,
+        "english_barrier": 6,
+        "walkability_transit": 3,
+        "internet_speed": 7,
+        "work_culture": 6,
+        "humidity_level": 9,
+        "air_quality": 4,
+        "sunshine_hours": 7,
+        "childcare_education_cost": 5,
+        "dining_food_cost": 9,
+        "bureaucracy_difficulty": 7,
+        "foreigner_friendliness": 9,
+        "road_quality": 6,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 2,
+        "academic_satisfaction": 5,
+        "happiness_index": 6,
+        "ease_of_doing_business": 6,
+        "childcare_quality": 5
+      }
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "quality": "curated",
+      "facts": {
+        "capital": "Oslo",
+        "currency": "Norwegian Krone (NOK)",
+        "languages": "Norwegian"
+      },
+      "cities": [
+        "Oslo",
+        "Bergen",
+        "Trondheim",
+        "Stavanger",
+        "Sandvika",
+        "Kristiansand",
+        "Fredrikstad",
+        "Tromso"
+      ],
+      "summary": "An outdoor enthusiast's dream featuring breathtaking fjords, high wages, extreme safety, and a robust social welfare state.",
+      "overview": "Norway offers some of the most dramatic landscapes on Earth, famous for its deep fjords and mountainous coastlines. It boasts a highly egalitarian society, high safety, and progressive values. The cost of living is extremely high, and the winters are long, dark, and cold.",
+      "visaInfo": "Norway does not offer a passive income visa. Paths include the Skilled Worker Visa (requires a job offer), Self-Employed Visa, or specific Svalbard options.",
+      "pros": [
+        "Breathtaking scenery with fjords and mountains.",
+        "Strong focus on work-life balance (standard 37.5-hour work week).",
+        "Extremely safe, clean, and well-functioning infrastructure.",
+        "High salaries and strong welfare/social safety net."
+      ],
+      "cons": [
+        "One of the most expensive countries in the world.",
+        "Very cold and dark winters; short summers.",
+        "Reserved social culture; forming friendships takes effort.",
+        "High taxation rates."
+      ],
+      "metrics": {
+        "warm_weather": 1,
+        "seasonal_variety": 9,
+        "nature_mountains": 10,
+        "nature_lakes_rivers": 8,
+        "nature_sea_beaches": 7,
+        "nature_forests_greenery": 9,
+        "cost_of_living": 9,
+        "housing_affordability": 3,
+        "tax_burden": 8,
+        "visa_difficulty": 6,
+        "pace_of_life": 4,
+        "social_tolerance": 9,
+        "safety": 10,
+        "healthcare_quality": 9,
+        "english_barrier": 1,
+        "walkability_transit": 8,
+        "internet_speed": 9,
+        "work_culture": 2,
+        "humidity_level": 4,
+        "air_quality": 10,
+        "sunshine_hours": 4,
+        "childcare_education_cost": 8,
+        "dining_food_cost": 2,
+        "bureaucracy_difficulty": 5,
+        "foreigner_friendliness": 7,
+        "road_quality": 9,
+        "local_job_market": 6,
+        "phd_stipend_ppp": 9,
+        "academic_satisfaction": 9,
+        "happiness_index": 9,
+        "ease_of_doing_business": 8,
+        "childcare_quality": 9
+      }
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Vienna",
+        "currency": "Euro (EUR)",
+        "languages": "German"
+      },
+      "cities": [
+        "Vienna",
+        "Graz",
+        "Linz",
+        "Salzburg",
+        "Innsbruck",
+        "Klagenfurt",
+        "Villach",
+        "Wels"
+      ]
+    },
+    {
+      "id": "belgium",
+      "name": "Belgium",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Brussels",
+        "currency": "Euro (EUR)",
+        "languages": "Dutch, French, German"
+      },
+      "cities": [
+        "Brussels",
+        "Antwerp",
+        "Ghent",
+        "Charleroi",
+        "Liege",
+        "Bruges",
+        "Namur",
+        "Leuven"
+      ]
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Stockholm",
+        "currency": "Swedish Krona (SEK)",
+        "languages": "Swedish"
+      },
+      "cities": [
+        "Stockholm",
+        "Gothenburg",
+        "Malmo",
+        "Uppsala",
+        "Upplands Vasby",
+        "Vasteras",
+        "Orebro",
+        "Linkoping"
+      ]
+    },
+    {
+      "id": "denmark",
+      "name": "Denmark",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Copenhagen",
+        "currency": "Danish Krone (DKK)",
+        "languages": "Danish"
+      },
+      "cities": [
+        "Copenhagen",
+        "Aarhus",
+        "Odense",
+        "Aalborg",
+        "Frederiksberg",
+        "Esbjerg",
+        "Randers",
+        "Kolding"
+      ]
+    },
+    {
+      "id": "ireland",
+      "name": "Ireland",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Dublin",
+        "currency": "Euro (EUR)",
+        "languages": "English, Irish"
+      },
+      "cities": [
+        "Dublin",
+        "Cork",
+        "Limerick",
+        "Galway",
+        "Waterford",
+        "Drogheda",
+        "Dundalk",
+        "Swords"
+      ]
+    },
+    {
+      "id": "iceland",
+      "name": "Iceland",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Reykjavík",
+        "currency": "Icelandic Króna (ISK)",
+        "languages": "Icelandic"
+      },
+      "cities": [
+        "Reykjavik",
+        "Kopavogur",
+        "Hafnarfjordur",
+        "Akureyri",
+        "Reykjanesbaer",
+        "Gardabaer",
+        "Mosfellsbaer",
+        "Arborg"
+      ]
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Athens",
+        "currency": "Euro (EUR)",
+        "languages": "Greek"
+      },
+      "cities": [
+        "Athens",
+        "Thessaloniki",
+        "Patras",
+        "Piraeus",
+        "Larissa",
+        "Heraklion",
+        "Volos",
+        "Ioannina"
+      ]
+    },
+    {
+      "id": "croatia",
+      "name": "Croatia",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Zagreb",
+        "currency": "Euro (EUR)",
+        "languages": "Croatian"
+      },
+      "cities": [
+        "Zagreb",
+        "Split",
+        "Rijeka",
+        "Osijek",
+        "Zadar",
+        "Velika Gorica",
+        "Slavonski Brod",
+        "Pula"
+      ]
+    },
+    {
+      "id": "czechia",
+      "name": "Czech Republic",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Prague",
+        "currency": "Czech Koruna (CZK)",
+        "languages": "Czech"
+      },
+      "cities": [
+        "Prague",
+        "Brno",
+        "Ostrava",
+        "Pilsen",
+        "Liberec",
+        "Olomouc",
+        "Usti nad Labem",
+        "Hradec Kralove"
+      ]
+    },
+    {
+      "id": "poland",
+      "name": "Poland",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Warsaw",
+        "currency": "Polish Złoty (PLN)",
+        "languages": "Polish"
+      },
+      "cities": [
+        "Warsaw",
+        "Krakow",
+        "Lodz",
+        "Wroclaw",
+        "Poznan",
+        "Gdansk",
+        "Szczecin",
+        "Bydgoszcz"
+      ]
+    },
+    {
+      "id": "hungary",
+      "name": "Hungary",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Budapest",
+        "currency": "Hungarian Forint (HUF)",
+        "languages": "Hungarian"
+      },
+      "cities": [
+        "Budapest",
+        "Debrecen",
+        "Szeged",
+        "Miskolc",
+        "Pecs",
+        "Gyor",
+        "Nyiregyhaza",
+        "Kecskemet"
+      ]
+    },
+    {
+      "id": "romania",
+      "name": "Romania",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Bucharest",
+        "currency": "Romanian Leu (RON)",
+        "languages": "Romanian"
+      },
+      "cities": [
+        "Bucharest",
+        "Cluj-Napoca",
+        "Timisoara",
+        "Iasi",
+        "Constanta",
+        "Craiova",
+        "Brasov",
+        "Galati"
+      ]
+    },
+    {
+      "id": "estonia",
+      "name": "Estonia",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Tallinn",
+        "currency": "Euro (EUR)",
+        "languages": "Estonian"
+      },
+      "cities": [
+        "Tallinn",
+        "Tartu",
+        "Narva",
+        "Parnu",
+        "Kohtla-Jarve",
+        "Viljandi",
+        "Rakvere",
+        "Maardu"
+      ]
+    },
+    {
+      "id": "latvia",
+      "name": "Latvia",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Riga",
+        "currency": "Euro (EUR)",
+        "languages": "Latvian"
+      },
+      "cities": [
+        "Riga",
+        "Daugavpils",
+        "Liepaja",
+        "Jelgava",
+        "Jurmala",
+        "Ventspils",
+        "Rezekne",
+        "Valmiera"
+      ]
+    },
+    {
+      "id": "lithuania",
+      "name": "Lithuania",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Vilnius",
+        "currency": "Euro (EUR)",
+        "languages": "Lithuanian"
+      },
+      "cities": [
+        "Vilnius",
+        "Kaunas",
+        "Klaipeda",
+        "Siauliai",
+        "Panevezys",
+        "Alytus",
+        "Marijampole",
+        "Mazeikiai"
+      ]
+    },
+    {
+      "id": "cyprus",
+      "name": "Cyprus",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Nicosia",
+        "currency": "Euro (EUR)",
+        "languages": "Greek, Turkish"
+      },
+      "cities": [
+        "Nicosia",
+        "Limassol",
+        "Larnaca",
+        "Paphos",
+        "Kyrenia",
+        "Famagusta",
+        "Protaras",
+        "Ayia Napa"
+      ]
+    },
+    {
+      "id": "malta",
+      "name": "Malta",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Valletta",
+        "currency": "Euro (EUR)",
+        "languages": "Maltese, English"
+      },
+      "cities": [
+        "Valletta",
+        "Birkirkara",
+        "Qormi",
+        "Mosta",
+        "St. Paul's Bay",
+        "Sliema",
+        "St. Julian's",
+        "Zabbar"
+      ]
+    },
+    {
+      "id": "south_korea",
+      "name": "South Korea",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Seoul",
+        "currency": "South Korean Won (KRW)",
+        "languages": "Korean"
+      },
+      "cities": [
+        "Seoul",
+        "Busan",
+        "Incheon",
+        "Daegu",
+        "Daejeon",
+        "Gwangju",
+        "Suwon",
+        "Ulsan"
+      ]
+    },
+    {
+      "id": "taiwan",
+      "name": "Taiwan",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Taipei",
+        "currency": "New Taiwan Dollar (TWD)",
+        "languages": "Mandarin"
+      },
+      "cities": [
+        "Taipei",
+        "New Taipei City",
+        "Kaohsiung",
+        "Taichung",
+        "Tainan",
+        "Taoyuan",
+        "Hsinchu",
+        "Keelung"
+      ]
+    },
+    {
+      "id": "malaysia",
+      "name": "Malaysia",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Kuala Lumpur",
+        "currency": "Malaysian Ringgit (MYR)",
+        "languages": "Malay"
+      },
+      "cities": [
+        "Kuala Lumpur",
+        "George Town",
+        "Johor Bahru",
+        "Ipoh",
+        "Shah Alam",
+        "Malacca City",
+        "Alor Setar",
+        "Kuala Terengganu"
+      ]
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Jakarta",
+        "currency": "Indonesian Rupiah (IDR)",
+        "languages": "Indonesian"
+      },
+      "cities": [
+        "Jakarta",
+        "Surabaya",
+        "Bandung",
+        "Medan",
+        "Bekasi",
+        "Tangerang",
+        "Depok",
+        "Semarang"
+      ]
+    },
+    {
+      "id": "philippines",
+      "name": "Philippines",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Manila",
+        "currency": "Philippine Peso (PHP)",
+        "languages": "Filipino, English"
+      },
+      "cities": [
+        "Manila",
+        "Quezon City",
+        "Davao City",
+        "Cebu City",
+        "Zamboanga City",
+        "Antipolo",
+        "Pasig",
+        "Taguig"
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "New Delhi",
+        "currency": "Indian Rupee (INR)",
+        "languages": "Hindi, English"
+      },
+      "cities": [
+        "Mumbai",
+        "Delhi",
+        "Bangalore",
+        "Hyderabad",
+        "Ahmedabad",
+        "Chennai",
+        "Kolkata",
+        "Surat"
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Ankara",
+        "currency": "Turkish Lira (TRY)",
+        "languages": "Turkish"
+      },
+      "cities": [
+        "Istanbul",
+        "Ankara",
+        "Izmir",
+        "Bursa",
+        "Antalya",
+        "Adana",
+        "Konya",
+        "Gaziantep"
+      ]
+    },
+    {
+      "id": "uae",
+      "name": "United Arab Emirates",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Abu Dhabi",
+        "currency": "UAE Dirham (AED)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Dubai",
+        "Abu Dhabi",
+        "Sharjah",
+        "Al Ain",
+        "Ajman",
+        "Ras Al Khaimah",
+        "Fujairah",
+        "Umm Al Quwain"
+      ]
+    },
+    {
+      "id": "south_africa",
+      "name": "South Africa",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Pretoria (executive)",
+        "currency": "South African Rand (ZAR)",
+        "languages": "12 official languages incl. Zulu, Xhosa, Afrikaans, English"
+      },
+      "cities": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Pretoria",
+        "Port Elizabeth",
+        "Bloemfontein",
+        "East London",
+        "Nelspruit"
+      ]
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Nairobi",
+        "currency": "Kenyan Shilling (KES)",
+        "languages": "Swahili, English"
+      },
+      "cities": [
+        "Nairobi",
+        "Mombasa",
+        "Kisumu",
+        "Nakuru",
+        "Eldoret",
+        "Kehancha",
+        "Ruiru",
+        "Kikuyu"
+      ]
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Rabat",
+        "currency": "Moroccan Dirham (MAD)",
+        "languages": "Arabic, Tamazight"
+      },
+      "cities": [
+        "Casablanca",
+        "Rabat",
+        "Fes",
+        "Marrakech",
+        "Tangier",
+        "Sale",
+        "Meknes",
+        "Oujda"
+      ]
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Cairo",
+        "currency": "Egyptian Pound (EGP)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Cairo",
+        "Alexandria",
+        "Giza",
+        "Shubra El Kheima",
+        "Port Said",
+        "Suez",
+        "Luxor",
+        "Mansoura"
+      ]
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Brasília",
+        "currency": "Brazilian Real (BRL)",
+        "languages": "Portuguese"
+      },
+      "cities": [
+        "Sao Paulo",
+        "Rio de Janeiro",
+        "Brasilia",
+        "Salvador",
+        "Fortaleza",
+        "Belo Horizonte",
+        "Manaus",
+        "Curitiba"
+      ]
+    },
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Buenos Aires",
+        "currency": "Argentine Peso (ARS)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Buenos Aires",
+        "Cordoba",
+        "Rosario",
+        "Mendoza",
+        "La Plata",
+        "San Miguel de Tucuman",
+        "Mar del Plata",
+        "Salta"
+      ]
+    },
+    {
+      "id": "chile",
+      "name": "Chile",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Santiago",
+        "currency": "Chilean Peso (CLP)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Santiago",
+        "Valparaiso",
+        "Concepcion",
+        "Vina del Mar",
+        "Antofagasta",
+        "Valdivia",
+        "Temuco",
+        "Iquique"
+      ]
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Bogotá",
+        "currency": "Colombian Peso (COP)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Bogota",
+        "Medellin",
+        "Cali",
+        "Barranquilla",
+        "Cartagena",
+        "Bucaramanga",
+        "Pereira",
+        "Santa Marta"
+      ]
+    },
+    {
+      "id": "peru",
+      "name": "Peru",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Lima",
+        "currency": "Peruvian Sol (PEN)",
+        "languages": "Spanish, Quechua"
+      },
+      "cities": [
+        "Lima",
+        "Arequipa",
+        "Trujillo",
+        "Chiclayo",
+        "Piura",
+        "Iquitos",
+        "Cusco",
+        "Huancayo"
+      ]
+    },
+    {
+      "id": "uruguay",
+      "name": "Uruguay",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Montevideo",
+        "currency": "Uruguayan Peso (UYU)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Montevideo",
+        "Salto",
+        "Ciudad de la Costa",
+        "Paysandu",
+        "Las Piedras",
+        "Rivera",
+        "Maldonado",
+        "Tacuarembo"
+      ]
+    },
+    {
+      "id": "panama",
+      "name": "Panama",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Panama City",
+        "currency": "Panamanian Balboa (PAB) / US Dollar (USD)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Panama City",
+        "San Miguelito",
+        "Tocumen",
+        "David",
+        "Las Cumbres",
+        "La Chorrera",
+        "Pacora",
+        "Colon"
+      ]
+    },
+    {
+      "id": "ecuador",
+      "name": "Ecuador",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Quito",
+        "currency": "US Dollar (USD)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Guayaquil",
+        "Quito",
+        "Cuenca",
+        "Santo Domingo",
+        "Machala",
+        "Manta",
+        "Portoviejo",
+        "Loja"
+      ]
+    },
+    {
+      "id": "dominican_republic",
+      "name": "Dominican Republic",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Santo Domingo",
+        "currency": "Dominican Peso (DOP)",
+        "languages": "Spanish"
+      },
+      "cities": [
+        "Santo Domingo",
+        "Santiago de los Caballeros",
+        "La Romana",
+        "San Pedro de Macoris",
+        "San Felipe de Puerto Plata",
+        "San Francisco de Macoris",
+        "La Altagracia",
+        "Higuey"
+      ]
+    },
+    {
+      "id": "georgia",
+      "name": "Georgia",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Tbilisi",
+        "currency": "Georgian Lari (GEL)",
+        "languages": "Georgian"
+      },
+      "cities": [
+        "Tbilisi",
+        "Batumi",
+        "Kutaisi",
+        "Rustavi",
+        "Gori",
+        "Zugdidi",
+        "Poti",
+        "Senaki"
+      ]
+    },
+    {
+      "id": "armenia",
+      "name": "Armenia",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Yerevan",
+        "currency": "Armenian Dram (AMD)",
+        "languages": "Armenian"
+      },
+      "cities": [
+        "Yerevan",
+        "Gyumri",
+        "Vanadzor",
+        "Vagharshapat",
+        "Hrazdan",
+        "Abovyan",
+        "Artashat",
+        "Kapan"
+      ]
+    },
+    {
+      "id": "kazakhstan",
+      "name": "Kazakhstan",
+      "quality": "template",
+      "template": "eurasia_steppe_mountain",
+      "facts": {
+        "capital": "Astana",
+        "currency": "Kazakhstani Tenge (KZT)",
+        "languages": "Kazakh, Russian"
+      },
+      "cities": [
+        "Almaty",
+        "Astana",
+        "Shymkent",
+        "Karaganda",
+        "Aktobe",
+        "Taraz",
+        "Pavlodar",
+        "Ust-Kamenogorsk"
+      ]
+    },
+    {
+      "id": "israel",
+      "name": "Israel",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Jerusalem (status internationally disputed)",
+        "currency": "Israeli New Shekel (ILS)",
+        "languages": "Hebrew"
+      },
+      "cities": [
+        "Jerusalem",
+        "Tel Aviv",
+        "Haifa",
+        "Rishon LeZion",
+        "Petah Tikva",
+        "Ashdod",
+        "Netanya",
+        "Beersheba"
+      ]
+    },
+    {
+      "id": "saudi_arabia",
+      "name": "Saudi Arabia",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Riyadh",
+        "currency": "Saudi Riyal (SAR)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Riyadh",
+        "Jeddah",
+        "Mecca",
+        "Medina",
+        "Dammam",
+        "Khobar",
+        "Taif",
+        "Tabuk"
+      ]
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Doha",
+        "currency": "Qatari Riyal (QAR)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Doha",
+        "Al Rayyan",
+        "Al Wakrah",
+        "Al Khor",
+        "Umm Salal",
+        "Al Shahaniya",
+        "Madinat ash Shamal",
+        "Mesaieed"
+      ]
+    },
+    {
+      "id": "bulgaria",
+      "name": "Bulgaria",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Sofia",
+        "currency": "Euro (EUR, since 2026)",
+        "languages": "Bulgarian"
+      },
+      "cities": [
+        "Sofia",
+        "Plovdiv",
+        "Varna",
+        "Burgas",
+        "Ruse",
+        "Stara Zagora",
+        "Pleven",
+        "Sliven"
+      ]
+    },
+    {
+      "id": "slovakia",
+      "name": "Slovakia",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Bratislava",
+        "currency": "Euro (EUR)",
+        "languages": "Slovak"
+      },
+      "cities": [
+        "Bratislava",
+        "Kosice",
+        "Presov",
+        "Zilina",
+        "Nitra",
+        "Banska Bystrica",
+        "Trnava",
+        "Martin"
+      ]
+    },
+    {
+      "id": "slovenia",
+      "name": "Slovenia",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Ljubljana",
+        "currency": "Euro (EUR)",
+        "languages": "Slovene"
+      },
+      "cities": [
+        "Ljubljana",
+        "Maribor",
+        "Celje",
+        "Kranj",
+        "Koper",
+        "Velenje",
+        "Novo Mesto",
+        "Ptuj"
+      ]
+    },
+    {
+      "id": "montenegro",
+      "name": "Montenegro",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Podgorica",
+        "currency": "Euro (EUR, adopted unilaterally)",
+        "languages": "Montenegrin"
+      },
+      "cities": [
+        "Podgorica",
+        "Niksic",
+        "Herceg Novi",
+        "Pljevlja",
+        "Budva",
+        "Bar",
+        "Bijelo Polje",
+        "Cetinje"
+      ]
+    },
+    {
+      "id": "albania",
+      "name": "Albania",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Tirana",
+        "currency": "Albanian Lek (ALL)",
+        "languages": "Albanian"
+      },
+      "cities": [
+        "Tirana",
+        "Durres",
+        "Vlore",
+        "Elbasan",
+        "Shkoder",
+        "Fier",
+        "Korce",
+        "Berat"
+      ]
+    },
+    {
+      "id": "sri_lanka",
+      "name": "Sri Lanka",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Sri Jayawardenepura Kotte (Colombo is the commercial capital)",
+        "currency": "Sri Lankan Rupee (LKR)",
+        "languages": "Sinhala, Tamil"
+      },
+      "cities": [
+        "Colombo",
+        "Kandy",
+        "Galle",
+        "Jaffna",
+        "Negombo",
+        "Gampaha",
+        "Kurunegala",
+        "Ratnapura"
+      ]
+    },
+    {
+      "id": "luxembourg",
+      "name": "Luxembourg",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Luxembourg",
+        "currency": "Euro (EUR)",
+        "languages": "Luxembourgish, French, German"
+      },
+      "cities": [
+        "Luxembourg City",
+        "Esch-sur-Alzette",
+        "Differdange",
+        "Dudelange",
+        "Ettelbruck",
+        "Diekirch",
+        "Wiltz",
+        "Echternach"
+      ]
+    },
+    {
+      "id": "liechtenstein",
+      "name": "Liechtenstein",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Vaduz",
+        "currency": "Swiss Franc (CHF)",
+        "languages": "German"
+      },
+      "cities": [
+        "Vaduz",
+        "Schaan",
+        "Triesen",
+        "Balzers",
+        "Eschen",
+        "Mauren",
+        "Triesenberg",
+        "Ruggell"
+      ]
+    },
+    {
+      "id": "andorra",
+      "name": "Andorra",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Andorra la Vella",
+        "currency": "Euro (EUR)",
+        "languages": "Catalan"
+      },
+      "cities": [
+        "Andorra la Vella",
+        "Escaldes-Engordany",
+        "Encamp",
+        "Sant Julia de Loria",
+        "La Massana",
+        "Ordino",
+        "Canillo",
+        "Pas de la Casa"
+      ]
+    },
+    {
+      "id": "monaco",
+      "name": "Monaco",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Monaco",
+        "currency": "Euro (EUR)",
+        "languages": "French"
+      },
+      "cities": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille",
+        "Moneghetti",
+        "Larvotto",
+        "Les Revoires",
+        "Saint Roman"
+      ]
+    },
+    {
+      "id": "san_marino",
+      "name": "San Marino",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "San Marino",
+        "currency": "Euro (EUR)",
+        "languages": "Italian"
+      },
+      "cities": [
+        "San Marino City",
+        "Serravalle",
+        "Borgo Maggiore",
+        "Domagnano",
+        "Fiorentino",
+        "Acquaviva",
+        "Faetano",
+        "Chiesanuova"
+      ]
+    },
+    {
+      "id": "serbia",
+      "name": "Serbia",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Belgrade",
+        "currency": "Serbian Dinar (RSD)",
+        "languages": "Serbian"
+      },
+      "cities": [
+        "Belgrade",
+        "Novi Sad",
+        "Nis",
+        "Kragujevac",
+        "Subotica",
+        "Zrenjanin",
+        "Pancevo",
+        "Cacak"
+      ]
+    },
+    {
+      "id": "bosnia_herzegovina",
+      "name": "Bosnia & Herzegovina",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Sarajevo",
+        "currency": "Convertible Mark (BAM)",
+        "languages": "Bosnian, Croatian, Serbian"
+      },
+      "cities": [
+        "Sarajevo",
+        "Banja Luka",
+        "Tuzla",
+        "Zenica",
+        "Mostar",
+        "Bijeljina",
+        "Brcko",
+        "Bihac"
+      ]
+    },
+    {
+      "id": "north_macedonia",
+      "name": "North Macedonia",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Skopje",
+        "currency": "Macedonian Denar (MKD)",
+        "languages": "Macedonian, Albanian"
+      },
+      "cities": [
+        "Skopje",
+        "Bitola",
+        "Kumanovo",
+        "Prilep",
+        "Ohrid",
+        "Tetovo",
+        "Veles",
+        "Stip"
+      ]
+    },
+    {
+      "id": "kosovo",
+      "name": "Kosovo",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Pristina",
+        "currency": "Euro (EUR)",
+        "languages": "Albanian, Serbian"
+      },
+      "cities": [
+        "Pristina",
+        "Prizren",
+        "Peja",
+        "Mitrovica",
+        "Gjakova",
+        "Gjilan",
+        "Ferizaj",
+        "Podujeva"
+      ]
+    },
+    {
+      "id": "ukraine",
+      "name": "Ukraine",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Kyiv",
+        "currency": "Ukrainian Hryvnia (UAH)",
+        "languages": "Ukrainian"
+      },
+      "cities": [
+        "Kyiv",
+        "Kharkiv",
+        "Odesa",
+        "Dnipro",
+        "Donetsk",
+        "Zaporizhzhia",
+        "Lviv",
+        "Kryvyi Rih"
+      ]
+    },
+    {
+      "id": "belarus",
+      "name": "Belarus",
+      "quality": "template",
+      "template": "cold_europe",
+      "facts": {
+        "capital": "Minsk",
+        "currency": "Belarusian Ruble (BYN)",
+        "languages": "Belarusian, Russian"
+      },
+      "cities": [
+        "Minsk",
+        "Homel",
+        "Mahilyow",
+        "Vitebsk",
+        "Hrodna",
+        "Brest",
+        "Babruysk",
+        "Baranavichy"
+      ]
+    },
+    {
+      "id": "moldova",
+      "name": "Moldova",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Chișinău",
+        "currency": "Moldovan Leu (MDL)",
+        "languages": "Romanian"
+      },
+      "cities": [
+        "Chisinau",
+        "Balti",
+        "Tiraspol",
+        "Bender",
+        "Cahul",
+        "Soroca",
+        "Orhei",
+        "Comrat"
+      ]
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Amman",
+        "currency": "Jordanian Dinar (JOD)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Amman",
+        "Zarqa",
+        "Irbid",
+        "Aqaba",
+        "Salt",
+        "Madaba",
+        "Mafraq",
+        "Jerash"
+      ]
+    },
+    {
+      "id": "lebanon",
+      "name": "Lebanon",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Beirut",
+        "currency": "Lebanese Pound (LBP)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Beirut",
+        "Tripoli",
+        "Sidon",
+        "Tyre",
+        "Zahle",
+        "Jounieh",
+        "Byblos",
+        "Baalbek"
+      ]
+    },
+    {
+      "id": "oman",
+      "name": "Oman",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Muscat",
+        "currency": "Omani Rial (OMR)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Muscat",
+        "Salalah",
+        "Sohar",
+        "Nizwa",
+        "Sur",
+        "Seeb",
+        "Bawshar",
+        "Muttrah"
+      ]
+    },
+    {
+      "id": "bahrain",
+      "name": "Bahrain",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Manama",
+        "currency": "Bahraini Dinar (BHD)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Manama",
+        "Riffa",
+        "Muharraq",
+        "Hamad Town",
+        "Aali",
+        "Isa Town",
+        "Sitra",
+        "Budaiya"
+      ]
+    },
+    {
+      "id": "kuwait",
+      "name": "Kuwait",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Kuwait City",
+        "currency": "Kuwaiti Dinar (KWD)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Kuwait City",
+        "Salmiya",
+        "Hawally",
+        "Farwaniya",
+        "Fahaheel",
+        "Jahra",
+        "Ahmadi",
+        "Mubarak Al-Kabeer"
+      ]
+    },
+    {
+      "id": "azerbaijan",
+      "name": "Azerbaijan",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Baku",
+        "currency": "Azerbaijani Manat (AZN)",
+        "languages": "Azerbaijani"
+      },
+      "cities": [
+        "Baku",
+        "Ganja",
+        "Sumqayit",
+        "Lankaran",
+        "Mingachevir",
+        "Nakchivan",
+        "Shaki",
+        "Shirvan"
+      ]
+    },
+    {
+      "id": "uzbekistan",
+      "name": "Uzbekistan",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Tashkent",
+        "currency": "Uzbekistani Som (UZS)",
+        "languages": "Uzbek"
+      },
+      "cities": [
+        "Tashkent",
+        "Samarkand",
+        "Bukhara",
+        "Khiva",
+        "Andijan",
+        "Namangan",
+        "Fergana",
+        "Nukus"
+      ]
+    },
+    {
+      "id": "kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "quality": "template",
+      "template": "eurasia_steppe_mountain",
+      "facts": {
+        "capital": "Bishkek",
+        "currency": "Kyrgyzstani Som (KGS)",
+        "languages": "Kyrgyz, Russian"
+      },
+      "cities": [
+        "Bishkek",
+        "Osh",
+        "Jalal-Abad",
+        "Karakol",
+        "Tokmok",
+        "Balykchy",
+        "Naryn",
+        "Talas"
+      ]
+    },
+    {
+      "id": "tajikistan",
+      "name": "Tajikistan",
+      "quality": "template",
+      "template": "eurasia_steppe_mountain",
+      "facts": {
+        "capital": "Dushanbe",
+        "currency": "Tajikistani Somoni (TJS)",
+        "languages": "Tajik"
+      },
+      "cities": [
+        "Dushanbe",
+        "Khujand",
+        "Bokhtar",
+        "Kulob",
+        "Istaravshan",
+        "Panjakent",
+        "Konibodom",
+        "Isfara"
+      ]
+    },
+    {
+      "id": "turkmenistan",
+      "name": "Turkmenistan",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Ashgabat",
+        "currency": "Turkmenistani Manat (TMT)",
+        "languages": "Turkmen"
+      },
+      "cities": [
+        "Ashgabat",
+        "Turkmenabat",
+        "Dasoguz",
+        "Mary",
+        "Balkanabat",
+        "Turkmenbasy",
+        "Bayramaly",
+        "Anau"
+      ]
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "quality": "template",
+      "template": "temperate_europe",
+      "facts": {
+        "capital": "Beijing",
+        "currency": "Renminbi (CNY)",
+        "languages": "Mandarin Chinese"
+      },
+      "cities": [
+        "Beijing",
+        "Shanghai",
+        "Guangzhou",
+        "Shenzhen",
+        "Chengdu",
+        "Hangzhou",
+        "Wuhan",
+        "Xian"
+      ]
+    },
+    {
+      "id": "nepal",
+      "name": "Nepal",
+      "quality": "template",
+      "template": "eurasia_steppe_mountain",
+      "facts": {
+        "capital": "Kathmandu",
+        "currency": "Nepalese Rupee (NPR)",
+        "languages": "Nepali"
+      },
+      "cities": [
+        "Kathmandu",
+        "Pokhara",
+        "Lalitpur",
+        "Bharatpur",
+        "Biratnagar",
+        "Birgunj",
+        "Dharan",
+        "Janakpur"
+      ]
+    },
+    {
+      "id": "bangladesh",
+      "name": "Bangladesh",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Dhaka",
+        "currency": "Bangladeshi Taka (BDT)",
+        "languages": "Bengali"
+      },
+      "cities": [
+        "Dhaka",
+        "Chittagong",
+        "Khulna",
+        "Rajshahi",
+        "Sylhet",
+        "Barisal",
+        "Rangpur",
+        "Mymensingh"
+      ]
+    },
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Islamabad",
+        "currency": "Pakistani Rupee (PKR)",
+        "languages": "Urdu, English"
+      },
+      "cities": [
+        "Karachi",
+        "Lahore",
+        "Faisalabad",
+        "Rawalpindi",
+        "Gujranwala",
+        "Peshawar",
+        "Multan",
+        "Hyderabad"
+      ]
+    },
+    {
+      "id": "maldives",
+      "name": "Maldives",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Malé",
+        "currency": "Maldivian Rufiyaa (MVR)",
+        "languages": "Dhivehi"
+      },
+      "cities": [
+        "Male",
+        "Hulhumale",
+        "Maafushi",
+        "Addu City",
+        "Fuvahmulah",
+        "Kulhudhuffushi",
+        "Thinadhoo",
+        "Naifaru"
+      ]
+    },
+    {
+      "id": "cambodia",
+      "name": "Cambodia",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Phnom Penh",
+        "currency": "Cambodian Riel (KHR)",
+        "languages": "Khmer"
+      },
+      "cities": [
+        "Phnom Penh",
+        "Siem Reap",
+        "Sihanoukville",
+        "Battambang",
+        "Kampot",
+        "Kep",
+        "Poipet",
+        "Kampong Cham"
+      ]
+    },
+    {
+      "id": "laos",
+      "name": "Laos",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Vientiane",
+        "currency": "Lao Kip (LAK)",
+        "languages": "Lao"
+      },
+      "cities": [
+        "Vientiane",
+        "Luang Prabang",
+        "Pakse",
+        "Savannakhet",
+        "Thakhek",
+        "Vang Vieng",
+        "Phonsavan",
+        "Huay Xai"
+      ]
+    },
+    {
+      "id": "brunei",
+      "name": "Brunei",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Bandar Seri Begawan",
+        "currency": "Brunei Dollar (BND)",
+        "languages": "Malay"
+      },
+      "cities": [
+        "Bandar Seri Begawan",
+        "Kuala Belait",
+        "Seria",
+        "Tutong",
+        "Bangar",
+        "Muara",
+        "Jerudong",
+        "Sengkurong"
+      ]
+    },
+    {
+      "id": "myanmar",
+      "name": "Myanmar",
+      "quality": "template",
+      "template": "asia_tropical",
+      "facts": {
+        "capital": "Naypyidaw",
+        "currency": "Myanmar Kyat (MMK)",
+        "languages": "Burmese"
+      },
+      "cities": [
+        "Yangon",
+        "Mandalay",
+        "Naypyidaw",
+        "Mawlamyine",
+        "Bago",
+        "Pathein",
+        "Monywa",
+        "Taunggyi"
+      ]
+    },
+    {
+      "id": "tunisia",
+      "name": "Tunisia",
+      "quality": "template",
+      "template": "warm_europe",
+      "facts": {
+        "capital": "Tunis",
+        "currency": "Tunisian Dinar (TND)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Tunis",
+        "Sfax",
+        "Sousse",
+        "Kairouan",
+        "Bizerte",
+        "Gabes",
+        "Ariana",
+        "La Marsa"
+      ]
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Algiers",
+        "currency": "Algerian Dinar (DZD)",
+        "languages": "Arabic, Tamazight"
+      },
+      "cities": [
+        "Algiers",
+        "Oran",
+        "Constantine",
+        "Annaba",
+        "Blida",
+        "Batna",
+        "Setif",
+        "Sidi Bel Abbes"
+      ]
+    },
+    {
+      "id": "libya",
+      "name": "Libya",
+      "quality": "template",
+      "template": "desert_gulf",
+      "facts": {
+        "capital": "Tripoli",
+        "currency": "Libyan Dinar (LYD)",
+        "languages": "Arabic"
+      },
+      "cities": [
+        "Tripoli",
+        "Benghazi",
+        "Misrata",
+        "Tarhuna",
+        "Khoms",
+        "Zawiya",
+        "Zliten",
+        "Ajdabiya"
+      ]
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Dakar",
+        "currency": "West African CFA Franc (XOF)",
+        "languages": "French"
+      },
+      "cities": [
+        "Dakar",
+        "Saint-Louis",
+        "Thies",
+        "Kaolack",
+        "Ziguinchor",
+        "Mbour",
+        "Touba",
+        "Rufisque"
+      ]
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Accra",
+        "currency": "Ghanaian Cedi (GHS)",
+        "languages": "English"
+      },
+      "cities": [
+        "Accra",
+        "Kumasi",
+        "Tamale",
+        "Takoradi",
+        "Achimota",
+        "Tema",
+        "Cape Coast",
+        "Obuasi"
+      ]
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Abuja",
+        "currency": "Nigerian Naira (NGN)",
+        "languages": "English"
+      },
+      "cities": [
+        "Lagos",
+        "Abuja",
+        "Kano",
+        "Ibadan",
+        "Port Harcourt",
+        "Benin City",
+        "Kaduna",
+        "Enugu"
+      ]
+    },
+    {
+      "id": "ethiopia",
+      "name": "Ethiopia",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Addis Ababa",
+        "currency": "Ethiopian Birr (ETB)",
+        "languages": "Amharic"
+      },
+      "cities": [
+        "Addis Ababa",
+        "Dire Dawa",
+        "Mekelle",
+        "Gondar",
+        "Bahir Dar",
+        "Awasa",
+        "Adama",
+        "Jimma"
+      ]
+    },
+    {
+      "id": "tanzania",
+      "name": "Tanzania",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Dodoma",
+        "currency": "Tanzanian Shilling (TZS)",
+        "languages": "Swahili, English"
+      },
+      "cities": [
+        "Dar es Salaam",
+        "Dodoma",
+        "Arusha",
+        "Mwanza",
+        "Zanzibar City",
+        "Stone Town",
+        "Mbeya",
+        "Tanga"
+      ]
+    },
+    {
+      "id": "uganda",
+      "name": "Uganda",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Kampala",
+        "currency": "Ugandan Shilling (UGX)",
+        "languages": "English, Swahili"
+      },
+      "cities": [
+        "Kampala",
+        "Entebbe",
+        "Jinja",
+        "Gulu",
+        "Mbarara",
+        "Mbale",
+        "Masaka",
+        "Lira"
+      ]
+    },
+    {
+      "id": "rwanda",
+      "name": "Rwanda",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Kigali",
+        "currency": "Rwandan Franc (RWF)",
+        "languages": "Kinyarwanda, English, French"
+      },
+      "cities": [
+        "Kigali",
+        "Gisenyi",
+        "Butare",
+        "Ruhengeri",
+        "Kibuye",
+        "Byumba",
+        "Cyangugu",
+        "Gitarama"
+      ]
+    },
+    {
+      "id": "mauritius",
+      "name": "Mauritius",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Port Louis",
+        "currency": "Mauritian Rupee (MUR)",
+        "languages": "English, French"
+      },
+      "cities": [
+        "Port Louis",
+        "Beau Bassin-Rose Hill",
+        "Vacoas-Phoenix",
+        "Curepipe",
+        "Quatre Bornes",
+        "Grand Baie",
+        "Flic-en-Flac",
+        "Mahebourg"
+      ]
+    },
+    {
+      "id": "seychelles",
+      "name": "Seychelles",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Victoria",
+        "currency": "Seychellois Rupee (SCR)",
+        "languages": "Seychellois Creole, English, French"
+      },
+      "cities": [
+        "Victoria",
+        "Beau Vallon",
+        "Anse Royale",
+        "Cascade",
+        "Takamaka",
+        "Grand Anse",
+        "Baie Sainte Anne",
+        "La Digue"
+      ]
+    },
+    {
+      "id": "madagascar",
+      "name": "Madagascar",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Antananarivo",
+        "currency": "Malagasy Ariary (MGA)",
+        "languages": "Malagasy, French"
+      },
+      "cities": [
+        "Antananarivo",
+        "Toamasina",
+        "Antsirabe",
+        "Mahajanga",
+        "Fianarantsoa",
+        "Toliara",
+        "Antsiranana",
+        "Nosy Be"
+      ]
+    },
+    {
+      "id": "fiji",
+      "name": "Fiji",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Suva",
+        "currency": "Fijian Dollar (FJD)",
+        "languages": "English, Fijian, Fiji Hindi"
+      },
+      "cities": [
+        "Suva",
+        "Nadi",
+        "Lautoka",
+        "Labasa",
+        "Nausori",
+        "Savusavu",
+        "Sigatoka",
+        "Levuka"
+      ]
+    },
+    {
+      "id": "samoa",
+      "name": "Samoa",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Apia",
+        "currency": "Samoan Tālā (WST)",
+        "languages": "Samoan, English"
+      },
+      "cities": [
+        "Apia",
+        "Mulifanua",
+        "Salelologa",
+        "Faleolo",
+        "Lalomanu",
+        "Manono",
+        "Apolima",
+        "Safotu"
+      ]
+    },
+    {
+      "id": "tonga",
+      "name": "Tonga",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Nukuʻalofa",
+        "currency": "Tongan Paʻanga (TOP)",
+        "languages": "Tongan, English"
+      },
+      "cities": [
+        "Nuku'alofa",
+        "Neiafu",
+        "Pangai",
+        "Ohonua",
+        "Haveluloto",
+        "Kolofo'ou",
+        "Ma'ufanga",
+        "Vaini"
+      ]
+    },
+    {
+      "id": "papua_new_guinea",
+      "name": "Papua New Guinea",
+      "quality": "template",
+      "template": "latam_tropical",
+      "facts": {
+        "capital": "Port Moresby",
+        "currency": "Papua New Guinean Kina (PGK)",
+        "languages": "Tok Pisin, English, Hiri Motu"
+      },
+      "cities": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Madang",
+        "Wewak",
+        "Goroka",
+        "Rabaul",
+        "Kokopo"
+      ]
+    },
+    {
+      "id": "vanuatu",
+      "name": "Vanuatu",
+      "quality": "template",
+      "template": "warm_island",
+      "facts": {
+        "capital": "Port Vila",
+        "currency": "Vanuatu Vatu (VUV)",
+        "languages": "Bislama, English, French"
+      },
+      "cities": [
+        "Port Vila",
+        "Luganville",
+        "Norsup",
+        "Isangel",
+        "Sola",
+        "Lakatoro",
+        "Lenakel",
+        "Port Olry"
+      ]
+    },
+    {
+      "id": "mongolia",
+      "name": "Mongolia",
+      "quality": "template",
+      "template": "eurasia_steppe_mountain",
+      "facts": {
+        "capital": "Ulaanbaatar",
+        "currency": "Mongolian Tögrög (MNT)",
+        "languages": "Mongolian"
+      },
+      "cities": [
+        "Ulaanbaatar",
+        "Erdenet",
+        "Darkhan",
+        "Choibalsan",
+        "Moron",
+        "Nalaikh",
+        "Bayankhongor",
+        "Ulaangom"
+      ]
+    }
+  ]
+}

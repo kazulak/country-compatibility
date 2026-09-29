@@ -1,0 +1,854 @@
+{
+  "meta": {
+    "description": "Real universities only. No research groups, departments or rankings by subject.",
+    "arwu": "Approximate Academic Ranking of World Universities (Shanghai Ranking) positions, recalled from roughly the 2023 edition and not re-verified. Positions beyond 100 are shown as bands. Check shanghairanking.com for current figures."
+  },
+  "universities": [
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "city": "Cambridge",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 1,
+      "arwuBand": "#1"
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "city": "Stanford",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 2,
+      "arwuBand": "#2"
+    },
+    {
+      "id": "mit",
+      "name": "MIT",
+      "city": "Cambridge",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 3,
+      "arwuBand": "#3"
+    },
+    {
+      "id": "berkeley",
+      "name": "UC Berkeley",
+      "city": "Berkeley",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 5,
+      "arwuBand": "#5"
+    },
+    {
+      "id": "princeton",
+      "name": "Princeton University",
+      "city": "Princeton",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 6,
+      "arwuBand": "#6"
+    },
+    {
+      "id": "columbia",
+      "name": "Columbia University",
+      "city": "New York",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 8,
+      "arwuBand": "#8"
+    },
+    {
+      "id": "caltech",
+      "name": "Caltech",
+      "city": "Pasadena",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 9,
+      "arwuBand": "#9"
+    },
+    {
+      "id": "chicago",
+      "name": "University of Chicago",
+      "city": "Chicago",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 10,
+      "arwuBand": "#10"
+    },
+    {
+      "id": "yale",
+      "name": "Yale University",
+      "city": "New Haven",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 11,
+      "arwuBand": "#11"
+    },
+    {
+      "id": "cornell",
+      "name": "Cornell University",
+      "city": "Ithaca",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 12,
+      "arwuBand": "#12"
+    },
+    {
+      "id": "ucla",
+      "name": "UCLA",
+      "city": "Los Angeles",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 13,
+      "arwuBand": "#13"
+    },
+    {
+      "id": "upenn",
+      "name": "University of Pennsylvania",
+      "city": "Philadelphia",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 14,
+      "arwuBand": "#14"
+    },
+    {
+      "id": "ucsd",
+      "name": "UC San Diego",
+      "city": "La Jolla",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 16,
+      "arwuBand": "#16"
+    },
+    {
+      "id": "jhu",
+      "name": "Johns Hopkins University",
+      "city": "Baltimore",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 17,
+      "arwuBand": "#17"
+    },
+    {
+      "id": "nyu",
+      "name": "New York University",
+      "city": "New York",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 22,
+      "arwuBand": "#22"
+    },
+    {
+      "id": "umich",
+      "name": "University of Michigan",
+      "city": "Ann Arbor",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 26,
+      "arwuBand": "#26"
+    },
+    {
+      "id": "uw",
+      "name": "University of Washington",
+      "city": "Seattle",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 29,
+      "arwuBand": "#29"
+    },
+    {
+      "id": "utexas",
+      "name": "University of Texas at Austin",
+      "city": "Austin",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 37,
+      "arwuBand": "#37"
+    },
+    {
+      "id": "wisconsin",
+      "name": "University of Wisconsin-Madison",
+      "city": "Madison",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 39,
+      "arwuBand": "#39"
+    },
+    {
+      "id": "uiuc",
+      "name": "UIUC",
+      "city": "Urbana",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 45,
+      "arwuBand": "#45"
+    },
+    {
+      "id": "gatech",
+      "name": "Georgia Institute of Technology",
+      "city": "Atlanta",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 70,
+      "arwuBand": "#70"
+    },
+    {
+      "id": "cmu",
+      "name": "Carnegie Mellon University",
+      "city": "Pittsburgh",
+      "country": "USA",
+      "countryId": "united_states",
+      "arwuRank": 95,
+      "arwuBand": "#95"
+    },
+    {
+      "id": "cambridge",
+      "name": "University of Cambridge",
+      "city": "Cambridge",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 4,
+      "arwuBand": "#4"
+    },
+    {
+      "id": "oxford",
+      "name": "University of Oxford",
+      "city": "Oxford",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 7,
+      "arwuBand": "#7"
+    },
+    {
+      "id": "ucl",
+      "name": "UCL",
+      "city": "London",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 18,
+      "arwuBand": "#18"
+    },
+    {
+      "id": "imperial",
+      "name": "Imperial College London",
+      "city": "London",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 20,
+      "arwuBand": "#20"
+    },
+    {
+      "id": "edinburgh",
+      "name": "University of Edinburgh",
+      "city": "Edinburgh",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 35,
+      "arwuBand": "#35"
+    },
+    {
+      "id": "manchester",
+      "name": "University of Manchester",
+      "city": "Manchester",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 38,
+      "arwuBand": "#38"
+    },
+    {
+      "id": "kcl",
+      "name": "King's College London",
+      "city": "London",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 48,
+      "arwuBand": "#48"
+    },
+    {
+      "id": "bristol",
+      "name": "University of Bristol",
+      "city": "Bristol",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 64,
+      "arwuBand": "#64"
+    },
+    {
+      "id": "warwick",
+      "name": "University of Warwick",
+      "city": "Coventry",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "glasgow",
+      "name": "University of Glasgow",
+      "city": "Glasgow",
+      "country": "UK",
+      "countryId": "united_kingdom",
+      "arwuRank": 120,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "eth_zurich",
+      "name": "ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "countryId": "switzerland",
+      "arwuRank": 15,
+      "arwuBand": "#15"
+    },
+    {
+      "id": "epfl",
+      "name": "EPFL",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "countryId": "switzerland",
+      "arwuRank": 75,
+      "arwuBand": "#75"
+    },
+    {
+      "id": "sorbonne",
+      "name": "Sorbonne University",
+      "city": "Paris",
+      "country": "France",
+      "countryId": "france",
+      "arwuRank": 35,
+      "arwuBand": "#35"
+    },
+    {
+      "id": "psl",
+      "name": "Paris Sciences et Lettres",
+      "city": "Paris",
+      "country": "France",
+      "countryId": "france",
+      "arwuRank": 40,
+      "arwuBand": "#40"
+    },
+    {
+      "id": "saclay",
+      "name": "Paris-Saclay University",
+      "city": "Gif-sur-Yvette",
+      "country": "France",
+      "countryId": "france",
+      "arwuRank": 14,
+      "arwuBand": "#14"
+    },
+    {
+      "id": "tum",
+      "name": "Technical University of Munich",
+      "city": "Munich",
+      "country": "Germany",
+      "countryId": "germany",
+      "arwuRank": 56,
+      "arwuBand": "#56"
+    },
+    {
+      "id": "lmu",
+      "name": "LMU Munich",
+      "city": "Munich",
+      "country": "Germany",
+      "countryId": "germany",
+      "arwuRank": 57,
+      "arwuBand": "#57"
+    },
+    {
+      "id": "heidelberg",
+      "name": "Heidelberg University",
+      "city": "Heidelberg",
+      "country": "Germany",
+      "countryId": "germany",
+      "arwuRank": 70,
+      "arwuBand": "#70"
+    },
+    {
+      "id": "utrecht",
+      "name": "Utrecht University",
+      "city": "Utrecht",
+      "country": "Netherlands",
+      "countryId": "netherlands",
+      "arwuRank": 52,
+      "arwuBand": "#52"
+    },
+    {
+      "id": "leiden",
+      "name": "Leiden University",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "countryId": "netherlands",
+      "arwuRank": 80,
+      "arwuBand": "#80"
+    },
+    {
+      "id": "uva",
+      "name": "University of Amsterdam",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryId": "netherlands",
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "delft",
+      "name": "TU Delft",
+      "city": "Delft",
+      "country": "Netherlands",
+      "countryId": "netherlands",
+      "arwuRank": 151,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "copenhagen",
+      "name": "University of Copenhagen",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "countryId": "denmark",
+      "arwuRank": 30,
+      "arwuBand": "#30"
+    },
+    {
+      "id": "aarhus",
+      "name": "Aarhus University",
+      "city": "Aarhus",
+      "country": "Denmark",
+      "countryId": "denmark",
+      "arwuRank": 78,
+      "arwuBand": "#78"
+    },
+    {
+      "id": "karolinska",
+      "name": "Karolinska Institute",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "countryId": "sweden",
+      "arwuRank": 41,
+      "arwuBand": "#41"
+    },
+    {
+      "id": "uppsala",
+      "name": "Uppsala University",
+      "city": "Uppsala",
+      "country": "Sweden",
+      "countryId": "sweden",
+      "arwuRank": 77,
+      "arwuBand": "#77"
+    },
+    {
+      "id": "kth",
+      "name": "KTH Royal Institute of Technology",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "countryId": "sweden",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "helsinki",
+      "name": "University of Helsinki",
+      "city": "Helsinki",
+      "country": "Finland",
+      "countryId": "finland",
+      "arwuRank": 99,
+      "arwuBand": "#99"
+    },
+    {
+      "id": "oslo",
+      "name": "University of Oslo",
+      "city": "Oslo",
+      "country": "Norway",
+      "countryId": "norway",
+      "arwuRank": 67,
+      "arwuBand": "#67"
+    },
+    {
+      "id": "warsaw",
+      "name": "University of Warsaw",
+      "city": "Warsaw",
+      "country": "Poland",
+      "countryId": "poland",
+      "arwuRank": 350,
+      "arwuBand": "301–400"
+    },
+    {
+      "id": "jagiellonian",
+      "name": "Jagiellonian University",
+      "city": "Krakow",
+      "country": "Poland",
+      "countryId": "poland",
+      "arwuRank": 401,
+      "arwuBand": "401–500"
+    },
+    {
+      "id": "charles",
+      "name": "Charles University",
+      "city": "Prague",
+      "country": "Czechia",
+      "countryId": "czechia",
+      "arwuRank": 301,
+      "arwuBand": "301–400"
+    },
+    {
+      "id": "elte",
+      "name": "Eotvos Lorand University",
+      "city": "Budapest",
+      "country": "Hungary",
+      "countryId": "hungary",
+      "arwuRank": 501,
+      "arwuBand": "501–600"
+    },
+    {
+      "id": "vienna",
+      "name": "University of Vienna",
+      "city": "Vienna",
+      "country": "Austria",
+      "countryId": "austria",
+      "arwuRank": 151,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "bologna",
+      "name": "University of Bologna",
+      "city": "Bologna",
+      "country": "Italy",
+      "countryId": "italy",
+      "arwuRank": 152,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "sapienza",
+      "name": "Sapienza University of Rome",
+      "city": "Rome",
+      "country": "Italy",
+      "countryId": "italy",
+      "arwuRank": 110,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "barcelona",
+      "name": "University of Barcelona",
+      "city": "Barcelona",
+      "country": "Spain",
+      "countryId": "spain",
+      "arwuRank": 153,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "coimbra",
+      "name": "University of Coimbra",
+      "city": "Coimbra",
+      "country": "Portugal",
+      "countryId": "portugal",
+      "arwuRank": 401,
+      "arwuBand": "401–500"
+    },
+    {
+      "id": "tokyo",
+      "name": "University of Tokyo",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryId": "japan",
+      "arwuRank": 24,
+      "arwuBand": "#24"
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto University",
+      "city": "Kyoto",
+      "country": "Japan",
+      "countryId": "japan",
+      "arwuRank": 36,
+      "arwuBand": "#36"
+    },
+    {
+      "id": "osaka",
+      "name": "Osaka University",
+      "city": "Osaka",
+      "country": "Japan",
+      "countryId": "japan",
+      "arwuRank": 151,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "snu",
+      "name": "Seoul National University",
+      "city": "Seoul",
+      "country": "South Korea",
+      "countryId": "south_korea",
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "kaist",
+      "name": "KAIST",
+      "city": "Daejeon",
+      "country": "South Korea",
+      "countryId": "south_korea",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "nus",
+      "name": "National University of Singapore",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryId": "singapore",
+      "arwuRank": 71,
+      "arwuBand": "#71"
+    },
+    {
+      "id": "ntu",
+      "name": "Nanyang Technological University",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryId": "singapore",
+      "arwuRank": 91,
+      "arwuBand": "#91"
+    },
+    {
+      "id": "hku",
+      "name": "University of Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong SAR, China",
+      "countryId": null,
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "hkust",
+      "name": "HKUST",
+      "city": "Hong Kong",
+      "country": "Hong Kong SAR, China",
+      "countryId": null,
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "cuhk",
+      "name": "Chinese University of Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong SAR, China",
+      "countryId": null,
+      "arwuRank": 102,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "tsinghua",
+      "name": "Tsinghua University",
+      "city": "Beijing",
+      "country": "China",
+      "countryId": "china",
+      "arwuRank": 26,
+      "arwuBand": "#26"
+    },
+    {
+      "id": "peking",
+      "name": "Peking University",
+      "city": "Beijing",
+      "country": "China",
+      "countryId": "china",
+      "arwuRank": 30,
+      "arwuBand": "#30"
+    },
+    {
+      "id": "fudan",
+      "name": "Fudan University",
+      "city": "Shanghai",
+      "country": "China",
+      "countryId": "china",
+      "arwuRank": 60,
+      "arwuBand": "#60"
+    },
+    {
+      "id": "sjtu",
+      "name": "Shanghai Jiao Tong University",
+      "city": "Shanghai",
+      "country": "China",
+      "countryId": "china",
+      "arwuRank": 46,
+      "arwuBand": "#46"
+    },
+    {
+      "id": "zhejiang",
+      "name": "Zhejiang University",
+      "city": "Hangzhou",
+      "country": "China",
+      "countryId": "china",
+      "arwuRank": 50,
+      "arwuBand": "#50"
+    },
+    {
+      "id": "melbourne",
+      "name": "University of Melbourne",
+      "city": "Melbourne",
+      "country": "Australia",
+      "countryId": "australia",
+      "arwuRank": 32,
+      "arwuBand": "#32"
+    },
+    {
+      "id": "sydney",
+      "name": "University of Sydney",
+      "city": "Sydney",
+      "country": "Australia",
+      "countryId": "australia",
+      "arwuRank": 60,
+      "arwuBand": "#60"
+    },
+    {
+      "id": "unsw",
+      "name": "UNSW Sydney",
+      "city": "Sydney",
+      "country": "Australia",
+      "countryId": "australia",
+      "arwuRank": 74,
+      "arwuBand": "#74"
+    },
+    {
+      "id": "anu",
+      "name": "Australian National University",
+      "city": "Canberra",
+      "country": "Australia",
+      "countryId": "australia",
+      "arwuRank": 79,
+      "arwuBand": "#79"
+    },
+    {
+      "id": "auckland",
+      "name": "University of Auckland",
+      "city": "Auckland",
+      "country": "New Zealand",
+      "countryId": "new_zealand",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "toronto",
+      "name": "University of Toronto",
+      "city": "Toronto",
+      "country": "Canada",
+      "countryId": "canada",
+      "arwuRank": 22,
+      "arwuBand": "#22"
+    },
+    {
+      "id": "ubc",
+      "name": "University of British Columbia",
+      "city": "Vancouver",
+      "country": "Canada",
+      "countryId": "canada",
+      "arwuRank": 35,
+      "arwuBand": "#35"
+    },
+    {
+      "id": "mcgill",
+      "name": "McGill University",
+      "city": "Montreal",
+      "country": "Canada",
+      "countryId": "canada",
+      "arwuRank": 70,
+      "arwuBand": "#70"
+    },
+    {
+      "id": "waterloo",
+      "name": "University of Waterloo",
+      "city": "Waterloo",
+      "country": "Canada",
+      "countryId": "canada",
+      "arwuRank": 151,
+      "arwuBand": "151–200"
+    },
+    {
+      "id": "unam",
+      "name": "UNAM",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "countryId": "mexico",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "usp",
+      "name": "University of Sao Paulo",
+      "city": "Sao Paulo",
+      "country": "Brazil",
+      "countryId": "brazil",
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "uba",
+      "name": "University of Buenos Aires",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "countryId": "argentina",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "uct",
+      "name": "University of Cape Town",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "countryId": "south_africa",
+      "arwuRank": 250,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "wits",
+      "name": "University of the Witwatersrand",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "countryId": "south_africa",
+      "arwuRank": 301,
+      "arwuBand": "301–400"
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo University",
+      "city": "Cairo",
+      "country": "Egypt",
+      "countryId": "egypt",
+      "arwuRank": 350,
+      "arwuBand": "301–400"
+    },
+    {
+      "id": "huji",
+      "name": "Hebrew University of Jerusalem",
+      "city": "Jerusalem",
+      "country": "Israel",
+      "countryId": "israel",
+      "arwuRank": 86,
+      "arwuBand": "#86"
+    },
+    {
+      "id": "technion",
+      "name": "Technion",
+      "city": "Haifa",
+      "country": "Israel",
+      "countryId": "israel",
+      "arwuRank": 101,
+      "arwuBand": "101–150"
+    },
+    {
+      "id": "kaust",
+      "name": "KAUST",
+      "city": "Thuwal",
+      "country": "Saudi Arabia",
+      "countryId": "saudi_arabia",
+      "arwuRank": 201,
+      "arwuBand": "201–300"
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanbul University",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "countryId": "turkey",
+      "arwuRank": 401,
+      "arwuBand": "401–500"
+    }
+  ]
+}
