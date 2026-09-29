@@ -19,11 +19,11 @@
     <p class="muted">Everything this site does, and everything it gets wrong, in one place.</p>
 
     <h2 id="what">1. What this is</h2>
-    <p>Country Compass is a just-for-fun side project. You say what matters to you, and it ranks countries (and a list of well-known universities) by how well they match. It is <strong>not a research tool</strong>. The numbers are hand-written guesses, not measurements.</p>
+    <p>Country Compass is a just-for-fun side project. You say what matters to you, and it ranks countries (and a list of well-known universities) by how well they match. It is <strong>not a research tool</strong>. Most numbers are hand-written guesses; seven metrics use real World Bank data.</p>
     <div class="disclaimer-banner"><strong>Please don't use this for real decisions.</strong> For visas, safety and money, use official government portals, travel advisories and the institutions themselves.</div>
 
     <h2 id="score">2. How the score works</h2>
-    <p>Each country has a 0&ndash;10 number for each of 32 metrics. For every metric you set an importance, which becomes a weight:</p>
+    <p>Each country has a 0&ndash;10 number for each of 32 metrics. A value comes from one of two sources: real World Bank data converted to 0&ndash;10 (7 metrics, see <a href="#world-bank">section 4</a>), or a hand-made estimate (the other 25, and any World Bank gap). For every metric you set an importance, which becomes a weight:</p>
     <ul>
       <li><strong>Off</strong> = 0 (ignored)</li>
       <li><strong>Low</strong> = 3</li>
@@ -58,48 +58,71 @@
     </div>
     <p class="muted">Three metrics are stored in the data as <em>difficulty</em> (higher is worse) and shown inverted as <em>ease</em> (10 minus the stored value). An earlier version scored bureaucracy the wrong way round; that is fixed.</p>
 
-    <h2 id="data">4. Where the data comes from, and how old it is</h2>
+    <h2 id="world-bank">4. Real data from the World Bank</h2>
+    <p>Seven metrics use World Bank numbers instead of guesses. Each value is converted to 0&ndash;10 with fixed anchor points, so scores do not shift when other countries change.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Site metric</th><th>What is measured</th><th>Indicator</th><th>Conversion to 0&ndash;10</th><th>Coverage</th></tr></thead>
+        <tbody id="wb-body"><tr><td colspan="5" class="muted">Loading&hellip;</td></tr></tbody>
+      </table>
+    </div>
+    <ul id="wb-notes"></ul>
+    <p>Source: World Bank, World Development Indicators, CC BY 4.0. Population and GDP per capita on the <a href="table.html">data table</a> are also from the World Bank.</p>
+    <p><strong>Refreshing the data:</strong> run <code>python tools/fetch_worldbank.py</code> to re-download and regenerate <code>docs/data/worldbank.json</code>.</p>
+
+    <h2 id="data">5. Where the data comes from, and how old it is</h2>
     <div class="table-scroll">
       <table>
         <thead><tr><th>Data</th><th>Source</th><th>Age / status</th></tr></thead>
         <tbody>
-          <tr><td>Curated country scores and text (20 countries)</td><td>Hand-written by one person</td><td>About 2025. Subjective.</td></tr>
-          <tr><td>Template countries (100 countries)</td><td>A generic regional template copied onto each country</td><td>No year. Not researched individually.</td></tr>
+          <tr><td>World Bank data (7 metrics, plus population and GDP per capita)</td><td>World Bank, World Development Indicators, CC BY 4.0</td><td>Mostly 2023&ndash;2025, some older. See each value on the <a href="table.html">data table</a>.</td></tr>
+          <tr><td>Curated country scores and text (20 countries), for the other 25 metrics</td><td>Hand-written by one person</td><td>About 2025. Subjective.</td></tr>
+          <tr><td>Template countries (100 countries)</td><td>A generic regional template copied onto each country, for the other 25 metrics</td><td>No year. Not researched individually.</td></tr>
           <tr><td>Capitals, currencies, languages</td><td>Reference facts</td><td>Checked 2026</td></tr>
           <tr><td>City lists</td><td>A few major cities per country</td><td>No city-level scores</td></tr>
           <tr><td>ARWU university ranks</td><td>Shanghai Ranking, recalled from memory</td><td>Approximate, about the 2023 edition. Not re-verified. Beyond 100 shown as bands.</td></tr>
-          <tr><td>University metrics other than rank</td><td>Copied from the host country's estimate</td><td>Nothing describes the university itself. Hong Kong has only the rank.</td></tr>
+          <tr><td>University metrics other than rank</td><td>Copied from the host country (safety and price level from World Bank data, the rest estimates)</td><td>Nothing describes the university itself. Hong Kong has only the rank.</td></tr>
           <tr><td>Map shapes</td><td>Natural Earth via world-atlas (50m)</td><td>Boundaries are simplified and not a political statement</td></tr>
         </tbody>
       </table>
     </div>
     <p>See every number on the <a href="table.html">data table</a>.</p>
 
-    <h2 id="problems">5. Known problems and likely errors</h2>
+    <h2 id="problems">6. Known problems and likely errors</h2>
     <ul>
-      <li><strong>Templates fit some countries badly.</strong> China, South Korea, Uzbekistan and Azerbaijan use the "Temperate Europe" template. Kenya, Nigeria and Ethiopia use "Tropical (Latin America)". The "Gulf / Desert" template claims zero income tax and high safety for Egypt, Algeria, Libya and others. Ukraine inherits "high public safety".</li>
-      <li><strong>Template countries ignore current events.</strong> They do not reflect conflicts, travel advisories or sanctions.</li>
+      <li><strong>Templates fit some countries badly.</strong> China, South Korea, Uzbekistan and Azerbaijan use the "Temperate Europe" template. Kenya, Nigeria and Ethiopia use "Tropical (Latin America)". The "Gulf / Desert" template claims zero income tax and high safety for Egypt, Algeria, Libya and others.</li>
+      <li><strong>Template countries ignore current events.</strong> Their estimates do not reflect conflicts, travel advisories or sanctions.</li>
       <li><strong>Countries sharing a template tie exactly</strong>, because their scores are identical.</li>
       <li><strong>Visa rules change often.</strong> The visa text on curated countries may be out of date, and template visa text is generic.</li>
       <li><strong>Scores are integers from 0 to 10 written by one person.</strong> There is no second opinion and no inter-rater check.</li>
       <li><strong>Several universities share an approximate rank</strong>, and ranks beyond 100 are only bands.</li>
       <li><strong>University scores describe the country, not the university.</strong></li>
       <li><strong>The quiz presets are arbitrary.</strong> They are convenient starting points, not findings.</li>
+      <li><strong>Homicide rate ignores war, terrorism and petty crime</strong>, and the data can be years old. Ukraine's value is from 2021, before the war shows up (it scores about 6.0). Egypt's is from 2017.</li>
+      <li><strong>PM2.5 is a modelled national average</strong>, not what you breathe in a given city.</li>
+      <li><strong>Internet measures access</strong> (share of people online), not speed.</li>
+      <li><strong>GDP per capita is an average</strong>, not wages for your job.</li>
+      <li><strong>The price level is economy-wide</strong> and misses expat rents in expensive cities. Singapore scores mid-range despite very high rents.</li>
+      <li><strong>Life expectancy is a health outcome</strong> shaped by much more than healthcare quality.</li>
+      <li><strong>Forest cover is not all nature</strong>: it ignores grassland, wetlands, mountains and desert landscapes, and includes plantations.</li>
+      <li><strong>Taiwan has no World Bank data</strong>, and a few microstates miss some metrics. They fall back to the old estimates.</li>
+      <li><strong>The 0&ndash;10 conversions use anchor points chosen by hand</strong>, which is itself a judgement call.</li>
       <li>Labels like "Happiness" or "Safety" do not match any official index.</li>
     </ul>
 
-    <h2 id="changelog">6. Changelog</h2>
+    <h2 id="changelog">7. Changelog</h2>
     <ul>
+      <li><strong>2026-09:</strong> 7 metrics now use World Bank data (safety, air quality, internet access, income level, life expectancy, price level, forest cover) with per-value source and year.</li>
       <li><strong>2026-09:</strong> removed generated research groups and invented universities, removed fabricated country facts and city statistics, fixed inverted bureaucracy scoring, labelled template countries.</li>
     </ul>
 
-    <h2 id="mistake">7. Found a mistake?</h2>
+    <h2 id="mistake">8. Found a mistake?</h2>
     <p>Please <a href="https://github.com/kazulak/country-compatibility/issues/new">open an issue</a> (the <a href="https://github.com/kazulak/country-compatibility">repo is here</a>). A correction with a source is the most helpful kind: tell me which country or university, which number, what it should be, and where you found it.</p>
   </main>
 
   <script type="module">
     import { METRICS, INVERTED } from "./js/metrics.js";
-    import { escapeHTML } from "./js/engine.js";
+    import { escapeHTML, loadJSON } from "./js/engine.js";
 
     const body = document.getElementById("metrics-body");
     body.innerHTML = Object.entries(METRICS).map(([key, m]) => {
@@ -110,6 +133,29 @@
       const note = inverted ? `${direction}. Stored as difficulty, shown inverted as ease.` : direction;
       return `<tr><td>${escapeHTML(m.label)}</td><td>${escapeHTML(m.type)}</td><td>${escapeHTML(note)}</td></tr>`;
     }).join("");
+
+    // ---- World Bank table, built from worldbank.json ----
+    Promise.all([loadJSON("data/worldbank.json"), loadJSON("data/countries.json")]).then(([wb, site]) => {
+      const meta = wb.meta;
+      const total = site.countries.length;
+      const counts = {};
+      for (const c of Object.values(wb.countries)) {
+        for (const key of Object.keys(c.metrics || {})) counts[key] = (counts[key] || 0) + 1;
+      }
+      document.getElementById("wb-body").innerHTML = Object.entries(meta.metrics).map(([key, m]) => {
+        const codes = (m.indicators || []).map(code =>
+          `<a href="https://data.worldbank.org/indicator/${encodeURIComponent(code)}">${escapeHTML(code)}</a>`).join(", ");
+        const label = METRICS[key] ? METRICS[key].label : key;
+        return `<tr><td>${escapeHTML(label)}</td><td>${escapeHTML(m.measure)}</td><td>${codes}</td><td>${escapeHTML(m.transform)}</td><td>${counts[key] || 0} of ${total} countries</td></tr>`;
+      }).join("");
+      document.getElementById("wb-notes").innerHTML = [
+        `Data retrieved ${escapeHTML(meta.retrieved)}; each country uses its most recent available year.`,
+        `Values older than ${escapeHTML(meta.minYear)} are dropped.`,
+        "If a country has no usable World Bank value for a metric, the old estimate is used instead.",
+      ].map(t => `<li>${t}</li>`).join("");
+    }).catch(() => {
+      document.getElementById("wb-body").innerHTML = '<tr><td colspan="5" class="muted">Could not load worldbank.json.</td></tr>';
+    });
   </script>
 </body>
 </html>

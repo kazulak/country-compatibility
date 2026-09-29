@@ -1,0 +1,5789 @@
+{
+ "meta": {
+  "source": "World Bank, World Development Indicators",
+  "sourceUrl": "https://data.worldbank.org/",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-09-29",
+  "minYear": 2015,
+  "note": "Most recent non-empty value per country; values older than minYear are dropped. Scores use fixed anchors, see transform.",
+  "metrics": {
+   "safety": {
+    "indicators": [
+     "VC.IHR.PSRC.P5"
+    ],
+    "measure": "Intentional homicides per 100,000 people",
+    "unit": "per 100k",
+    "transform": "Log scale: 0 homicides = 10, 50 or more = 0."
+   },
+   "air_quality": {
+    "indicators": [
+     "EN.ATM.PM25.MC.M3"
+    ],
+    "measure": "PM2.5 air pollution, mean annual exposure",
+    "unit": "µg/m³",
+    "transform": "5 µg/m³ (WHO guideline) = 10, 50 or more = 0, linear."
+   },
+   "internet_speed": {
+    "indicators": [
+     "IT.NET.USER.ZS"
+    ],
+    "measure": "Individuals using the internet",
+    "unit": "% of population",
+    "transform": "Share online divided by 10 (100% = 10). Measures access, not speed."
+   },
+   "local_job_market": {
+    "indicators": [
+     "NY.GDP.PCAP.PP.CD"
+    ],
+    "measure": "GDP per capita, PPP (income level)",
+    "unit": "international $",
+    "transform": "Log scale: $2,000 = 0, $100,000 or more = 10. An economy-wide average, not wages for your job."
+   },
+   "healthcare_quality": {
+    "indicators": [
+     "SP.DYN.LE00.IN"
+    ],
+    "measure": "Life expectancy at birth",
+    "unit": "years",
+    "transform": "55 years = 0, 85 years = 10, linear. A health outcome, not a direct measure of healthcare."
+   },
+   "cost_of_living": {
+    "indicators": [
+     "PA.NUS.PPP",
+     "PA.NUS.FCRF"
+    ],
+    "measure": "Price level ratio (PPP conversion factor / market exchange rate; USA = 1)",
+    "unit": "× US prices",
+    "transform": "Log scale: 0.2 × US prices = 0 (cheap), 1.2 × = 10 (expensive)."
+   },
+   "nature_forests_greenery": {
+    "indicators": [
+     "AG.LND.FRST.ZS"
+    ],
+    "measure": "Forest area",
+    "unit": "% of land area",
+    "transform": "0% = 0, 60% or more = 10, linear. Counts forest only, not parks or farmland."
+   }
+  },
+  "facts": {
+   "population": {
+    "indicator": "SP.POP.TOTL",
+    "measure": "Population"
+   },
+   "gdpPerCapitaPPP": {
+    "indicator": "NY.GDP.PCAP.PP.CD",
+    "measure": "GDP per capita, PPP (current international $)"
+   }
+  }
+ },
+ "countries": {
+  "portugal": {
+   "metrics": {
+    "safety": {
+     "raw": 0.72,
+     "year": 2022,
+     "score": 8.6
+    },
+    "air_quality": {
+     "raw": 8.77,
+     "year": 2023,
+     "score": 9.2
+    },
+    "internet_speed": {
+     "raw": 88.49,
+     "year": 2024,
+     "score": 8.8
+    },
+    "local_job_market": {
+     "raw": 53145.73,
+     "year": 2025,
+     "score": 8.4
+    },
+    "healthcare_quality": {
+     "raw": 82.38,
+     "year": 2024,
+     "score": 9.1
+    },
+    "cost_of_living": {
+     "raw": 0.6,
+     "year": 2025,
+     "score": 6.2
+    },
+    "nature_forests_greenery": {
+     "raw": 36.15,
+     "year": 2023,
+     "score": 6.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10804871,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 53146,
+     "year": 2025
+    }
+   }
+  },
+  "spain": {
+   "metrics": {
+    "safety": {
+     "raw": 0.69,
+     "year": 2023,
+     "score": 8.7
+    },
+    "air_quality": {
+     "raw": 10.08,
+     "year": 2023,
+     "score": 8.9
+    },
+    "internet_speed": {
+     "raw": 95.76,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 59867.69,
+     "year": 2025,
+     "score": 8.7
+    },
+    "healthcare_quality": {
+     "raw": 83.89,
+     "year": 2024,
+     "score": 9.6
+    },
+    "cost_of_living": {
+     "raw": 0.65,
+     "year": 2025,
+     "score": 6.5
+    },
+    "nature_forests_greenery": {
+     "raw": 37.19,
+     "year": 2023,
+     "score": 6.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 49355143,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 59868,
+     "year": 2025
+    }
+   }
+  },
+  "germany": {
+   "metrics": {
+    "safety": {
+     "raw": 0.91,
+     "year": 2023,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 8.81,
+     "year": 2023,
+     "score": 9.2
+    },
+    "internet_speed": {
+     "raw": 93.5,
+     "year": 2024,
+     "score": 9.3
+    },
+    "local_job_market": {
+     "raw": 75406.69,
+     "year": 2025,
+     "score": 9.3
+    },
+    "healthcare_quality": {
+     "raw": 80.79,
+     "year": 2024,
+     "score": 8.6
+    },
+    "cost_of_living": {
+     "raw": 0.8,
+     "year": 2025,
+     "score": 7.8
+    },
+    "nature_forests_greenery": {
+     "raw": 32.68,
+     "year": 2023,
+     "score": 5.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 83491249,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 75407,
+     "year": 2025
+    }
+   }
+  },
+  "japan": {
+   "metrics": {
+    "safety": {
+     "raw": 0.23,
+     "year": 2023,
+     "score": 9.5
+    },
+    "air_quality": {
+     "raw": 11.45,
+     "year": 2023,
+     "score": 8.6
+    },
+    "internet_speed": {
+     "raw": 85.54,
+     "year": 2024,
+     "score": 8.6
+    },
+    "local_job_market": {
+     "raw": 55421.88,
+     "year": 2025,
+     "score": 8.5
+    },
+    "healthcare_quality": {
+     "raw": 84.04,
+     "year": 2024,
+     "score": 9.7
+    },
+    "cost_of_living": {
+     "raw": 0.65,
+     "year": 2025,
+     "score": 6.6
+    },
+    "nature_forests_greenery": {
+     "raw": 68.4,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 123366734,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 55422,
+     "year": 2025
+    }
+   }
+  },
+  "canada": {
+   "metrics": {
+    "safety": {
+     "raw": 1.98,
+     "year": 2023,
+     "score": 7.2
+    },
+    "air_quality": {
+     "raw": 6.55,
+     "year": 2023,
+     "score": 9.7
+    },
+    "internet_speed": {
+     "raw": 94.35,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 66745.82,
+     "year": 2025,
+     "score": 9.0
+    },
+    "healthcare_quality": {
+     "raw": 82.11,
+     "year": 2024,
+     "score": 9.0
+    },
+    "cost_of_living": {
+     "raw": 0.83,
+     "year": 2025,
+     "score": 8.0
+    },
+    "nature_forests_greenery": {
+     "raw": 39.46,
+     "year": 2023,
+     "score": 6.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 41651653,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 66746,
+     "year": 2025
+    }
+   }
+  },
+  "australia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.85,
+     "year": 2023,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 6.41,
+     "year": 2023,
+     "score": 9.7
+    },
+    "internet_speed": {
+     "raw": 96.13,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 71934.4,
+     "year": 2025,
+     "score": 9.2
+    },
+    "healthcare_quality": {
+     "raw": 83.05,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 0.9,
+     "year": 2025,
+     "score": 8.4
+    },
+    "nature_forests_greenery": {
+     "raw": 17.42,
+     "year": 2023,
+     "score": 2.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 27614411,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 71934,
+     "year": 2025
+    }
+   }
+  },
+  "thailand": {
+   "metrics": {
+    "air_quality": {
+     "raw": 23.49,
+     "year": 2023,
+     "score": 5.9
+    },
+    "internet_speed": {
+     "raw": 90.87,
+     "year": 2024,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 26250.07,
+     "year": 2025,
+     "score": 6.6
+    },
+    "healthcare_quality": {
+     "raw": 76.56,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.31,
+     "year": 2025,
+     "score": 2.4
+    },
+    "nature_forests_greenery": {
+     "raw": 38.69,
+     "year": 2023,
+     "score": 6.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 71619863,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 26250,
+     "year": 2025
+    }
+   }
+  },
+  "costa_rica": {
+   "metrics": {
+    "safety": {
+     "raw": 17.75,
+     "year": 2023,
+     "score": 2.5
+    },
+    "air_quality": {
+     "raw": 17.7,
+     "year": 2023,
+     "score": 7.2
+    },
+    "internet_speed": {
+     "raw": 87.17,
+     "year": 2024,
+     "score": 8.7
+    },
+    "local_job_market": {
+     "raw": 33814.77,
+     "year": 2025,
+     "score": 7.2
+    },
+    "healthcare_quality": {
+     "raw": 81.0,
+     "year": 2024,
+     "score": 8.7
+    },
+    "cost_of_living": {
+     "raw": 0.59,
+     "year": 2025,
+     "score": 6.0
+    },
+    "nature_forests_greenery": {
+     "raw": 60.4,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5152950,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 33815,
+     "year": 2025
+    }
+   }
+  },
+  "finland": {
+   "metrics": {
+    "safety": {
+     "raw": 0.98,
+     "year": 2023,
+     "score": 8.3
+    },
+    "air_quality": {
+     "raw": 4.57,
+     "year": 2023,
+     "score": 10.0
+    },
+    "internet_speed": {
+     "raw": 93.72,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 65884.49,
+     "year": 2025,
+     "score": 8.9
+    },
+    "healthcare_quality": {
+     "raw": 82.34,
+     "year": 2024,
+     "score": 9.1
+    },
+    "cost_of_living": {
+     "raw": 0.85,
+     "year": 2025,
+     "score": 8.1
+    },
+    "nature_forests_greenery": {
+     "raw": 73.72,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5646436,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 65884,
+     "year": 2025
+    }
+   }
+  },
+  "switzerland": {
+   "metrics": {
+    "safety": {
+     "raw": 0.6,
+     "year": 2023,
+     "score": 8.8
+    },
+    "air_quality": {
+     "raw": 8.32,
+     "year": 2023,
+     "score": 9.3
+    },
+    "internet_speed": {
+     "raw": 97.32,
+     "year": 2025,
+     "score": 9.7
+    },
+    "local_job_market": {
+     "raw": 102513.35,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 84.41,
+     "year": 2024,
+     "score": 9.8
+    },
+    "cost_of_living": {
+     "raw": 1.12,
+     "year": 2025,
+     "score": 9.6
+    },
+    "nature_forests_greenery": {
+     "raw": 32.38,
+     "year": 2023,
+     "score": 5.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 9092436,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 102513,
+     "year": 2025
+    }
+   }
+  },
+  "united_states": {
+   "metrics": {
+    "safety": {
+     "raw": 5.76,
+     "year": 2023,
+     "score": 5.1
+    },
+    "air_quality": {
+     "raw": 6.97,
+     "year": 2023,
+     "score": 9.6
+    },
+    "internet_speed": {
+     "raw": 94.69,
+     "year": 2024,
+     "score": 9.5
+    },
+    "local_job_market": {
+     "raw": 90026.52,
+     "year": 2025,
+     "score": 9.7
+    },
+    "healthcare_quality": {
+     "raw": 78.89,
+     "year": 2024,
+     "score": 8.0
+    },
+    "cost_of_living": {
+     "raw": 1.0,
+     "year": 2025,
+     "score": 9.0
+    },
+    "nature_forests_greenery": {
+     "raw": 33.87,
+     "year": 2023,
+     "score": 5.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 341784857,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 90027,
+     "year": 2025
+    }
+   }
+  },
+  "united_kingdom": {
+   "metrics": {
+    "safety": {
+     "raw": 1.12,
+     "year": 2021,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 9.46,
+     "year": 2023,
+     "score": 9.0
+    },
+    "internet_speed": {
+     "raw": 95.47,
+     "year": 2024,
+     "score": 9.5
+    },
+    "local_job_market": {
+     "raw": 64606.5,
+     "year": 2025,
+     "score": 8.9
+    },
+    "healthcare_quality": {
+     "raw": 81.39,
+     "year": 2024,
+     "score": 8.8
+    },
+    "cost_of_living": {
+     "raw": 0.89,
+     "year": 2025,
+     "score": 8.3
+    },
+    "nature_forests_greenery": {
+     "raw": 13.29,
+     "year": 2023,
+     "score": 2.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 69487000,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 64606,
+     "year": 2025
+    }
+   }
+  },
+  "netherlands": {
+   "metrics": {
+    "safety": {
+     "raw": 0.69,
+     "year": 2023,
+     "score": 8.7
+    },
+    "air_quality": {
+     "raw": 8.59,
+     "year": 2023,
+     "score": 9.2
+    },
+    "internet_speed": {
+     "raw": 97.01,
+     "year": 2024,
+     "score": 9.7
+    },
+    "local_job_market": {
+     "raw": 87320.15,
+     "year": 2025,
+     "score": 9.7
+    },
+    "healthcare_quality": {
+     "raw": 81.97,
+     "year": 2024,
+     "score": 9.0
+    },
+    "cost_of_living": {
+     "raw": 0.84,
+     "year": 2025,
+     "score": 8.0
+    },
+    "nature_forests_greenery": {
+     "raw": 11.06,
+     "year": 2023,
+     "score": 1.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 18087633,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 87320,
+     "year": 2025
+    }
+   }
+  },
+  "singapore": {
+   "metrics": {
+    "safety": {
+     "raw": 0.07,
+     "year": 2023,
+     "score": 9.8
+    },
+    "air_quality": {
+     "raw": 15.14,
+     "year": 2023,
+     "score": 7.7
+    },
+    "internet_speed": {
+     "raw": 94.38,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 163353.99,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 83.35,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 0.6,
+     "year": 2025,
+     "score": 6.2
+    },
+    "nature_forests_greenery": {
+     "raw": 20.93,
+     "year": 2023,
+     "score": 3.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 6111175,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 163354,
+     "year": 2025
+    }
+   }
+  },
+  "new_zealand": {
+   "metrics": {
+    "safety": {
+     "raw": 1.46,
+     "year": 2022,
+     "score": 7.7
+    },
+    "air_quality": {
+     "raw": 6.88,
+     "year": 2023,
+     "score": 9.6
+    },
+    "internet_speed": {
+     "raw": 93.52,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 57350.36,
+     "year": 2025,
+     "score": 8.6
+    },
+    "healthcare_quality": {
+     "raw": 82.01,
+     "year": 2024,
+     "score": 9.0
+    },
+    "cost_of_living": {
+     "raw": 0.86,
+     "year": 2025,
+     "score": 8.1
+    },
+    "nature_forests_greenery": {
+     "raw": 37.79,
+     "year": 2023,
+     "score": 6.3
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5324700,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 57350,
+     "year": 2025
+    }
+   }
+  },
+  "mexico": {
+   "metrics": {
+    "safety": {
+     "raw": 24.86,
+     "year": 2023,
+     "score": 1.7
+    },
+    "air_quality": {
+     "raw": 16.61,
+     "year": 2023,
+     "score": 7.4
+    },
+    "internet_speed": {
+     "raw": 83.12,
+     "year": 2024,
+     "score": 8.3
+    },
+    "local_job_market": {
+     "raw": 25868.48,
+     "year": 2025,
+     "score": 6.5
+    },
+    "healthcare_quality": {
+     "raw": 75.26,
+     "year": 2024,
+     "score": 6.8
+    },
+    "cost_of_living": {
+     "raw": 0.54,
+     "year": 2025,
+     "score": 5.5
+    },
+    "nature_forests_greenery": {
+     "raw": 33.6,
+     "year": 2023,
+     "score": 5.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 131946900,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 25868,
+     "year": 2025
+    }
+   }
+  },
+  "italy": {
+   "metrics": {
+    "safety": {
+     "raw": 0.57,
+     "year": 2023,
+     "score": 8.9
+    },
+    "air_quality": {
+     "raw": 14.29,
+     "year": 2023,
+     "score": 7.9
+    },
+    "internet_speed": {
+     "raw": 89.22,
+     "year": 2024,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 62802.51,
+     "year": 2025,
+     "score": 8.8
+    },
+    "healthcare_quality": {
+     "raw": 83.95,
+     "year": 2024,
+     "score": 9.7
+    },
+    "cost_of_living": {
+     "raw": 0.69,
+     "year": 2025,
+     "score": 6.9
+    },
+    "nature_forests_greenery": {
+     "raw": 32.89,
+     "year": 2023,
+     "score": 5.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 58915656,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 62803,
+     "year": 2025
+    }
+   }
+  },
+  "france": {
+   "metrics": {
+    "safety": {
+     "raw": 1.34,
+     "year": 2023,
+     "score": 7.8
+    },
+    "air_quality": {
+     "raw": 8.23,
+     "year": 2023,
+     "score": 9.3
+    },
+    "internet_speed": {
+     "raw": 88.65,
+     "year": 2024,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 63975.35,
+     "year": 2025,
+     "score": 8.9
+    },
+    "healthcare_quality": {
+     "raw": 82.98,
+     "year": 2024,
+     "score": 9.3
+    },
+    "cost_of_living": {
+     "raw": 0.77,
+     "year": 2025,
+     "score": 7.5
+    },
+    "nature_forests_greenery": {
+     "raw": 32.48,
+     "year": 2023,
+     "score": 5.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 68720337,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 63975,
+     "year": 2025
+    }
+   }
+  },
+  "vietnam": {
+   "metrics": {
+    "air_quality": {
+     "raw": 24.78,
+     "year": 2023,
+     "score": 5.6
+    },
+    "internet_speed": {
+     "raw": 84.15,
+     "year": 2024,
+     "score": 8.4
+    },
+    "local_job_market": {
+     "raw": 18088.49,
+     "year": 2025,
+     "score": 5.6
+    },
+    "healthcare_quality": {
+     "raw": 74.74,
+     "year": 2024,
+     "score": 6.6
+    },
+    "cost_of_living": {
+     "raw": 0.29,
+     "year": 2024,
+     "score": 2.1
+    },
+    "nature_forests_greenery": {
+     "raw": 47.45,
+     "year": 2023,
+     "score": 7.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 101598527,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 18088,
+     "year": 2025
+    }
+   }
+  },
+  "norway": {
+   "metrics": {
+    "safety": {
+     "raw": 0.72,
+     "year": 2023,
+     "score": 8.6
+    },
+    "air_quality": {
+     "raw": 5.52,
+     "year": 2023,
+     "score": 9.9
+    },
+    "internet_speed": {
+     "raw": 99,
+     "year": 2024,
+     "score": 9.9
+    },
+    "local_job_market": {
+     "raw": 104043.67,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 83.16,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 0.91,
+     "year": 2025,
+     "score": 8.5
+    },
+    "nature_forests_greenery": {
+     "raw": 33.5,
+     "year": 2023,
+     "score": 5.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5610870,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 104044,
+     "year": 2025
+    }
+   }
+  },
+  "austria": {
+   "metrics": {
+    "safety": {
+     "raw": 0.88,
+     "year": 2023,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 10.03,
+     "year": 2023,
+     "score": 8.9
+    },
+    "internet_speed": {
+     "raw": 91.93,
+     "year": 2025,
+     "score": 9.2
+    },
+    "local_job_market": {
+     "raw": 76777.54,
+     "year": 2025,
+     "score": 9.3
+    },
+    "healthcare_quality": {
+     "raw": 82.0,
+     "year": 2024,
+     "score": 9.0
+    },
+    "cost_of_living": {
+     "raw": 0.82,
+     "year": 2025,
+     "score": 7.9
+    },
+    "nature_forests_greenery": {
+     "raw": 47.24,
+     "year": 2023,
+     "score": 7.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 9208163,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 76778,
+     "year": 2025
+    }
+   }
+  },
+  "belgium": {
+   "metrics": {
+    "safety": {
+     "raw": 1.08,
+     "year": 2021,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 8.45,
+     "year": 2023,
+     "score": 9.2
+    },
+    "internet_speed": {
+     "raw": 95.78,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 74675.61,
+     "year": 2025,
+     "score": 9.3
+    },
+    "healthcare_quality": {
+     "raw": 82.3,
+     "year": 2024,
+     "score": 9.1
+    },
+    "cost_of_living": {
+     "raw": 0.81,
+     "year": 2025,
+     "score": 7.8
+    },
+    "nature_forests_greenery": {
+     "raw": 22.6,
+     "year": 2023,
+     "score": 3.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 11941781,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 74676,
+     "year": 2025
+    }
+   }
+  },
+  "sweden": {
+   "metrics": {
+    "safety": {
+     "raw": 1.15,
+     "year": 2023,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 5.26,
+     "year": 2023,
+     "score": 9.9
+    },
+    "internet_speed": {
+     "raw": 95.77,
+     "year": 2025,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 72528.89,
+     "year": 2025,
+     "score": 9.2
+    },
+    "healthcare_quality": {
+     "raw": 84.06,
+     "year": 2024,
+     "score": 9.7
+    },
+    "cost_of_living": {
+     "raw": 0.87,
+     "year": 2025,
+     "score": 8.2
+    },
+    "nature_forests_greenery": {
+     "raw": 68.7,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10596620,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 72529,
+     "year": 2025
+    }
+   }
+  },
+  "denmark": {
+   "metrics": {
+    "safety": {
+     "raw": 0.84,
+     "year": 2023,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 7.5,
+     "year": 2023,
+     "score": 9.4
+    },
+    "internet_speed": {
+     "raw": 99.77,
+     "year": 2024,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 83218.07,
+     "year": 2025,
+     "score": 9.5
+    },
+    "healthcare_quality": {
+     "raw": 82.25,
+     "year": 2024,
+     "score": 9.1
+    },
+    "cost_of_living": {
+     "raw": 0.92,
+     "year": 2025,
+     "score": 8.5
+    },
+    "nature_forests_greenery": {
+     "raw": 15.78,
+     "year": 2023,
+     "score": 2.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 6009169,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 83218,
+     "year": 2025
+    }
+   }
+  },
+  "ireland": {
+   "metrics": {
+    "safety": {
+     "raw": 0.65,
+     "year": 2023,
+     "score": 8.7
+    },
+    "air_quality": {
+     "raw": 7.51,
+     "year": 2023,
+     "score": 9.4
+    },
+    "internet_speed": {
+     "raw": 97.19,
+     "year": 2024,
+     "score": 9.7
+    },
+    "local_job_market": {
+     "raw": 155089.41,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 83.01,
+     "year": 2024,
+     "score": 9.3
+    },
+    "cost_of_living": {
+     "raw": 0.85,
+     "year": 2025,
+     "score": 8.1
+    },
+    "nature_forests_greenery": {
+     "raw": 11.53,
+     "year": 2023,
+     "score": 1.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5484367,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 155089,
+     "year": 2025
+    }
+   }
+  },
+  "iceland": {
+   "metrics": {
+    "safety": {
+     "raw": 1.29,
+     "year": 2023,
+     "score": 7.9
+    },
+    "air_quality": {
+     "raw": 4.93,
+     "year": 2023,
+     "score": 10.0
+    },
+    "internet_speed": {
+     "raw": 98.21,
+     "year": 2024,
+     "score": 9.8
+    },
+    "local_job_market": {
+     "raw": 83431.21,
+     "year": 2025,
+     "score": 9.5
+    },
+    "healthcare_quality": {
+     "raw": 82.81,
+     "year": 2024,
+     "score": 9.3
+    },
+    "cost_of_living": {
+     "raw": 1.18,
+     "year": 2025,
+     "score": 9.9
+    },
+    "nature_forests_greenery": {
+     "raw": 0.53,
+     "year": 2023,
+     "score": 0.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 392404,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 83431,
+     "year": 2025
+    }
+   }
+  },
+  "greece": {
+   "metrics": {
+    "safety": {
+     "raw": 0.84,
+     "year": 2023,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 14.12,
+     "year": 2023,
+     "score": 8.0
+    },
+    "internet_speed": {
+     "raw": 86.27,
+     "year": 2024,
+     "score": 8.6
+    },
+    "local_job_market": {
+     "raw": 45263.65,
+     "year": 2025,
+     "score": 8.0
+    },
+    "healthcare_quality": {
+     "raw": 81.84,
+     "year": 2024,
+     "score": 8.9
+    },
+    "cost_of_living": {
+     "raw": 0.6,
+     "year": 2025,
+     "score": 6.1
+    },
+    "nature_forests_greenery": {
+     "raw": 30.27,
+     "year": 2023,
+     "score": 5.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10413962,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 45264,
+     "year": 2025
+    }
+   }
+  },
+  "croatia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.67,
+     "year": 2023,
+     "score": 8.7
+    },
+    "air_quality": {
+     "raw": 15.78,
+     "year": 2023,
+     "score": 7.6
+    },
+    "internet_speed": {
+     "raw": 83.63,
+     "year": 2024,
+     "score": 8.4
+    },
+    "local_job_market": {
+     "raw": 50946.17,
+     "year": 2025,
+     "score": 8.3
+    },
+    "healthcare_quality": {
+     "raw": 78.93,
+     "year": 2024,
+     "score": 8.0
+    },
+    "cost_of_living": {
+     "raw": 0.53,
+     "year": 2025,
+     "score": 5.5
+    },
+    "nature_forests_greenery": {
+     "raw": 34.79,
+     "year": 2023,
+     "score": 5.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3876200,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 50946,
+     "year": 2025
+    }
+   }
+  },
+  "czechia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.77,
+     "year": 2023,
+     "score": 8.6
+    },
+    "air_quality": {
+     "raw": 12.75,
+     "year": 2023,
+     "score": 8.3
+    },
+    "internet_speed": {
+     "raw": 87.69,
+     "year": 2024,
+     "score": 8.8
+    },
+    "local_job_market": {
+     "raw": 60487.29,
+     "year": 2025,
+     "score": 8.7
+    },
+    "healthcare_quality": {
+     "raw": 79.98,
+     "year": 2024,
+     "score": 8.3
+    },
+    "cost_of_living": {
+     "raw": 0.59,
+     "year": 2025,
+     "score": 6.1
+    },
+    "nature_forests_greenery": {
+     "raw": 34.76,
+     "year": 2023,
+     "score": 5.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10886878,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 60487,
+     "year": 2025
+    }
+   }
+  },
+  "poland": {
+   "metrics": {
+    "safety": {
+     "raw": 0.8,
+     "year": 2023,
+     "score": 8.5
+    },
+    "air_quality": {
+     "raw": 16.52,
+     "year": 2023,
+     "score": 7.4
+    },
+    "internet_speed": {
+     "raw": 88.58,
+     "year": 2024,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 54262.4,
+     "year": 2025,
+     "score": 8.4
+    },
+    "healthcare_quality": {
+     "raw": 78.41,
+     "year": 2024,
+     "score": 7.8
+    },
+    "cost_of_living": {
+     "raw": 0.52,
+     "year": 2025,
+     "score": 5.4
+    },
+    "nature_forests_greenery": {
+     "raw": 31.08,
+     "year": 2023,
+     "score": 5.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 36435861,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 54262,
+     "year": 2025
+    }
+   }
+  },
+  "hungary": {
+   "metrics": {
+    "safety": {
+     "raw": 0.72,
+     "year": 2023,
+     "score": 8.6
+    },
+    "air_quality": {
+     "raw": 13.72,
+     "year": 2023,
+     "score": 8.1
+    },
+    "internet_speed": {
+     "raw": 93.78,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 49837.6,
+     "year": 2025,
+     "score": 8.2
+    },
+    "healthcare_quality": {
+     "raw": 76.72,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.52,
+     "year": 2025,
+     "score": 5.3
+    },
+    "nature_forests_greenery": {
+     "raw": 22.45,
+     "year": 2023,
+     "score": 3.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 9514251,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 49838,
+     "year": 2025
+    }
+   }
+  },
+  "romania": {
+   "metrics": {
+    "safety": {
+     "raw": 1.11,
+     "year": 2023,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 16.01,
+     "year": 2023,
+     "score": 7.6
+    },
+    "internet_speed": {
+     "raw": 91.29,
+     "year": 2024,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 50895.08,
+     "year": 2025,
+     "score": 8.3
+    },
+    "healthcare_quality": {
+     "raw": 76.46,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.44,
+     "year": 2025,
+     "score": 4.4
+    },
+    "nature_forests_greenery": {
+     "raw": 30.12,
+     "year": 2023,
+     "score": 5.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 19020271,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 50895,
+     "year": 2025
+    }
+   }
+  },
+  "estonia": {
+   "metrics": {
+    "safety": {
+     "raw": 1.54,
+     "year": 2023,
+     "score": 7.6
+    },
+    "air_quality": {
+     "raw": 5.92,
+     "year": 2023,
+     "score": 9.8
+    },
+    "internet_speed": {
+     "raw": 92.24,
+     "year": 2024,
+     "score": 9.2
+    },
+    "local_job_market": {
+     "raw": 52105.51,
+     "year": 2025,
+     "score": 8.3
+    },
+    "healthcare_quality": {
+     "raw": 79.3,
+     "year": 2024,
+     "score": 8.1
+    },
+    "cost_of_living": {
+     "raw": 0.66,
+     "year": 2025,
+     "score": 6.7
+    },
+    "nature_forests_greenery": {
+     "raw": 57.07,
+     "year": 2023,
+     "score": 9.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1366475,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 52106,
+     "year": 2025
+    }
+   }
+  },
+  "latvia": {
+   "metrics": {
+    "safety": {
+     "raw": 2.5,
+     "year": 2023,
+     "score": 6.8
+    },
+    "air_quality": {
+     "raw": 13.01,
+     "year": 2023,
+     "score": 8.2
+    },
+    "internet_speed": {
+     "raw": 92.71,
+     "year": 2024,
+     "score": 9.3
+    },
+    "local_job_market": {
+     "raw": 46136.69,
+     "year": 2025,
+     "score": 8.0
+    },
+    "healthcare_quality": {
+     "raw": 76.43,
+     "year": 2024,
+     "score": 7.1
+    },
+    "cost_of_living": {
+     "raw": 0.57,
+     "year": 2025,
+     "score": 5.8
+    },
+    "nature_forests_greenery": {
+     "raw": 55.0,
+     "year": 2023,
+     "score": 9.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1847785,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 46137,
+     "year": 2025
+    }
+   }
+  },
+  "lithuania": {
+   "metrics": {
+    "safety": {
+     "raw": 2.63,
+     "year": 2023,
+     "score": 6.7
+    },
+    "air_quality": {
+     "raw": 10.75,
+     "year": 2023,
+     "score": 8.7
+    },
+    "internet_speed": {
+     "raw": 89.16,
+     "year": 2024,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 56837.81,
+     "year": 2025,
+     "score": 8.6
+    },
+    "healthcare_quality": {
+     "raw": 77.2,
+     "year": 2024,
+     "score": 7.4
+    },
+    "cost_of_living": {
+     "raw": 0.58,
+     "year": 2025,
+     "score": 5.9
+    },
+    "nature_forests_greenery": {
+     "raw": 35.23,
+     "year": 2023,
+     "score": 5.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 2888774,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 56838,
+     "year": 2025
+    }
+   }
+  },
+  "cyprus": {
+   "metrics": {
+    "safety": {
+     "raw": 0.82,
+     "year": 2023,
+     "score": 8.5
+    },
+    "air_quality": {
+     "raw": 16.07,
+     "year": 2023,
+     "score": 7.5
+    },
+    "internet_speed": {
+     "raw": 89.6,
+     "year": 2024,
+     "score": 9.0
+    },
+    "local_job_market": {
+     "raw": 64574.62,
+     "year": 2025,
+     "score": 8.9
+    },
+    "healthcare_quality": {
+     "raw": 81.82,
+     "year": 2024,
+     "score": 8.9
+    },
+    "cost_of_living": {
+     "raw": 0.65,
+     "year": 2025,
+     "score": 6.6
+    },
+    "nature_forests_greenery": {
+     "raw": 18.67,
+     "year": 2023,
+     "score": 3.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1370754,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 64575,
+     "year": 2025
+    }
+   }
+  },
+  "malta": {
+   "metrics": {
+    "safety": {
+     "raw": 0.56,
+     "year": 2023,
+     "score": 8.9
+    },
+    "air_quality": {
+     "raw": 10.81,
+     "year": 2023,
+     "score": 8.7
+    },
+    "internet_speed": {
+     "raw": 93.86,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 72210.34,
+     "year": 2025,
+     "score": 9.2
+    },
+    "healthcare_quality": {
+     "raw": 82.96,
+     "year": 2024,
+     "score": 9.3
+    },
+    "cost_of_living": {
+     "raw": 0.66,
+     "year": 2025,
+     "score": 6.7
+    },
+    "nature_forests_greenery": {
+     "raw": 1.44,
+     "year": 2023,
+     "score": 0.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 579704,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 72210,
+     "year": 2025
+    }
+   }
+  },
+  "south_korea": {
+   "metrics": {
+    "safety": {
+     "raw": 0.48,
+     "year": 2023,
+     "score": 9.0
+    },
+    "air_quality": {
+     "raw": 21.89,
+     "year": 2023,
+     "score": 6.2
+    },
+    "internet_speed": {
+     "raw": 97.9,
+     "year": 2024,
+     "score": 9.8
+    },
+    "local_job_market": {
+     "raw": 63124.92,
+     "year": 2025,
+     "score": 8.8
+    },
+    "healthcare_quality": {
+     "raw": 83.63,
+     "year": 2024,
+     "score": 9.5
+    },
+    "cost_of_living": {
+     "raw": 0.57,
+     "year": 2025,
+     "score": 5.9
+    },
+    "nature_forests_greenery": {
+     "raw": 64.11,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 51684564,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 63125,
+     "year": 2025
+    }
+   }
+  },
+  "malaysia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.73,
+     "year": 2023,
+     "score": 8.6
+    },
+    "air_quality": {
+     "raw": 15.87,
+     "year": 2023,
+     "score": 7.6
+    },
+    "internet_speed": {
+     "raw": 98.02,
+     "year": 2024,
+     "score": 9.8
+    },
+    "local_job_market": {
+     "raw": 41497.67,
+     "year": 2025,
+     "score": 7.8
+    },
+    "healthcare_quality": {
+     "raw": 76.82,
+     "year": 2024,
+     "score": 7.3
+    },
+    "cost_of_living": {
+     "raw": 0.32,
+     "year": 2025,
+     "score": 2.6
+    },
+    "nature_forests_greenery": {
+     "raw": 57.72,
+     "year": 2023,
+     "score": 9.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 35977838,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 41498,
+     "year": 2025
+    }
+   }
+  },
+  "indonesia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.3,
+     "year": 2022,
+     "score": 9.3
+    },
+    "air_quality": {
+     "raw": 20.84,
+     "year": 2023,
+     "score": 6.5
+    },
+    "internet_speed": {
+     "raw": 72.78,
+     "year": 2024,
+     "score": 7.3
+    },
+    "local_job_market": {
+     "raw": 17659.79,
+     "year": 2025,
+     "score": 5.6
+    },
+    "healthcare_quality": {
+     "raw": 71.29,
+     "year": 2024,
+     "score": 5.4
+    },
+    "cost_of_living": {
+     "raw": 0.29,
+     "year": 2025,
+     "score": 2.0
+    },
+    "nature_forests_greenery": {
+     "raw": 47.72,
+     "year": 2023,
+     "score": 8.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 285721236,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 17660,
+     "year": 2025
+    }
+   }
+  },
+  "philippines": {
+   "metrics": {
+    "safety": {
+     "raw": 4.35,
+     "year": 2023,
+     "score": 5.7
+    },
+    "air_quality": {
+     "raw": 22.21,
+     "year": 2023,
+     "score": 6.2
+    },
+    "internet_speed": {
+     "raw": 67.26,
+     "year": 2024,
+     "score": 6.7
+    },
+    "local_job_market": {
+     "raw": 12576.99,
+     "year": 2025,
+     "score": 4.7
+    },
+    "healthcare_quality": {
+     "raw": 69.95,
+     "year": 2024,
+     "score": 5.0
+    },
+    "cost_of_living": {
+     "raw": 0.33,
+     "year": 2025,
+     "score": 2.8
+    },
+    "nature_forests_greenery": {
+     "raw": 24.46,
+     "year": 2023,
+     "score": 4.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 116786962,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 12577,
+     "year": 2025
+    }
+   }
+  },
+  "india": {
+   "metrics": {
+    "safety": {
+     "raw": 2.82,
+     "year": 2022,
+     "score": 6.6
+    },
+    "air_quality": {
+     "raw": 54.05,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 70,
+     "year": 2025,
+     "score": 7.0
+    },
+    "local_job_market": {
+     "raw": 11747.92,
+     "year": 2025,
+     "score": 4.5
+    },
+    "healthcare_quality": {
+     "raw": 72.23,
+     "year": 2024,
+     "score": 5.7
+    },
+    "cost_of_living": {
+     "raw": 0.23,
+     "year": 2025,
+     "score": 0.8
+    },
+    "nature_forests_greenery": {
+     "raw": 24.54,
+     "year": 2023,
+     "score": 4.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1463865525,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 11748,
+     "year": 2025
+    }
+   }
+  },
+  "turkey": {
+   "metrics": {
+    "safety": {
+     "raw": 3.23,
+     "year": 2023,
+     "score": 6.3
+    },
+    "air_quality": {
+     "raw": 26.4,
+     "year": 2023,
+     "score": 5.2
+    },
+    "internet_speed": {
+     "raw": 89.77,
+     "year": 2025,
+     "score": 9.0
+    },
+    "local_job_market": {
+     "raw": 45288.48,
+     "year": 2025,
+     "score": 8.0
+    },
+    "healthcare_quality": {
+     "raw": 77.42,
+     "year": 2024,
+     "score": 7.5
+    },
+    "cost_of_living": {
+     "raw": 0.41,
+     "year": 2025,
+     "score": 4.0
+    },
+    "nature_forests_greenery": {
+     "raw": 29.48,
+     "year": 2023,
+     "score": 4.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 85878556,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 45288,
+     "year": 2025
+    }
+   }
+  },
+  "uae": {
+   "metrics": {
+    "safety": {
+     "raw": 0.69,
+     "year": 2022,
+     "score": 8.7
+    },
+    "air_quality": {
+     "raw": 57.19,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 100,
+     "year": 2024,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 79343.78,
+     "year": 2024,
+     "score": 9.4
+    },
+    "healthcare_quality": {
+     "raw": 83.07,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 0.63,
+     "year": 2024,
+     "score": 6.4
+    },
+    "nature_forests_greenery": {
+     "raw": 4.47,
+     "year": 2023,
+     "score": 0.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 11513149,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 79344,
+     "year": 2024
+    }
+   }
+  },
+  "south_africa": {
+   "metrics": {
+    "safety": {
+     "raw": 43.72,
+     "year": 2022,
+     "score": 0.3
+    },
+    "air_quality": {
+     "raw": 27.72,
+     "year": 2023,
+     "score": 5.0
+    },
+    "internet_speed": {
+     "raw": 78.36,
+     "year": 2024,
+     "score": 7.8
+    },
+    "local_job_market": {
+     "raw": 15905.68,
+     "year": 2025,
+     "score": 5.3
+    },
+    "healthcare_quality": {
+     "raw": 66.31,
+     "year": 2024,
+     "score": 3.8
+    },
+    "cost_of_living": {
+     "raw": 0.41,
+     "year": 2025,
+     "score": 4.1
+    },
+    "nature_forests_greenery": {
+     "raw": 13.97,
+     "year": 2023,
+     "score": 2.3
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 64747319,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 15906,
+     "year": 2025
+    }
+   }
+  },
+  "kenya": {
+   "metrics": {
+    "safety": {
+     "raw": 4.87,
+     "year": 2022,
+     "score": 5.5
+    },
+    "air_quality": {
+     "raw": 20.25,
+     "year": 2023,
+     "score": 6.6
+    },
+    "internet_speed": {
+     "raw": 34.98,
+     "year": 2024,
+     "score": 3.5
+    },
+    "local_job_market": {
+     "raw": 7015.94,
+     "year": 2025,
+     "score": 3.2
+    },
+    "healthcare_quality": {
+     "raw": 63.83,
+     "year": 2024,
+     "score": 2.9
+    },
+    "cost_of_living": {
+     "raw": 0.34,
+     "year": 2025,
+     "score": 2.9
+    },
+    "nature_forests_greenery": {
+     "raw": 6.22,
+     "year": 2023,
+     "score": 1.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 57532493,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 7016,
+     "year": 2025
+    }
+   }
+  },
+  "morocco": {
+   "metrics": {
+    "safety": {
+     "raw": 1.71,
+     "year": 2023,
+     "score": 7.5
+    },
+    "air_quality": {
+     "raw": 18.72,
+     "year": 2023,
+     "score": 7.0
+    },
+    "internet_speed": {
+     "raw": 91.2,
+     "year": 2024,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 11111.71,
+     "year": 2025,
+     "score": 4.4
+    },
+    "healthcare_quality": {
+     "raw": 75.49,
+     "year": 2024,
+     "score": 6.8
+    },
+    "cost_of_living": {
+     "raw": 0.42,
+     "year": 2025,
+     "score": 4.1
+    },
+    "nature_forests_greenery": {
+     "raw": 12.94,
+     "year": 2023,
+     "score": 2.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 38430770,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 11112,
+     "year": 2025
+    }
+   }
+  },
+  "egypt": {
+   "metrics": {
+    "safety": {
+     "raw": 1.31,
+     "year": 2017,
+     "score": 7.9
+    },
+    "air_quality": {
+     "raw": 43.15,
+     "year": 2023,
+     "score": 1.5
+    },
+    "internet_speed": {
+     "raw": 74.65,
+     "year": 2024,
+     "score": 7.5
+    },
+    "local_job_market": {
+     "raw": 20204.01,
+     "year": 2025,
+     "score": 5.9
+    },
+    "healthcare_quality": {
+     "raw": 71.81,
+     "year": 2024,
+     "score": 5.6
+    },
+    "cost_of_living": {
+     "raw": 0.15,
+     "year": 2025,
+     "score": 0.0
+    },
+    "nature_forests_greenery": {
+     "raw": 0.05,
+     "year": 2023,
+     "score": 0.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 118365995,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 20204,
+     "year": 2025
+    }
+   }
+  },
+  "brazil": {
+   "metrics": {
+    "safety": {
+     "raw": 19.28,
+     "year": 2023,
+     "score": 2.3
+    },
+    "air_quality": {
+     "raw": 13.38,
+     "year": 2023,
+     "score": 8.1
+    },
+    "internet_speed": {
+     "raw": 84.46,
+     "year": 2024,
+     "score": 8.4
+    },
+    "local_job_market": {
+     "raw": 23433.29,
+     "year": 2025,
+     "score": 6.3
+    },
+    "healthcare_quality": {
+     "raw": 76.02,
+     "year": 2024,
+     "score": 7.0
+    },
+    "cost_of_living": {
+     "raw": 0.46,
+     "year": 2025,
+     "score": 4.6
+    },
+    "nature_forests_greenery": {
+     "raw": 58.98,
+     "year": 2023,
+     "score": 9.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 212812405,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 23433,
+     "year": 2025
+    }
+   }
+  },
+  "argentina": {
+   "metrics": {
+    "safety": {
+     "raw": 4.49,
+     "year": 2023,
+     "score": 5.7
+    },
+    "air_quality": {
+     "raw": 14.35,
+     "year": 2023,
+     "score": 7.9
+    },
+    "internet_speed": {
+     "raw": 89.67,
+     "year": 2024,
+     "score": 9.0
+    },
+    "local_job_market": {
+     "raw": 32586.63,
+     "year": 2025,
+     "score": 7.1
+    },
+    "healthcare_quality": {
+     "raw": 77.54,
+     "year": 2024,
+     "score": 7.5
+    },
+    "cost_of_living": {
+     "raw": 0.46,
+     "year": 2025,
+     "score": 4.6
+    },
+    "nature_forests_greenery": {
+     "raw": 10.32,
+     "year": 2023,
+     "score": 1.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 45851378,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 32587,
+     "year": 2025
+    }
+   }
+  },
+  "chile": {
+   "metrics": {
+    "safety": {
+     "raw": 6.35,
+     "year": 2023,
+     "score": 4.9
+    },
+    "air_quality": {
+     "raw": 23.1,
+     "year": 2023,
+     "score": 6.0
+    },
+    "internet_speed": {
+     "raw": 95.59,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 37774.09,
+     "year": 2025,
+     "score": 7.5
+    },
+    "healthcare_quality": {
+     "raw": 81.36,
+     "year": 2024,
+     "score": 8.8
+    },
+    "cost_of_living": {
+     "raw": 0.48,
+     "year": 2025,
+     "score": 4.8
+    },
+    "nature_forests_greenery": {
+     "raw": 25.01,
+     "year": 2023,
+     "score": 4.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 19859921,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 37774,
+     "year": 2025
+    }
+   }
+  },
+  "colombia": {
+   "metrics": {
+    "safety": {
+     "raw": 24.91,
+     "year": 2023,
+     "score": 1.7
+    },
+    "air_quality": {
+     "raw": 18.36,
+     "year": 2023,
+     "score": 7.0
+    },
+    "internet_speed": {
+     "raw": 79.35,
+     "year": 2024,
+     "score": 7.9
+    },
+    "local_job_market": {
+     "raw": 22640.42,
+     "year": 2025,
+     "score": 6.2
+    },
+    "healthcare_quality": {
+     "raw": 77.91,
+     "year": 2024,
+     "score": 7.6
+    },
+    "cost_of_living": {
+     "raw": 0.38,
+     "year": 2025,
+     "score": 3.6
+    },
+    "nature_forests_greenery": {
+     "raw": 52.77,
+     "year": 2023,
+     "score": 8.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 53425635,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 22640,
+     "year": 2025
+    }
+   }
+  },
+  "peru": {
+   "metrics": {
+    "safety": {
+     "raw": 8.6,
+     "year": 2021,
+     "score": 4.2
+    },
+    "air_quality": {
+     "raw": 31.09,
+     "year": 2023,
+     "score": 4.2
+    },
+    "internet_speed": {
+     "raw": 81.96,
+     "year": 2024,
+     "score": 8.2
+    },
+    "local_job_market": {
+     "raw": 18816.1,
+     "year": 2025,
+     "score": 5.7
+    },
+    "healthcare_quality": {
+     "raw": 77.94,
+     "year": 2024,
+     "score": 7.6
+    },
+    "cost_of_living": {
+     "raw": 0.51,
+     "year": 2025,
+     "score": 5.3
+    },
+    "nature_forests_greenery": {
+     "raw": 56.1,
+     "year": 2023,
+     "score": 9.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 34576665,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 18816,
+     "year": 2025
+    }
+   }
+  },
+  "uruguay": {
+   "metrics": {
+    "safety": {
+     "raw": 11.25,
+     "year": 2023,
+     "score": 3.6
+    },
+    "air_quality": {
+     "raw": 10.85,
+     "year": 2023,
+     "score": 8.7
+    },
+    "internet_speed": {
+     "raw": 91.99,
+     "year": 2024,
+     "score": 9.2
+    },
+    "local_job_market": {
+     "raw": 38314.89,
+     "year": 2025,
+     "score": 7.5
+    },
+    "healthcare_quality": {
+     "raw": 78.29,
+     "year": 2024,
+     "score": 7.8
+    },
+    "cost_of_living": {
+     "raw": 0.66,
+     "year": 2025,
+     "score": 6.6
+    },
+    "nature_forests_greenery": {
+     "raw": 11.96,
+     "year": 2023,
+     "score": 2.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3384688,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 38315,
+     "year": 2025
+    }
+   }
+  },
+  "panama": {
+   "metrics": {
+    "safety": {
+     "raw": 11.71,
+     "year": 2023,
+     "score": 3.5
+    },
+    "air_quality": {
+     "raw": 15.12,
+     "year": 2023,
+     "score": 7.8
+    },
+    "internet_speed": {
+     "raw": 72.77,
+     "year": 2024,
+     "score": 7.3
+    },
+    "local_job_market": {
+     "raw": 43902.16,
+     "year": 2025,
+     "score": 7.9
+    },
+    "healthcare_quality": {
+     "raw": 79.78,
+     "year": 2024,
+     "score": 8.3
+    },
+    "cost_of_living": {
+     "raw": 0.45,
+     "year": 2025,
+     "score": 4.5
+    },
+    "nature_forests_greenery": {
+     "raw": 56.34,
+     "year": 2023,
+     "score": 9.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 4571189,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 43902,
+     "year": 2025
+    }
+   }
+  },
+  "ecuador": {
+   "metrics": {
+    "safety": {
+     "raw": 45.72,
+     "year": 2023,
+     "score": 0.2
+    },
+    "air_quality": {
+     "raw": 18.61,
+     "year": 2023,
+     "score": 7.0
+    },
+    "internet_speed": {
+     "raw": 77.17,
+     "year": 2024,
+     "score": 7.7
+    },
+    "local_job_market": {
+     "raw": 16756.65,
+     "year": 2025,
+     "score": 5.4
+    },
+    "healthcare_quality": {
+     "raw": 77.58,
+     "year": 2024,
+     "score": 7.5
+    },
+    "cost_of_living": {
+     "raw": 0.43,
+     "year": 2025,
+     "score": 4.2
+    },
+    "nature_forests_greenery": {
+     "raw": 49.55,
+     "year": 2023,
+     "score": 8.3
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 18289896,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 16757,
+     "year": 2025
+    }
+   }
+  },
+  "dominican_republic": {
+   "metrics": {
+    "safety": {
+     "raw": 10.92,
+     "year": 2023,
+     "score": 3.7
+    },
+    "air_quality": {
+     "raw": 13.51,
+     "year": 2023,
+     "score": 8.1
+    },
+    "internet_speed": {
+     "raw": 91.0,
+     "year": 2024,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 28721.1,
+     "year": 2025,
+     "score": 6.8
+    },
+    "healthcare_quality": {
+     "raw": 73.87,
+     "year": 2024,
+     "score": 6.3
+    },
+    "cost_of_living": {
+     "raw": 0.39,
+     "year": 2025,
+     "score": 3.7
+    },
+    "nature_forests_greenery": {
+     "raw": 44.99,
+     "year": 2023,
+     "score": 7.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 11520487,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 28721,
+     "year": 2025
+    }
+   }
+  },
+  "georgia": {
+   "metrics": {
+    "safety": {
+     "raw": 2.03,
+     "year": 2019,
+     "score": 7.2
+    },
+    "air_quality": {
+     "raw": 18.57,
+     "year": 2023,
+     "score": 7.0
+    },
+    "internet_speed": {
+     "raw": 83.8,
+     "year": 2024,
+     "score": 8.4
+    },
+    "local_job_market": {
+     "raw": 29414.38,
+     "year": 2025,
+     "score": 6.9
+    },
+    "healthcare_quality": {
+     "raw": 74.66,
+     "year": 2024,
+     "score": 6.6
+    },
+    "cost_of_living": {
+     "raw": 0.33,
+     "year": 2025,
+     "score": 2.8
+    },
+    "nature_forests_greenery": {
+     "raw": 40.62,
+     "year": 2023,
+     "score": 6.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3935766,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 29414,
+     "year": 2025
+    }
+   }
+  },
+  "armenia": {
+   "metrics": {
+    "safety": {
+     "raw": 2.21,
+     "year": 2023,
+     "score": 7.0
+    },
+    "air_quality": {
+     "raw": 28.55,
+     "year": 2023,
+     "score": 4.8
+    },
+    "internet_speed": {
+     "raw": 81.34,
+     "year": 2024,
+     "score": 8.1
+    },
+    "local_job_market": {
+     "raw": 24754.21,
+     "year": 2025,
+     "score": 6.4
+    },
+    "healthcare_quality": {
+     "raw": 78.32,
+     "year": 2024,
+     "score": 7.8
+    },
+    "cost_of_living": {
+     "raw": 0.38,
+     "year": 2025,
+     "score": 3.6
+    },
+    "nature_forests_greenery": {
+     "raw": 11.62,
+     "year": 2023,
+     "score": 1.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3086700,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 24754,
+     "year": 2025
+    }
+   }
+  },
+  "kazakhstan": {
+   "metrics": {
+    "safety": {
+     "raw": 2.55,
+     "year": 2022,
+     "score": 6.8
+    },
+    "air_quality": {
+     "raw": 19.6,
+     "year": 2023,
+     "score": 6.8
+    },
+    "internet_speed": {
+     "raw": 93.39,
+     "year": 2024,
+     "score": 9.3
+    },
+    "local_job_market": {
+     "raw": 44293.48,
+     "year": 2025,
+     "score": 7.9
+    },
+    "healthcare_quality": {
+     "raw": 74.53,
+     "year": 2024,
+     "score": 6.5
+    },
+    "cost_of_living": {
+     "raw": 0.33,
+     "year": 2025,
+     "score": 2.8
+    },
+    "nature_forests_greenery": {
+     "raw": 1.31,
+     "year": 2023,
+     "score": 0.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 20843754,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 44293,
+     "year": 2025
+    }
+   }
+  },
+  "israel": {
+   "metrics": {
+    "safety": {
+     "raw": 1.63,
+     "year": 2022,
+     "score": 7.5
+    },
+    "air_quality": {
+     "raw": 21.9,
+     "year": 2023,
+     "score": 6.2
+    },
+    "internet_speed": {
+     "raw": 88.18,
+     "year": 2024,
+     "score": 8.8
+    },
+    "local_job_market": {
+     "raw": 59716.97,
+     "year": 2025,
+     "score": 8.7
+    },
+    "healthcare_quality": {
+     "raw": 83.2,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 1.01,
+     "year": 2025,
+     "score": 9.0
+    },
+    "nature_forests_greenery": {
+     "raw": 6.47,
+     "year": 2023,
+     "score": 1.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10122800,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 59717,
+     "year": 2025
+    }
+   }
+  },
+  "saudi_arabia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.94,
+     "year": 2019,
+     "score": 8.3
+    },
+    "air_quality": {
+     "raw": 73.52,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 100,
+     "year": 2024,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 73783.56,
+     "year": 2025,
+     "score": 9.2
+    },
+    "healthcare_quality": {
+     "raw": 78.98,
+     "year": 2024,
+     "score": 8.0
+    },
+    "cost_of_living": {
+     "raw": 0.47,
+     "year": 2025,
+     "score": 4.7
+    },
+    "nature_forests_greenery": {
+     "raw": 0.45,
+     "year": 2023,
+     "score": 0.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 36973555,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 73784,
+     "year": 2025
+    }
+   }
+  },
+  "qatar": {
+   "metrics": {
+    "safety": {
+     "raw": 0.07,
+     "year": 2022,
+     "score": 9.8
+    },
+    "air_quality": {
+     "raw": 107.76,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 98.09,
+     "year": 2024,
+     "score": 9.8
+    },
+    "local_job_market": {
+     "raw": 128882.93,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 82.52,
+     "year": 2024,
+     "score": 9.2
+    },
+    "cost_of_living": {
+     "raw": 0.56,
+     "year": 2025,
+     "score": 5.8
+    },
+    "nature_forests_greenery": {
+     "raw": 0,
+     "year": 2023,
+     "score": 0.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 2972215,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 128883,
+     "year": 2025
+    }
+   }
+  },
+  "bulgaria": {
+   "metrics": {
+    "safety": {
+     "raw": 1.09,
+     "year": 2023,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 19.68,
+     "year": 2023,
+     "score": 6.7
+    },
+    "internet_speed": {
+     "raw": 82.44,
+     "year": 2024,
+     "score": 8.2
+    },
+    "local_job_market": {
+     "raw": 44451.1,
+     "year": 2025,
+     "score": 7.9
+    },
+    "healthcare_quality": {
+     "raw": 75.76,
+     "year": 2024,
+     "score": 6.9
+    },
+    "cost_of_living": {
+     "raw": 0.23,
+     "year": 2025,
+     "score": 0.9
+    },
+    "nature_forests_greenery": {
+     "raw": 36.22,
+     "year": 2023,
+     "score": 6.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 6433302,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 44451,
+     "year": 2025
+    }
+   }
+  },
+  "slovakia": {
+   "metrics": {
+    "safety": {
+     "raw": 1.12,
+     "year": 2023,
+     "score": 8.1
+    },
+    "air_quality": {
+     "raw": 13.72,
+     "year": 2023,
+     "score": 8.1
+    },
+    "internet_speed": {
+     "raw": 89.83,
+     "year": 2024,
+     "score": 9.0
+    },
+    "local_job_market": {
+     "raw": 49308.7,
+     "year": 2025,
+     "score": 8.2
+    },
+    "healthcare_quality": {
+     "raw": 78.37,
+     "year": 2024,
+     "score": 7.8
+    },
+    "cost_of_living": {
+     "raw": 0.58,
+     "year": 2025,
+     "score": 5.9
+    },
+    "nature_forests_greenery": {
+     "raw": 40.06,
+     "year": 2023,
+     "score": 6.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5413813,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 49309,
+     "year": 2025
+    }
+   }
+  },
+  "slovenia": {
+   "metrics": {
+    "safety": {
+     "raw": 0.57,
+     "year": 2023,
+     "score": 8.9
+    },
+    "air_quality": {
+     "raw": 12.56,
+     "year": 2023,
+     "score": 8.3
+    },
+    "internet_speed": {
+     "raw": 90.76,
+     "year": 2024,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 59244.71,
+     "year": 2025,
+     "score": 8.7
+    },
+    "healthcare_quality": {
+     "raw": 82.29,
+     "year": 2024,
+     "score": 9.1
+    },
+    "cost_of_living": {
+     "raw": 0.63,
+     "year": 2025,
+     "score": 6.4
+    },
+    "nature_forests_greenery": {
+     "raw": 61.17,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 2130986,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 59245,
+     "year": 2025
+    }
+   }
+  },
+  "montenegro": {
+   "metrics": {
+    "safety": {
+     "raw": 0.79,
+     "year": 2023,
+     "score": 8.5
+    },
+    "air_quality": {
+     "raw": 18.45,
+     "year": 2023,
+     "score": 7.0
+    },
+    "internet_speed": {
+     "raw": 88.88,
+     "year": 2024,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 35422.64,
+     "year": 2025,
+     "score": 7.3
+    },
+    "healthcare_quality": {
+     "raw": 77.89,
+     "year": 2024,
+     "score": 7.6
+    },
+    "cost_of_living": {
+     "raw": 0.42,
+     "year": 2025,
+     "score": 4.1
+    },
+    "nature_forests_greenery": {
+     "raw": 61.49,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 623129,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 35423,
+     "year": 2025
+    }
+   }
+  },
+  "albania": {
+   "metrics": {
+    "safety": {
+     "raw": 1.39,
+     "year": 2023,
+     "score": 7.8
+    },
+    "air_quality": {
+     "raw": 15.51,
+     "year": 2023,
+     "score": 7.7
+    },
+    "internet_speed": {
+     "raw": 85.86,
+     "year": 2024,
+     "score": 8.6
+    },
+    "local_job_market": {
+     "raw": 28220.8,
+     "year": 2025,
+     "score": 6.8
+    },
+    "healthcare_quality": {
+     "raw": 79.78,
+     "year": 2024,
+     "score": 8.3
+    },
+    "cost_of_living": {
+     "raw": 0.43,
+     "year": 2024,
+     "score": 4.3
+    },
+    "nature_forests_greenery": {
+     "raw": 28.79,
+     "year": 2023,
+     "score": 4.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 2349580,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 28221,
+     "year": 2025
+    }
+   }
+  },
+  "sri_lanka": {
+   "metrics": {
+    "safety": {
+     "raw": 3.31,
+     "year": 2019,
+     "score": 6.3
+    },
+    "air_quality": {
+     "raw": 22.68,
+     "year": 2023,
+     "score": 6.1
+    },
+    "internet_speed": {
+     "raw": 54.59,
+     "year": 2024,
+     "score": 5.5
+    },
+    "local_job_market": {
+     "raw": 17065.03,
+     "year": 2025,
+     "score": 5.5
+    },
+    "healthcare_quality": {
+     "raw": 77.67,
+     "year": 2024,
+     "score": 7.6
+    },
+    "nature_forests_greenery": {
+     "raw": 34.0,
+     "year": 2023,
+     "score": 5.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 21756000,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 17065,
+     "year": 2025
+    }
+   }
+  },
+  "luxembourg": {
+   "metrics": {
+    "safety": {
+     "raw": 1.53,
+     "year": 2022,
+     "score": 7.6
+    },
+    "air_quality": {
+     "raw": 7.43,
+     "year": 2023,
+     "score": 9.5
+    },
+    "internet_speed": {
+     "raw": 99.13,
+     "year": 2025,
+     "score": 9.9
+    },
+    "local_job_market": {
+     "raw": 156542.08,
+     "year": 2025,
+     "score": 10.0
+    },
+    "healthcare_quality": {
+     "raw": 83.2,
+     "year": 2024,
+     "score": 9.4
+    },
+    "cost_of_living": {
+     "raw": 0.94,
+     "year": 2025,
+     "score": 8.6
+    },
+    "nature_forests_greenery": {
+     "raw": 34.45,
+     "year": 2023,
+     "score": 5.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 686970,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 156542,
+     "year": 2025
+    }
+   }
+  },
+  "liechtenstein": {
+   "metrics": {
+    "safety": {
+     "raw": 5.12,
+     "year": 2021,
+     "score": 5.4
+    },
+    "internet_speed": {
+     "raw": 98.26,
+     "year": 2024,
+     "score": 9.8
+    },
+    "healthcare_quality": {
+     "raw": 84.2,
+     "year": 2024,
+     "score": 9.7
+    },
+    "nature_forests_greenery": {
+     "raw": 41.88,
+     "year": 2023,
+     "score": 7.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 41024,
+     "year": 2025
+    }
+   }
+  },
+  "andorra": {
+   "metrics": {
+    "safety": {
+     "raw": 2.58,
+     "year": 2020,
+     "score": 6.8
+    },
+    "air_quality": {
+     "raw": 8.88,
+     "year": 2023,
+     "score": 9.1
+    },
+    "internet_speed": {
+     "raw": 94.4,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 79566.79,
+     "year": 2025,
+     "score": 9.4
+    },
+    "healthcare_quality": {
+     "raw": 84.19,
+     "year": 2024,
+     "score": 9.7
+    },
+    "cost_of_living": {
+     "raw": 0.68,
+     "year": 2025,
+     "score": 6.8
+    },
+    "nature_forests_greenery": {
+     "raw": 34.04,
+     "year": 2023,
+     "score": 5.7
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 82904,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 79567,
+     "year": 2025
+    }
+   }
+  },
+  "monaco": {
+   "metrics": {
+    "air_quality": {
+     "raw": 11.38,
+     "year": 2023,
+     "score": 8.6
+    },
+    "internet_speed": {
+     "raw": 99.04,
+     "year": 2024,
+     "score": 9.9
+    },
+    "healthcare_quality": {
+     "raw": 86.5,
+     "year": 2024,
+     "score": 10.0
+    },
+    "nature_forests_greenery": {
+     "raw": 0,
+     "year": 2023,
+     "score": 0.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 38341,
+     "year": 2025
+    }
+   }
+  },
+  "san_marino": {
+   "metrics": {
+    "air_quality": {
+     "raw": 12.74,
+     "year": 2023,
+     "score": 8.3
+    },
+    "internet_speed": {
+     "raw": 97.35,
+     "year": 2024,
+     "score": 9.7
+    },
+    "local_job_market": {
+     "raw": 78810.34,
+     "year": 2023,
+     "score": 9.4
+    },
+    "healthcare_quality": {
+     "raw": 85.82,
+     "year": 2024,
+     "score": 10.0
+    },
+    "nature_forests_greenery": {
+     "raw": 16.67,
+     "year": 2023,
+     "score": 2.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 34109,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 78810,
+     "year": 2023
+    }
+   }
+  },
+  "serbia": {
+   "metrics": {
+    "safety": {
+     "raw": 1.31,
+     "year": 2023,
+     "score": 7.9
+    },
+    "air_quality": {
+     "raw": 19.34,
+     "year": 2023,
+     "score": 6.8
+    },
+    "internet_speed": {
+     "raw": 87.69,
+     "year": 2024,
+     "score": 8.8
+    },
+    "local_job_market": {
+     "raw": 33909.76,
+     "year": 2025,
+     "score": 7.2
+    },
+    "healthcare_quality": {
+     "raw": 75.97,
+     "year": 2024,
+     "score": 7.0
+    },
+    "cost_of_living": {
+     "raw": 0.45,
+     "year": 2025,
+     "score": 4.5
+    },
+    "nature_forests_greenery": {
+     "raw": 32.39,
+     "year": 2023,
+     "score": 5.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 6549143,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 33910,
+     "year": 2025
+    }
+   }
+  },
+  "bosnia_herzegovina": {
+   "metrics": {
+    "safety": {
+     "raw": 1.22,
+     "year": 2023,
+     "score": 8.0
+    },
+    "air_quality": {
+     "raw": 26.09,
+     "year": 2023,
+     "score": 5.3
+    },
+    "internet_speed": {
+     "raw": 86.1,
+     "year": 2024,
+     "score": 8.6
+    },
+    "local_job_market": {
+     "raw": 25814.26,
+     "year": 2025,
+     "score": 6.5
+    },
+    "healthcare_quality": {
+     "raw": 78.04,
+     "year": 2024,
+     "score": 7.7
+    },
+    "cost_of_living": {
+     "raw": 0.4,
+     "year": 2025,
+     "score": 3.9
+    },
+    "nature_forests_greenery": {
+     "raw": 42.73,
+     "year": 2023,
+     "score": 7.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3140095,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 25814,
+     "year": 2025
+    }
+   }
+  },
+  "north_macedonia": {
+   "metrics": {
+    "safety": {
+     "raw": 1.53,
+     "year": 2023,
+     "score": 7.6
+    },
+    "air_quality": {
+     "raw": 21.81,
+     "year": 2023,
+     "score": 6.3
+    },
+    "internet_speed": {
+     "raw": 93.1,
+     "year": 2025,
+     "score": 9.3
+    },
+    "local_job_market": {
+     "raw": 28028.57,
+     "year": 2025,
+     "score": 6.7
+    },
+    "healthcare_quality": {
+     "raw": 76.62,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.37,
+     "year": 2025,
+     "score": 3.5
+    },
+    "nature_forests_greenery": {
+     "raw": 39.71,
+     "year": 2023,
+     "score": 6.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1820909,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 28029,
+     "year": 2025
+    }
+   }
+  },
+  "kosovo": {
+   "metrics": {
+    "safety": {
+     "raw": 1.89,
+     "year": 2021,
+     "score": 7.3
+    },
+    "internet_speed": {
+     "raw": 89.44,
+     "year": 2018,
+     "score": 8.9
+    },
+    "local_job_market": {
+     "raw": 19263.33,
+     "year": 2025,
+     "score": 5.8
+    },
+    "healthcare_quality": {
+     "raw": 78.22,
+     "year": 2024,
+     "score": 7.7
+    },
+    "cost_of_living": {
+     "raw": 0.41,
+     "year": 2025,
+     "score": 4.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1576876,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 19263,
+     "year": 2025
+    }
+   }
+  },
+  "ukraine": {
+   "metrics": {
+    "safety": {
+     "raw": 3.78,
+     "year": 2021,
+     "score": 6.0
+    },
+    "air_quality": {
+     "raw": 14.85,
+     "year": 2023,
+     "score": 7.8
+    },
+    "internet_speed": {
+     "raw": 82.47,
+     "year": 2024,
+     "score": 8.2
+    },
+    "local_job_market": {
+     "raw": 18904.98,
+     "year": 2025,
+     "score": 5.7
+    },
+    "healthcare_quality": {
+     "raw": 74.69,
+     "year": 2024,
+     "score": 6.6
+    },
+    "cost_of_living": {
+     "raw": 0.31,
+     "year": 2025,
+     "score": 2.5
+    },
+    "nature_forests_greenery": {
+     "raw": 16.76,
+     "year": 2023,
+     "score": 2.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 38980376,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 18905,
+     "year": 2025
+    }
+   }
+  },
+  "belarus": {
+   "metrics": {
+    "safety": {
+     "raw": 2.38,
+     "year": 2019,
+     "score": 6.9
+    },
+    "air_quality": {
+     "raw": 11.98,
+     "year": 2023,
+     "score": 8.4
+    },
+    "internet_speed": {
+     "raw": 94.26,
+     "year": 2024,
+     "score": 9.4
+    },
+    "local_job_market": {
+     "raw": 34715.98,
+     "year": 2025,
+     "score": 7.3
+    },
+    "healthcare_quality": {
+     "raw": 74.37,
+     "year": 2024,
+     "score": 6.5
+    },
+    "cost_of_living": {
+     "raw": 0.3,
+     "year": 2025,
+     "score": 2.2
+    },
+    "nature_forests_greenery": {
+     "raw": 43.41,
+     "year": 2023,
+     "score": 7.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 9085991,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 34716,
+     "year": 2025
+    }
+   }
+  },
+  "moldova": {
+   "metrics": {
+    "safety": {
+     "raw": 2.54,
+     "year": 2023,
+     "score": 6.8
+    },
+    "air_quality": {
+     "raw": 14.95,
+     "year": 2023,
+     "score": 7.8
+    },
+    "internet_speed": {
+     "raw": 77.37,
+     "year": 2024,
+     "score": 7.7
+    },
+    "local_job_market": {
+     "raw": 19995.76,
+     "year": 2025,
+     "score": 5.9
+    },
+    "healthcare_quality": {
+     "raw": 71.33,
+     "year": 2024,
+     "score": 5.4
+    },
+    "cost_of_living": {
+     "raw": 0.43,
+     "year": 2025,
+     "score": 4.3
+    },
+    "nature_forests_greenery": {
+     "raw": 11.74,
+     "year": 2023,
+     "score": 2.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 2360527,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 19996,
+     "year": 2025
+    }
+   }
+  },
+  "jordan": {
+   "metrics": {
+    "safety": {
+     "raw": 0.99,
+     "year": 2023,
+     "score": 8.3
+    },
+    "air_quality": {
+     "raw": 32.63,
+     "year": 2023,
+     "score": 3.9
+    },
+    "internet_speed": {
+     "raw": 95.62,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 12631.63,
+     "year": 2025,
+     "score": 4.7
+    },
+    "healthcare_quality": {
+     "raw": 77.98,
+     "year": 2024,
+     "score": 7.7
+    },
+    "cost_of_living": {
+     "raw": 0.42,
+     "year": 2025,
+     "score": 4.2
+    },
+    "nature_forests_greenery": {
+     "raw": 1.1,
+     "year": 2023,
+     "score": 0.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 11520684,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 12632,
+     "year": 2025
+    }
+   }
+  },
+  "lebanon": {
+   "metrics": {
+    "safety": {
+     "raw": 2.24,
+     "year": 2020,
+     "score": 7.0
+    },
+    "air_quality": {
+     "raw": 26.69,
+     "year": 2023,
+     "score": 5.2
+    },
+    "internet_speed": {
+     "raw": 80.63,
+     "year": 2024,
+     "score": 8.1
+    },
+    "local_job_market": {
+     "raw": 11917.45,
+     "year": 2024,
+     "score": 4.6
+    },
+    "healthcare_quality": {
+     "raw": 77.94,
+     "year": 2024,
+     "score": 7.6
+    },
+    "cost_of_living": {
+     "raw": 0.38,
+     "year": 2024,
+     "score": 3.5
+    },
+    "nature_forests_greenery": {
+     "raw": 14.19,
+     "year": 2023,
+     "score": 2.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5849421,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 11917,
+     "year": 2024
+    }
+   }
+  },
+  "oman": {
+   "metrics": {
+    "safety": {
+     "raw": 0.14,
+     "year": 2023,
+     "score": 9.7
+    },
+    "air_quality": {
+     "raw": 46.86,
+     "year": 2023,
+     "score": 0.7
+    },
+    "internet_speed": {
+     "raw": 95.25,
+     "year": 2024,
+     "score": 9.5
+    },
+    "local_job_market": {
+     "raw": 42295.18,
+     "year": 2025,
+     "score": 7.8
+    },
+    "healthcare_quality": {
+     "raw": 80.25,
+     "year": 2024,
+     "score": 8.4
+    },
+    "cost_of_living": {
+     "raw": 0.47,
+     "year": 2025,
+     "score": 4.8
+    },
+    "nature_forests_greenery": {
+     "raw": 0.01,
+     "year": 2023,
+     "score": 0.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 5494691,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 42295,
+     "year": 2025
+    }
+   }
+  },
+  "bahrain": {
+   "metrics": {
+    "safety": {
+     "raw": 0.2,
+     "year": 2022,
+     "score": 9.5
+    },
+    "air_quality": {
+     "raw": 56.57,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 100,
+     "year": 2024,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 70996.78,
+     "year": 2025,
+     "score": 9.1
+    },
+    "healthcare_quality": {
+     "raw": 81.42,
+     "year": 2024,
+     "score": 8.8
+    },
+    "cost_of_living": {
+     "raw": 0.43,
+     "year": 2025,
+     "score": 4.3
+    },
+    "nature_forests_greenery": {
+     "raw": 0.95,
+     "year": 2023,
+     "score": 0.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1600366,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 70997,
+     "year": 2025
+    }
+   }
+  },
+  "kuwait": {
+   "metrics": {
+    "safety": {
+     "raw": 0.25,
+     "year": 2020,
+     "score": 9.4
+    },
+    "air_quality": {
+     "raw": 62.35,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 100,
+     "year": 2025,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 56467.73,
+     "year": 2025,
+     "score": 8.5
+    },
+    "healthcare_quality": {
+     "raw": 84.58,
+     "year": 2024,
+     "score": 9.9
+    },
+    "cost_of_living": {
+     "raw": 0.57,
+     "year": 2025,
+     "score": 5.9
+    },
+    "nature_forests_greenery": {
+     "raw": 0.35,
+     "year": 2023,
+     "score": 0.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 4865298,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 56468,
+     "year": 2025
+    }
+   }
+  },
+  "azerbaijan": {
+   "metrics": {
+    "safety": {
+     "raw": 2.16,
+     "year": 2023,
+     "score": 7.1
+    },
+    "air_quality": {
+     "raw": 23.71,
+     "year": 2023,
+     "score": 5.8
+    },
+    "internet_speed": {
+     "raw": 90.8,
+     "year": 2025,
+     "score": 9.1
+    },
+    "local_job_market": {
+     "raw": 26112.53,
+     "year": 2025,
+     "score": 6.6
+    },
+    "healthcare_quality": {
+     "raw": 74.58,
+     "year": 2024,
+     "score": 6.5
+    },
+    "cost_of_living": {
+     "raw": 0.28,
+     "year": 2025,
+     "score": 2.0
+    },
+    "nature_forests_greenery": {
+     "raw": 14.11,
+     "year": 2023,
+     "score": 2.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10246996,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 26113,
+     "year": 2025
+    }
+   }
+  },
+  "uzbekistan": {
+   "metrics": {
+    "safety": {
+     "raw": 1.4,
+     "year": 2021,
+     "score": 7.8
+    },
+    "air_quality": {
+     "raw": 32.77,
+     "year": 2023,
+     "score": 3.8
+    },
+    "internet_speed": {
+     "raw": 89.51,
+     "year": 2024,
+     "score": 9.0
+    },
+    "local_job_market": {
+     "raw": 13601.29,
+     "year": 2025,
+     "score": 4.9
+    },
+    "healthcare_quality": {
+     "raw": 72.53,
+     "year": 2024,
+     "score": 5.8
+    },
+    "cost_of_living": {
+     "raw": 0.29,
+     "year": 2025,
+     "score": 2.1
+    },
+    "nature_forests_greenery": {
+     "raw": 8.55,
+     "year": 2023,
+     "score": 1.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 37053428,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 13601,
+     "year": 2025
+    }
+   }
+  },
+  "kyrgyzstan": {
+   "metrics": {
+    "safety": {
+     "raw": 1.75,
+     "year": 2020,
+     "score": 7.4
+    },
+    "air_quality": {
+     "raw": 20.12,
+     "year": 2023,
+     "score": 6.6
+    },
+    "internet_speed": {
+     "raw": 92.03,
+     "year": 2024,
+     "score": 9.2
+    },
+    "local_job_market": {
+     "raw": 9219.51,
+     "year": 2025,
+     "score": 3.9
+    },
+    "healthcare_quality": {
+     "raw": 72.4,
+     "year": 2024,
+     "score": 5.8
+    },
+    "cost_of_living": {
+     "raw": 0.33,
+     "year": 2024,
+     "score": 2.9
+    },
+    "nature_forests_greenery": {
+     "raw": 7.14,
+     "year": 2023,
+     "score": 1.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 7343064,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 9220,
+     "year": 2025
+    }
+   }
+  },
+  "tajikistan": {
+   "metrics": {
+    "safety": {
+     "raw": 0.89,
+     "year": 2020,
+     "score": 8.4
+    },
+    "air_quality": {
+     "raw": 33.35,
+     "year": 2023,
+     "score": 3.7
+    },
+    "internet_speed": {
+     "raw": 55.79,
+     "year": 2024,
+     "score": 5.6
+    },
+    "local_job_market": {
+     "raw": 5923.47,
+     "year": 2025,
+     "score": 2.8
+    },
+    "healthcare_quality": {
+     "raw": 71.93,
+     "year": 2024,
+     "score": 5.6
+    },
+    "cost_of_living": {
+     "raw": 0.28,
+     "year": 2025,
+     "score": 1.8
+    },
+    "nature_forests_greenery": {
+     "raw": 3.08,
+     "year": 2023,
+     "score": 0.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10786734,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 5923,
+     "year": 2025
+    }
+   }
+  },
+  "turkmenistan": {
+   "metrics": {
+    "safety": {
+     "raw": 1.01,
+     "year": 2015,
+     "score": 8.2
+    },
+    "air_quality": {
+     "raw": 31.25,
+     "year": 2023,
+     "score": 4.2
+    },
+    "internet_speed": {
+     "raw": 17.99,
+     "year": 2016,
+     "score": 1.8
+    },
+    "local_job_market": {
+     "raw": 22601.55,
+     "year": 2025,
+     "score": 6.2
+    },
+    "healthcare_quality": {
+     "raw": 70.2,
+     "year": 2024,
+     "score": 5.1
+    },
+    "nature_forests_greenery": {
+     "raw": 8.78,
+     "year": 2023,
+     "score": 1.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 7618847,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 22602,
+     "year": 2025
+    }
+   }
+  },
+  "china": {
+   "metrics": {
+    "safety": {
+     "raw": 0.5,
+     "year": 2020,
+     "score": 9.0
+    },
+    "air_quality": {
+     "raw": 31.99,
+     "year": 2023,
+     "score": 4.0
+    },
+    "internet_speed": {
+     "raw": 91.6,
+     "year": 2025,
+     "score": 9.2
+    },
+    "local_job_market": {
+     "raw": 29333.33,
+     "year": 2025,
+     "score": 6.9
+    },
+    "healthcare_quality": {
+     "raw": 78.02,
+     "year": 2024,
+     "score": 7.7
+    },
+    "cost_of_living": {
+     "raw": 0.47,
+     "year": 2025,
+     "score": 4.8
+    },
+    "nature_forests_greenery": {
+     "raw": 24.03,
+     "year": 2023,
+     "score": 4.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1406585000,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 29333,
+     "year": 2025
+    }
+   }
+  },
+  "nepal": {
+   "metrics": {
+    "safety": {
+     "raw": 2.13,
+     "year": 2020,
+     "score": 7.1
+    },
+    "air_quality": {
+     "raw": 53.2,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 46.32,
+     "year": 2024,
+     "score": 4.6
+    },
+    "local_job_market": {
+     "raw": 6175.16,
+     "year": 2025,
+     "score": 2.9
+    },
+    "healthcare_quality": {
+     "raw": 70.64,
+     "year": 2024,
+     "score": 5.2
+    },
+    "cost_of_living": {
+     "raw": 0.24,
+     "year": 2025,
+     "score": 1.1
+    },
+    "nature_forests_greenery": {
+     "raw": 41.59,
+     "year": 2023,
+     "score": 6.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 29618118,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 6175,
+     "year": 2025
+    }
+   }
+  },
+  "bangladesh": {
+   "metrics": {
+    "safety": {
+     "raw": 2.34,
+     "year": 2018,
+     "score": 6.9
+    },
+    "air_quality": {
+     "raw": 69.25,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 53.42,
+     "year": 2024,
+     "score": 5.3
+    },
+    "local_job_market": {
+     "raw": 10153.71,
+     "year": 2025,
+     "score": 4.2
+    },
+    "healthcare_quality": {
+     "raw": 74.93,
+     "year": 2024,
+     "score": 6.6
+    },
+    "cost_of_living": {
+     "raw": 0.25,
+     "year": 2025,
+     "score": 1.3
+    },
+    "nature_forests_greenery": {
+     "raw": 14.49,
+     "year": 2023,
+     "score": 2.4
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 175686899,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 10154,
+     "year": 2025
+    }
+   }
+  },
+  "pakistan": {
+   "metrics": {
+    "safety": {
+     "raw": 4.33,
+     "year": 2023,
+     "score": 5.7
+    },
+    "air_quality": {
+     "raw": 58.37,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 57.25,
+     "year": 2024,
+     "score": 5.7
+    },
+    "local_job_market": {
+     "raw": 6573.42,
+     "year": 2025,
+     "score": 3.0
+    },
+    "healthcare_quality": {
+     "raw": 67.8,
+     "year": 2024,
+     "score": 4.3
+    },
+    "cost_of_living": {
+     "raw": 0.24,
+     "year": 2025,
+     "score": 1.0
+    },
+    "nature_forests_greenery": {
+     "raw": 4.67,
+     "year": 2023,
+     "score": 0.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 255219554,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 6573,
+     "year": 2025
+    }
+   }
+  },
+  "maldives": {
+   "metrics": {
+    "safety": {
+     "raw": 0.62,
+     "year": 2019,
+     "score": 8.8
+    },
+    "air_quality": {
+     "raw": 11.16,
+     "year": 2023,
+     "score": 8.6
+    },
+    "internet_speed": {
+     "raw": 85.24,
+     "year": 2024,
+     "score": 8.5
+    },
+    "local_job_market": {
+     "raw": 28554.89,
+     "year": 2025,
+     "score": 6.8
+    },
+    "healthcare_quality": {
+     "raw": 81.28,
+     "year": 2024,
+     "score": 8.8
+    },
+    "cost_of_living": {
+     "raw": 0.51,
+     "year": 2025,
+     "score": 5.2
+    },
+    "nature_forests_greenery": {
+     "raw": 2.75,
+     "year": 2023,
+     "score": 0.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 529676,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 28555,
+     "year": 2025
+    }
+   }
+  },
+  "cambodia": {
+   "metrics": {
+    "air_quality": {
+     "raw": 19.43,
+     "year": 2023,
+     "score": 6.8
+    },
+    "internet_speed": {
+     "raw": 68.48,
+     "year": 2024,
+     "score": 6.8
+    },
+    "local_job_market": {
+     "raw": 8542.7,
+     "year": 2025,
+     "score": 3.7
+    },
+    "healthcare_quality": {
+     "raw": 70.82,
+     "year": 2024,
+     "score": 5.3
+    },
+    "cost_of_living": {
+     "raw": 0.34,
+     "year": 2025,
+     "score": 2.9
+    },
+    "nature_forests_greenery": {
+     "raw": 43.06,
+     "year": 2023,
+     "score": 7.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 17847982,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 8543,
+     "year": 2025
+    }
+   }
+  },
+  "laos": {
+   "metrics": {
+    "air_quality": {
+     "raw": 25.98,
+     "year": 2023,
+     "score": 5.3
+    },
+    "internet_speed": {
+     "raw": 65.59,
+     "year": 2024,
+     "score": 6.6
+    },
+    "local_job_market": {
+     "raw": 10383.0,
+     "year": 2025,
+     "score": 4.2
+    },
+    "healthcare_quality": {
+     "raw": 69.22,
+     "year": 2024,
+     "score": 4.7
+    },
+    "cost_of_living": {
+     "raw": 0.23,
+     "year": 2024,
+     "score": 0.7
+    },
+    "nature_forests_greenery": {
+     "raw": 71.46,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 7873046,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 10383,
+     "year": 2025
+    }
+   }
+  },
+  "brunei": {
+   "metrics": {
+    "air_quality": {
+     "raw": 7.57,
+     "year": 2023,
+     "score": 9.4
+    },
+    "internet_speed": {
+     "raw": 96.3,
+     "year": 2024,
+     "score": 9.6
+    },
+    "local_job_market": {
+     "raw": 92429.93,
+     "year": 2025,
+     "score": 9.8
+    },
+    "healthcare_quality": {
+     "raw": 75.5,
+     "year": 2024,
+     "score": 6.8
+    },
+    "cost_of_living": {
+     "raw": 0.35,
+     "year": 2025,
+     "score": 3.1
+    },
+    "nature_forests_greenery": {
+     "raw": 72.11,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 466330,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 92430,
+     "year": 2025
+    }
+   }
+  },
+  "myanmar": {
+   "metrics": {
+    "safety": {
+     "raw": 2.58,
+     "year": 2023,
+     "score": 6.8
+    },
+    "air_quality": {
+     "raw": 35.07,
+     "year": 2023,
+     "score": 3.3
+    },
+    "internet_speed": {
+     "raw": 45.45,
+     "year": 2020,
+     "score": 4.5
+    },
+    "local_job_market": {
+     "raw": 6011.53,
+     "year": 2025,
+     "score": 2.8
+    },
+    "healthcare_quality": {
+     "raw": 67.09,
+     "year": 2024,
+     "score": 4.0
+    },
+    "nature_forests_greenery": {
+     "raw": 42.4,
+     "year": 2023,
+     "score": 7.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 54850648,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 6012,
+     "year": 2025
+    }
+   }
+  },
+  "tunisia": {
+   "metrics": {
+    "safety": {
+     "raw": 4.69,
+     "year": 2020,
+     "score": 5.6
+    },
+    "air_quality": {
+     "raw": 18.87,
+     "year": 2023,
+     "score": 6.9
+    },
+    "internet_speed": {
+     "raw": 76.5,
+     "year": 2024,
+     "score": 7.7
+    },
+    "local_job_market": {
+     "raw": 15233.49,
+     "year": 2025,
+     "score": 5.2
+    },
+    "healthcare_quality": {
+     "raw": 76.71,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.29,
+     "year": 2024,
+     "score": 2.2
+    },
+    "nature_forests_greenery": {
+     "raw": 4.55,
+     "year": 2023,
+     "score": 0.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 12348573,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 15233,
+     "year": 2025
+    }
+   }
+  },
+  "algeria": {
+   "metrics": {
+    "safety": {
+     "raw": 1.16,
+     "year": 2023,
+     "score": 8.0
+    },
+    "air_quality": {
+     "raw": 16.54,
+     "year": 2023,
+     "score": 7.4
+    },
+    "internet_speed": {
+     "raw": 77.42,
+     "year": 2024,
+     "score": 7.7
+    },
+    "local_job_market": {
+     "raw": 18586.26,
+     "year": 2025,
+     "score": 5.7
+    },
+    "healthcare_quality": {
+     "raw": 76.47,
+     "year": 2024,
+     "score": 7.2
+    },
+    "cost_of_living": {
+     "raw": 0.33,
+     "year": 2025,
+     "score": 2.7
+    },
+    "nature_forests_greenery": {
+     "raw": 0.83,
+     "year": 2023,
+     "score": 0.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 47435312,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 18586,
+     "year": 2025
+    }
+   }
+  },
+  "libya": {
+   "metrics": {
+    "air_quality": {
+     "raw": 20.01,
+     "year": 2023,
+     "score": 6.7
+    },
+    "internet_speed": {
+     "raw": 81.95,
+     "year": 2024,
+     "score": 8.2
+    },
+    "local_job_market": {
+     "raw": 16521.4,
+     "year": 2025,
+     "score": 5.4
+    },
+    "healthcare_quality": {
+     "raw": 71.12,
+     "year": 2024,
+     "score": 5.4
+    },
+    "cost_of_living": {
+     "raw": 0.39,
+     "year": 2025,
+     "score": 3.7
+    },
+    "nature_forests_greenery": {
+     "raw": 0.12,
+     "year": 2023,
+     "score": 0.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 7458555,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 16521,
+     "year": 2025
+    }
+   }
+  },
+  "senegal": {
+   "metrics": {
+    "safety": {
+     "raw": 0.27,
+     "year": 2015,
+     "score": 9.4
+    },
+    "air_quality": {
+     "raw": 41.65,
+     "year": 2023,
+     "score": 1.9
+    },
+    "internet_speed": {
+     "raw": 60.12,
+     "year": 2024,
+     "score": 6.0
+    },
+    "local_job_market": {
+     "raw": 5463.22,
+     "year": 2025,
+     "score": 2.6
+    },
+    "healthcare_quality": {
+     "raw": 68.92,
+     "year": 2024,
+     "score": 4.6
+    },
+    "cost_of_living": {
+     "raw": 0.36,
+     "year": 2025,
+     "score": 3.2
+    },
+    "nature_forests_greenery": {
+     "raw": 41.28,
+     "year": 2023,
+     "score": 6.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 18931966,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 5463,
+     "year": 2025
+    }
+   }
+  },
+  "ghana": {
+   "metrics": {
+    "safety": {
+     "raw": 1.83,
+     "year": 2022,
+     "score": 7.4
+    },
+    "air_quality": {
+     "raw": 28.14,
+     "year": 2023,
+     "score": 4.9
+    },
+    "internet_speed": {
+     "raw": 72.18,
+     "year": 2024,
+     "score": 7.2
+    },
+    "local_job_market": {
+     "raw": 8610.28,
+     "year": 2025,
+     "score": 3.7
+    },
+    "healthcare_quality": {
+     "raw": 65.69,
+     "year": 2024,
+     "score": 3.6
+    },
+    "cost_of_living": {
+     "raw": 0.38,
+     "year": 2025,
+     "score": 3.6
+    },
+    "nature_forests_greenery": {
+     "raw": 35.19,
+     "year": 2023,
+     "score": 5.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 35064272,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 8610,
+     "year": 2025
+    }
+   }
+  },
+  "nigeria": {
+   "metrics": {
+    "safety": {
+     "raw": 15.75,
+     "year": 2023,
+     "score": 2.8
+    },
+    "air_quality": {
+     "raw": 65.74,
+     "year": 2023,
+     "score": 0.0
+    },
+    "internet_speed": {
+     "raw": 41.21,
+     "year": 2024,
+     "score": 4.1
+    },
+    "local_job_market": {
+     "raw": 9531.61,
+     "year": 2025,
+     "score": 4.0
+    },
+    "healthcare_quality": {
+     "raw": 54.63,
+     "year": 2024,
+     "score": 0.0
+    },
+    "cost_of_living": {
+     "raw": 0.13,
+     "year": 2025,
+     "score": 0.0
+    },
+    "nature_forests_greenery": {
+     "raw": 23.21,
+     "year": 2023,
+     "score": 3.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 237527782,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 9532,
+     "year": 2025
+    }
+   }
+  },
+  "ethiopia": {
+   "metrics": {
+    "air_quality": {
+     "raw": 23.8,
+     "year": 2023,
+     "score": 5.8
+    },
+    "internet_speed": {
+     "raw": 21.94,
+     "year": 2024,
+     "score": 2.2
+    },
+    "local_job_market": {
+     "raw": 3621.67,
+     "year": 2025,
+     "score": 1.5
+    },
+    "healthcare_quality": {
+     "raw": 67.6,
+     "year": 2024,
+     "score": 4.2
+    },
+    "cost_of_living": {
+     "raw": 0.37,
+     "year": 2024,
+     "score": 3.5
+    },
+    "nature_forests_greenery": {
+     "raw": 14.93,
+     "year": 2023,
+     "score": 2.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 135472051,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 3622,
+     "year": 2025
+    }
+   }
+  },
+  "tanzania": {
+   "metrics": {
+    "safety": {
+     "raw": 3.75,
+     "year": 2020,
+     "score": 6.0
+    },
+    "air_quality": {
+     "raw": 20.17,
+     "year": 2023,
+     "score": 6.6
+    },
+    "internet_speed": {
+     "raw": 31.16,
+     "year": 2024,
+     "score": 3.1
+    },
+    "local_job_market": {
+     "raw": 4470.95,
+     "year": 2025,
+     "score": 2.1
+    },
+    "healthcare_quality": {
+     "raw": 67.21,
+     "year": 2024,
+     "score": 4.1
+    },
+    "cost_of_living": {
+     "raw": 0.29,
+     "year": 2024,
+     "score": 2.0
+    },
+    "nature_forests_greenery": {
+     "raw": 50.05,
+     "year": 2023,
+     "score": 8.3
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 70545865,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 4471,
+     "year": 2025
+    }
+   }
+  },
+  "uganda": {
+   "metrics": {
+    "safety": {
+     "raw": 8.97,
+     "year": 2023,
+     "score": 4.2
+    },
+    "air_quality": {
+     "raw": 31.21,
+     "year": 2023,
+     "score": 4.2
+    },
+    "internet_speed": {
+     "raw": 8.95,
+     "year": 2024,
+     "score": 0.9
+    },
+    "local_job_market": {
+     "raw": 3487.7,
+     "year": 2025,
+     "score": 1.4
+    },
+    "healthcare_quality": {
+     "raw": 68.49,
+     "year": 2024,
+     "score": 4.5
+    },
+    "cost_of_living": {
+     "raw": 0.35,
+     "year": 2025,
+     "score": 3.2
+    },
+    "nature_forests_greenery": {
+     "raw": 11.04,
+     "year": 2023,
+     "score": 1.8
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 51384894,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 3488,
+     "year": 2025
+    }
+   }
+  },
+  "rwanda": {
+   "metrics": {
+    "safety": {
+     "raw": 3.61,
+     "year": 2020,
+     "score": 6.1
+    },
+    "air_quality": {
+     "raw": 36.01,
+     "year": 2023,
+     "score": 3.1
+    },
+    "internet_speed": {
+     "raw": 31.7,
+     "year": 2024,
+     "score": 3.2
+    },
+    "local_job_market": {
+     "raw": 4164.44,
+     "year": 2025,
+     "score": 1.9
+    },
+    "healthcare_quality": {
+     "raw": 68.02,
+     "year": 2024,
+     "score": 4.3
+    },
+    "cost_of_living": {
+     "raw": 0.27,
+     "year": 2025,
+     "score": 1.7
+    },
+    "nature_forests_greenery": {
+     "raw": 11.31,
+     "year": 2023,
+     "score": 1.9
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 14569341,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 4164,
+     "year": 2025
+    }
+   }
+  },
+  "mauritius": {
+   "metrics": {
+    "safety": {
+     "raw": 2.27,
+     "year": 2022,
+     "score": 7.0
+    },
+    "air_quality": {
+     "raw": 14.06,
+     "year": 2023,
+     "score": 8.0
+    },
+    "internet_speed": {
+     "raw": 73.31,
+     "year": 2024,
+     "score": 7.3
+    },
+    "local_job_market": {
+     "raw": 33666.64,
+     "year": 2025,
+     "score": 7.2
+    },
+    "healthcare_quality": {
+     "raw": 73.79,
+     "year": 2024,
+     "score": 6.3
+    },
+    "cost_of_living": {
+     "raw": 0.39,
+     "year": 2025,
+     "score": 3.7
+    },
+    "nature_forests_greenery": {
+     "raw": 19.47,
+     "year": 2023,
+     "score": 3.2
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 1243741,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 33667,
+     "year": 2025
+    }
+   }
+  },
+  "seychelles": {
+   "metrics": {
+    "safety": {
+     "raw": 7.97,
+     "year": 2022,
+     "score": 4.4
+    },
+    "air_quality": {
+     "raw": 9.26,
+     "year": 2023,
+     "score": 9.1
+    },
+    "internet_speed": {
+     "raw": 87.82,
+     "year": 2024,
+     "score": 8.8
+    },
+    "local_job_market": {
+     "raw": 35854.03,
+     "year": 2025,
+     "score": 7.4
+    },
+    "healthcare_quality": {
+     "raw": 76.3,
+     "year": 2024,
+     "score": 7.1
+    },
+    "cost_of_living": {
+     "raw": 0.54,
+     "year": 2025,
+     "score": 5.6
+    },
+    "nature_forests_greenery": {
+     "raw": 73.26,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 122730,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 35854,
+     "year": 2025
+    }
+   }
+  },
+  "madagascar": {
+   "metrics": {
+    "air_quality": {
+     "raw": 12.39,
+     "year": 2023,
+     "score": 8.4
+    },
+    "internet_speed": {
+     "raw": 18.68,
+     "year": 2024,
+     "score": 1.9
+    },
+    "local_job_market": {
+     "raw": 1952.48,
+     "year": 2025,
+     "score": 0.0
+    },
+    "healthcare_quality": {
+     "raw": 63.84,
+     "year": 2024,
+     "score": 2.9
+    },
+    "cost_of_living": {
+     "raw": 0.31,
+     "year": 2025,
+     "score": 2.4
+    },
+    "nature_forests_greenery": {
+     "raw": 21.3,
+     "year": 2023,
+     "score": 3.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 32740678,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 1952,
+     "year": 2025
+    }
+   }
+  },
+  "fiji": {
+   "metrics": {
+    "safety": {
+     "raw": 2.06,
+     "year": 2023,
+     "score": 7.2
+    },
+    "air_quality": {
+     "raw": 6.45,
+     "year": 2023,
+     "score": 9.7
+    },
+    "internet_speed": {
+     "raw": 74.71,
+     "year": 2024,
+     "score": 7.5
+    },
+    "local_job_market": {
+     "raw": 16337.57,
+     "year": 2025,
+     "score": 5.4
+    },
+    "healthcare_quality": {
+     "raw": 67.46,
+     "year": 2024,
+     "score": 4.2
+    },
+    "cost_of_living": {
+     "raw": 0.41,
+     "year": 2025,
+     "score": 4.0
+    },
+    "nature_forests_greenery": {
+     "raw": 63.5,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 933154,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 16338,
+     "year": 2025
+    }
+   }
+  },
+  "samoa": {
+   "metrics": {
+    "safety": {
+     "raw": 6.26,
+     "year": 2018,
+     "score": 5.0
+    },
+    "air_quality": {
+     "raw": 4.58,
+     "year": 2023,
+     "score": 10.0
+    },
+    "local_job_market": {
+     "raw": 9318.96,
+     "year": 2025,
+     "score": 3.9
+    },
+    "healthcare_quality": {
+     "raw": 71.83,
+     "year": 2024,
+     "score": 5.6
+    },
+    "cost_of_living": {
+     "raw": 0.63,
+     "year": 2025,
+     "score": 6.4
+    },
+    "nature_forests_greenery": {
+     "raw": 57.64,
+     "year": 2023,
+     "score": 9.6
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 219306,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 9319,
+     "year": 2025
+    }
+   }
+  },
+  "tonga": {
+   "metrics": {
+    "safety": {
+     "raw": 0.95,
+     "year": 2019,
+     "score": 8.3
+    },
+    "air_quality": {
+     "raw": 4.69,
+     "year": 2023,
+     "score": 10.0
+    },
+    "internet_speed": {
+     "raw": 67.44,
+     "year": 2024,
+     "score": 6.7
+    },
+    "local_job_market": {
+     "raw": 8674.68,
+     "year": 2025,
+     "score": 3.8
+    },
+    "healthcare_quality": {
+     "raw": 73.07,
+     "year": 2024,
+     "score": 6.0
+    },
+    "cost_of_living": {
+     "raw": 0.75,
+     "year": 2025,
+     "score": 7.4
+    },
+    "nature_forests_greenery": {
+     "raw": 12.43,
+     "year": 2023,
+     "score": 2.1
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 103742,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 8675,
+     "year": 2025
+    }
+   }
+  },
+  "papua_new_guinea": {
+   "metrics": {
+    "air_quality": {
+     "raw": 14.11,
+     "year": 2023,
+     "score": 8.0
+    },
+    "internet_speed": {
+     "raw": 18.81,
+     "year": 2024,
+     "score": 1.9
+    },
+    "local_job_market": {
+     "raw": 5214.77,
+     "year": 2025,
+     "score": 2.4
+    },
+    "healthcare_quality": {
+     "raw": 66.26,
+     "year": 2024,
+     "score": 3.8
+    },
+    "cost_of_living": {
+     "raw": 0.58,
+     "year": 2025,
+     "score": 5.9
+    },
+    "nature_forests_greenery": {
+     "raw": 78.95,
+     "year": 2023,
+     "score": 10.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 10762817,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 5215,
+     "year": 2025
+    }
+   }
+  },
+  "vanuatu": {
+   "metrics": {
+    "safety": {
+     "raw": 0.33,
+     "year": 2020,
+     "score": 9.3
+    },
+    "air_quality": {
+     "raw": 6.99,
+     "year": 2023,
+     "score": 9.6
+    },
+    "internet_speed": {
+     "raw": 22.35,
+     "year": 2015,
+     "score": 2.2
+    },
+    "local_job_market": {
+     "raw": 4525.24,
+     "year": 2025,
+     "score": 2.1
+    },
+    "healthcare_quality": {
+     "raw": 71.65,
+     "year": 2024,
+     "score": 5.6
+    },
+    "cost_of_living": {
+     "raw": 0.9,
+     "year": 2024,
+     "score": 8.4
+    },
+    "nature_forests_greenery": {
+     "raw": 36.28,
+     "year": 2023,
+     "score": 6.0
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 335169,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 4525,
+     "year": 2025
+    }
+   }
+  },
+  "mongolia": {
+   "metrics": {
+    "safety": {
+     "raw": 5.92,
+     "year": 2023,
+     "score": 5.1
+    },
+    "air_quality": {
+     "raw": 42.69,
+     "year": 2023,
+     "score": 1.6
+    },
+    "internet_speed": {
+     "raw": 85.12,
+     "year": 2024,
+     "score": 8.5
+    },
+    "local_job_market": {
+     "raw": 20797.77,
+     "year": 2025,
+     "score": 6.0
+    },
+    "healthcare_quality": {
+     "raw": 72.4,
+     "year": 2024,
+     "score": 5.8
+    },
+    "cost_of_living": {
+     "raw": 0.34,
+     "year": 2025,
+     "score": 3.0
+    },
+    "nature_forests_greenery": {
+     "raw": 9.09,
+     "year": 2023,
+     "score": 1.5
+    }
+   },
+   "facts": {
+    "population": {
+     "value": 3568978,
+     "year": 2025
+    },
+    "gdpPerCapitaPPP": {
+     "value": 20798,
+     "year": 2025
+    }
+   }
+  }
+ }
+}

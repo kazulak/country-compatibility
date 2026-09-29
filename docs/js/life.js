@@ -1,13 +1,13 @@
 /**
  * Country Compass - UI controller.
  * Reads sliders/importance pills, ranks countries with the shared engine, renders cards + details,
- * and runs the persona quiz. All data comes from data/countries.json (hand-made, subjective scores).
+ * and runs the persona quiz. Data comes from data/countries.json (hand-made estimates) with World Bank values merged in.
  */
 import {
-  rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry,
-  readHashState, writeHashState, setupCopyLink,
+  rank, escapeHTML, matchClass, debounce,
+  readHashState, writeHashState, setupCopyLink, reloadOnExternalHashChange,
 } from "./engine.js";
-import { METRICS, countryMetrics } from "./metrics.js";
+import { METRICS, countryMetrics, loadCountryData, describeSource, formatNumber } from "./metrics.js";
 import { createWorldMap } from "./map.js";
 
 // Advanced metrics: hidden behind a section toggle, ignored (importance 0) while it is off.
@@ -90,6 +90,7 @@ const PERSONA_PRESETS = {
 // ---------- State & DOM ----------
 let allCountries = [];
 let meta = {};
+let worldBank = null;       // World Bank metadata (units, transforms), or null if it failed to load
 let rankings = [];          // [{item, score, breakdown}] for the current pool
 let activeId = null;
 let visibleCount = PAGE_SIZE;
@@ -347,12 +348,16 @@ function listHTML(items) {
 }
 
 function dataNoteHTML(c) {
+  const n = Object.values(c.sources || {}).filter(src => src.kind === "worldbank").length;
+  const total = Object.keys(METRICS).length;
   if (c.quality === "template") {
-    return `<div class="data-note"><strong>Template data.</strong> The scores and text on this page come from the generic
+    return `<div class="data-note"><strong>Template data.</strong> The text on this page and most scores come from the generic
       "${escapeHTML(c.templateLabel)}" template. They are identical for every country using that template and were not
-      researched for ${escapeHTML(c.name)}. They may not reflect current events (conflict, travel advisories, sanctions).</div>`;
+      researched for ${escapeHTML(c.name)}. They may not reflect current events (conflict, travel advisories, sanctions).
+      ${n} of ${total} scores are real World Bank data; the other scores and all text come from the template.</div>`;
   }
-  return `<div class="data-note">Scores are subjective hand-written estimates (~2025). Visa details may be outdated; check official sources.</div>`;
+  return `<div class="data-note">${n} of ${total} scores come from World Bank data (year shown on each). The rest are subjective
+    hand-made estimates (~2025); visa details may be outdated. Check official sources.</div>`;
 }
 
 function renderDetails() {
@@ -367,6 +372,10 @@ function renderDetails() {
 
   const breakdownHTML = breakdown.map(b => {
     const bc = matchClass(b.metricScore);
+    const src = c.sources?.[b.key];
+    const isWB = src?.kind === "worldbank";
+    const transform = worldBank?.metrics?.[b.key]?.transform || "";
+    const sourceLine = `<div class="metric-source${isWB ? " metric-source-wb" : ""}"${isWB && transform ? ` title="${escapeHTML(transform)}"` : ""}>${isWB ? `<span class="wb-pill">WB</span> ` : ""}${escapeHTML(describeSource(c, b.key, worldBank))}</div>`;
     const rating = b.type === "preference" ? `Target: ${b.target} | Rating: ${b.value}` : `Rating: ${b.value}/10`;
     return `
       <div class="breakdown-card">
@@ -377,15 +386,25 @@ function renderDetails() {
         </div>
         <div class="breakdown-bar-bg"><div class="breakdown-bar-fill ${bc}" style="width: ${b.metricScore}%;"></div></div>
         <div class="breakdown-details"><span>${rating}</span><span>Imp: ${b.importance}</span></div>
+        ${sourceLine}
       </div>`;
   }).join("");
 
-  const facts = [["Capital City", c.facts?.capital], ["Official Language(s)", c.facts?.languages], ["Currency", c.facts?.currency]]
+  const wbf = c.worldBankFacts || {};
+  const factItems = [
+    ["Capital City", c.facts?.capital, ""],
+    ["Official Language(s)", c.facts?.languages, ""],
+    ["Currency", c.facts?.currency, ""],
+    ["Population", wbf.population && formatNumber(wbf.population.value), wbf.population && `World Bank ${wbf.population.year}`],
+    ["GDP per capita (PPP)", wbf.gdpPerCapitaPPP && `$${formatNumber(wbf.gdpPerCapitaPPP.value)}`, wbf.gdpPerCapitaPPP && `World Bank ${wbf.gdpPerCapitaPPP.year}`],
+  ];
+  const facts = factItems
     .filter(([, v]) => v)
-    .map(([label, v]) => `
+    .map(([label, v, note]) => `
       <div class="demographic-card">
         <span class="demographic-label">${label}</span>
         <span class="demographic-value">${escapeHTML(v)}</span>
+        ${note ? `<span class="metric-source">${escapeHTML(note)}</span>` : ""}
       </div>`).join("");
   const citiesLine = c.cities?.length
     ? `<p class="overview-text"><strong>Major cities:</strong> ${c.cities.map(escapeHTML).join(", ")}</p>` : "";
@@ -446,6 +465,7 @@ function renderDetails() {
     <p class="detail-links">
       <a href="${escapeHTML(reportErrorURL(c))}" target="_blank" rel="noopener noreferrer">Report an error for ${escapeHTML(c.name)}</a>
       · <a href="about.html">How the score works</a>
+      · <a href="about.html#world-bank">Where the real data comes from</a>
     </p>
   `;
 }
@@ -710,16 +730,18 @@ function setupEventListeners() {
 
 setupEventListeners();
 setupCopyLink($("copy-link-btn"));
-loadJSON("data/countries.json")
+reloadOnExternalHashChange();
+loadCountryData()
   .then(data => {
     meta = data.meta;
-    allCountries = data.countries.map(c => resolveCountry(c, data.templates));
+    worldBank = data.worldBank;
+    allCountries = data.countries;
     const openShared = applySharedState();
     initMap();
     updateCompatibility();
     if (openShared) showTab("details");
   })
   .catch(err => {
-    console.error("Failed to load countries.json:", err);
+    console.error("Failed to load country data:", err);
     resultsCount.textContent = "Error loading data.";
   });

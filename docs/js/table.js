@@ -1,5 +1,5 @@
-import { loadJSON, escapeHTML, resolveCountry } from "./engine.js";
-import { METRICS, countryMetrics } from "./metrics.js";
+import { loadJSON, escapeHTML } from "./engine.js";
+import { METRICS, INVERTED, countryMetrics, loadCountryData, describeSource, formatNumber } from "./metrics.js";
 
 const $ = id => document.getElementById(id);
 
@@ -10,6 +10,7 @@ const QUALITY_LABEL = { curated: "Curated", template: "Template" };
 function createTable({ headEl, bodyEl, countEl, columns, rows, filter, defaultSort }) {
   let sort = { id: defaultSort, dir: "asc" };
   let view = [];
+  const shown = columns.filter(c => !c.csvOnly); // csvOnly columns appear only in the download
 
   function compare(a, b) {
     const col = columns.find(c => c.id === sort.id);
@@ -23,7 +24,7 @@ function createTable({ headEl, bodyEl, countEl, columns, rows, filter, defaultSo
   }
 
   function renderHead() {
-    headEl.innerHTML = columns.map(c => {
+    headEl.innerHTML = shown.map(c => {
       const state = c.id === sort.id ? (sort.dir === "asc" ? "ascending" : "descending") : "none";
       const cls = c.sticky ? ' class="sticky-col"' : "";
       const title = c.title ? ` title="${escapeHTML(c.title)}"` : "";
@@ -34,11 +35,11 @@ function createTable({ headEl, bodyEl, countEl, columns, rows, filter, defaultSo
   function render() {
     view = rows.filter(filter).sort(compare);
     bodyEl.innerHTML = view.map(row =>
-      `<tr>${columns.map(c => c.cell(row)).join("")}</tr>`
+      `<tr>${shown.map(c => c.cell(row)).join("")}</tr>`
     ).join("");
     countEl.textContent = `${view.length} of ${rows.length} rows`;
     headEl.querySelectorAll("th").forEach((th, i) => {
-      const c = columns[i];
+      const c = shown[i];
       th.setAttribute("aria-sort", c.id === sort.id ? (sort.dir === "asc" ? "ascending" : "descending") : "none");
     });
   }
@@ -90,10 +91,22 @@ function matches(query, ...fields) {
 }
 
 // ---- countries ----
-function metricCell(value) {
+function metricCell(value, tip, isReal) {
   if (value == null) return '<td class="num na" title="No data">&mdash;</td>';
   const alpha = (0.05 + (Math.max(0, Math.min(10, value)) / 10) * 0.5).toFixed(2);
-  return `<td class="num" style="background: rgba(59, 130, 246, ${alpha})">${escapeHTML(value)}</td>`;
+  const cls = isReal ? "num wb" : "num";
+  return `<td class="${cls}" style="background: rgba(59, 130, 246, ${alpha})" title="${escapeHTML(tip)}">${escapeHTML(value)}</td>`;
+}
+
+function sourceLabel(country, key) {
+  const src = country.sources?.[key];
+  if (!src) return "";
+  return src.kind === "worldbank" ? `World Bank ${src.year}` : src.kind;
+}
+
+function factCell(fact) {
+  if (!fact) return '<td class="num na" title="No data">&mdash;</td>';
+  return `<td class="num" title="World Bank ${escapeHTML(fact.year)}">${escapeHTML(formatNumber(fact.value))}</td>`;
 }
 
 function badgeCell(row) {
@@ -102,16 +115,46 @@ function badgeCell(row) {
 }
 
 function setupCountries(data) {
-  const templates = data.templates;
-  const rows = data.countries.map(raw => {
-    const resolved = resolveCountry(raw, templates);
-    return {
-      name: raw.name,
-      quality: raw.quality,
-      templateLabel: raw.quality === "template" ? (resolved.templateLabel || raw.template) : "",
-      metrics: countryMetrics(resolved),
-    };
+  const wbMeta = data.worldBank;
+  const rows = data.countries.map(c => ({
+    country: c,
+    name: c.name,
+    quality: c.quality,
+    templateLabel: c.quality === "template" ? (c.templateLabel || c.template) : "",
+    metrics: countryMetrics(c),
+    population: c.worldBankFacts?.population,
+    gdp: c.worldBankFacts?.gdpPerCapitaPPP,
+  }));
+
+  const factCol = (id, label, csvLabel, key) => ({
+    id, label, csvLabel, numeric: true,
+    get: r => r[key]?.value,
+    cell: r => factCell(r[key]),
   });
+
+  const metricCols = Object.entries(METRICS).flatMap(([key, def]) => [
+    {
+      id: key,
+      label: def.label.replace(/\s*\(.*\)\s*$/, ""),
+      csvLabel: key,
+      title: def.label,
+      numeric: true,
+      get: r => r.metrics[key],
+      cell: r => {
+        const src = r.country.sources?.[key];
+        let tip = describeSource(r.country, key, wbMeta);
+        if (src?.kind === "worldbank" && src.estimate != null) {
+          const est = INVERTED.includes(key) ? 10 - src.estimate : src.estimate;
+          tip += ` (old estimate: ${est})`;
+        }
+        return metricCell(r.metrics[key], tip, src?.kind === "worldbank");
+      },
+    },
+    {
+      id: `${key}_source`, label: `${key}_source`, csvOnly: true,
+      get: r => sourceLabel(r.country, key),
+    },
+  ]);
 
   const columns = [
     { id: "name", label: "Country", sticky: true, get: r => r.name,
@@ -119,15 +162,9 @@ function setupCountries(data) {
     { id: "quality", label: "Quality", get: r => QUALITY_LABEL[r.quality] || r.quality, cell: badgeCell },
     { id: "template", label: "Template", get: r => r.templateLabel,
       cell: r => r.templateLabel ? `<td>${escapeHTML(r.templateLabel)}</td>` : '<td class="na">&mdash;</td>' },
-    ...Object.entries(METRICS).map(([key, def]) => ({
-      id: key,
-      label: def.label.replace(/\s*\(.*\)\s*$/, ""),
-      csvLabel: key,
-      title: def.label,
-      numeric: true,
-      get: r => r.metrics[key],
-      cell: r => metricCell(r.metrics[key]),
-    })),
+    factCol("population", "Population", "population", "population"),
+    factCol("gdp", "GDP/cap (PPP)", "gdp_per_capita_ppp", "gdp"),
+    ...metricCols,
   ];
 
   const search = $("country-search");
@@ -213,7 +250,7 @@ async function init() {
   setupTabs();
   try {
     const [countryData, uniData] = await Promise.all([
-      loadJSON("data/countries.json"),
+      loadCountryData(),
       loadJSON("data/universities.json"),
     ]);
     setupCountries(countryData);
