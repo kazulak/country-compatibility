@@ -1,5 +1,5 @@
 import {
-  rank, loadJSON, escapeHTML, matchClass, debounce,
+  rank, loadJSON, escapeHTML, matchClass, scoreText, debounce,
   readHashState, writeHashState, setupCopyLink, reloadOnExternalHashChange,
 } from "./engine.js";
 import { loadCountryData } from "./metrics.js";
@@ -88,14 +88,14 @@ function buildPreferenceControls() {
   prefList.innerHTML = METRIC_KEYS.map(key => {
     const m = METRICS[key];
     const pills = IMPORTANCE_LEVELS.map(([val, text]) => `
-        <input type="radio" id="imp-${key}-${val}" name="imp-${key}" value="${val}" ${val === "6" ? "checked" : ""} hidden>
+        <input type="radio" id="imp-${key}-${val}" name="imp-${key}" value="${val}" ${val === "6" ? "checked" : ""}>
         <label for="imp-${key}-${val}" class="importance-pill" style="flex: 1;">${text}</label>`).join("");
     return `
       <div class="preference-item">
         <div class="pref-label-row">
           <span class="pref-name" id="label-${key}">
             ${escapeHTML(m.label)}
-            <button type="button" class="info-btn" data-info="${key}" aria-label="Show description">i</button>
+            <button type="button" class="info-btn" data-info="${key}" aria-label="About ${escapeHTML(m.label)}" aria-expanded="false">i</button>
           </span>
         </div>
         <div class="metric-info-box" id="info-${key}" hidden>${escapeHTML(m.info)}</div>
@@ -112,6 +112,7 @@ function buildPreferenceControls() {
       const box = $(`info-${btn.dataset.info}`);
       box.hidden = !box.hidden;
       btn.classList.toggle("active", !box.hidden);
+      btn.setAttribute("aria-expanded", String(!box.hidden));
     });
   });
 }
@@ -165,10 +166,15 @@ function applyPreset(persona) {
 
 function recompute() {
   rankings = rank(universities, u => universityProfile(u).metrics, METRICS, readPrefs());
+  refreshSelection();
+}
+
+// Keep the selection if it is still listed, otherwise pick the top match (or none), then redraw.
+function refreshSelection() {
   const filtered = filteredRankings();
-  if (!filtered.some(r => r.item.id === activeId) && filtered.length) activeId = filtered[0].item.id;
+  if (!filtered.some(r => r.item.id === activeId)) activeId = filtered.length ? filtered[0].item.id : null;
   renderList();
-  if (activeId) renderDetails(activeId);
+  renderDetails(activeId);
   syncHash();
 }
 
@@ -202,7 +208,8 @@ function renderList() {
     const card = document.createElement("article");
     card.className = `country-card${active ? " active" : ""}`;
     card.tabIndex = 0;
-    card.setAttribute("aria-selected", active ? "true" : "false");
+    card.setAttribute("role", "button");
+    if (active) card.setAttribute("aria-current", "true");
     const cls = matchClass(score);
     card.innerHTML = `
       <div class="card-header-row">
@@ -210,10 +217,10 @@ function renderList() {
           <span class="card-rank">#${index + 1}</span>
           <h3 class="card-name">${escapeHTML(item.name)}</h3>
         </div>
-        <span class="card-match-badge ${cls}">${score}%</span>
+        <span class="card-match-badge ${cls}">${scoreText(score)}</span>
       </div>
       <p class="card-summary">${escapeHTML(item.city)}, ${escapeHTML(item.country)} · ARWU ${escapeHTML(bandLabel(item))}</p>
-      <div class="match-bar-bg"><div class="match-bar-fill ${cls}" style="width: ${score}%;"></div></div>`;
+      <div class="match-bar-bg"><div class="match-bar-fill ${cls}" style="width: ${score ?? 0}%;"></div></div>`;
     card.addEventListener("click", () => selectUniversity(item.id));
     card.addEventListener("keydown", e => {
       if (e.key === "Enter" || e.key === " ") {
@@ -230,8 +237,10 @@ function renderList() {
     more.className = "load-more-card";
     more.textContent = `Show more (+${filtered.length - visibleCount})`;
     more.addEventListener("click", () => {
+      const firstNew = visibleCount;
       visibleCount += PAGE_SIZE;
       renderList();
+      resultsList.children[firstNew]?.focus();
     });
     resultsList.appendChild(more);
   }
@@ -246,7 +255,10 @@ function selectUniversity(id) {
 
 function renderDetails(id) {
   const entry = rankings.find(r => r.item.id === id);
-  if (!entry) return;
+  if (!entry) {
+    detailsPanel.innerHTML = `<div class="empty-state"><p>No university matches your search.</p></div>`;
+    return;
+  }
   const { item, score, breakdown } = entry;
   const profile = universityProfile(item);
   const prefs = readPrefs();
@@ -281,7 +293,7 @@ function renderDetails(id) {
         <p class="subtitle">Shanghai (ARWU) rank: ${escapeHTML(bandLabel(item))} (approximate, ~2023)</p>
       </div>
       <div class="details-score-box">
-        <span class="details-percentage ${matchClass(score)}">${score}%</span>
+        <span class="details-percentage ${matchClass(score)}">${scoreText(score)}</span>
         <span class="details-score-label">Match</span>
       </div>
     </header>
@@ -307,7 +319,7 @@ function populateCountryFilter() {
 
 function resetAndRender() {
   visibleCount = PAGE_SIZE;
-  renderList();
+  refreshSelection();
 }
 
 async function init() {

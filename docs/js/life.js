@@ -218,12 +218,17 @@ function updateCompatibility() {
   const pool = allCountries.filter(c => includeTemplates.checked || c.quality === "curated");
   rankings = rank(pool, countryMetrics, METRICS, getPreferences());
   visibleCount = PAGE_SIZE;
+  syncSelection();
   renderRankingsList();
-  const filtered = getFilteredRankings();
-  if (!filtered.some(r => r.item.id === activeId) && filtered.length) activeId = filtered[0].item.id;
   renderDetails();
   updateMap();
   syncHash();
+}
+
+// Keep the selection while it is listed; otherwise select the top listed country (or none).
+function syncSelection() {
+  const filtered = getFilteredRankings();
+  if (!filtered.some(r => r.item.id === activeId)) activeId = filtered.length ? filtered[0].item.id : null;
 }
 
 function getFilteredRankings() {
@@ -234,9 +239,14 @@ function getFilteredRankings() {
 
 function onFilterChange() {
   visibleCount = PAGE_SIZE;
+  const previous = activeId;
+  syncSelection();
   renderRankingsList();
-  const filtered = getFilteredRankings();
-  if (filtered.length && !filtered.some(r => r.item.id === activeId)) selectCountry(filtered[0].item.id, false);
+  if (activeId !== previous) {
+    renderDetails();
+    updateMap();
+    syncHash();
+  }
 }
 
 function onActivate(el, handler) {
@@ -260,7 +270,8 @@ function renderRankingsList() {
     const card = document.createElement("article");
     card.className = `country-card ${active ? "active" : ""}`;
     card.tabIndex = 0;
-    card.setAttribute("aria-selected", String(active));
+    card.setAttribute("role", "button");
+    if (active) card.setAttribute("aria-current", "true");
     card.innerHTML = `
       <div class="card-header-row">
         <div class="card-rank-name">
@@ -278,14 +289,15 @@ function renderRankingsList() {
   });
 
   if (filtered.length > visibleCount) {
-    const more = document.createElement("div");
+    const more = document.createElement("button");
+    more.type = "button";
     more.className = "load-more-card";
     more.textContent = `Show More Matches (+${filtered.length - visibleCount})`;
-    more.setAttribute("role", "button");
-    more.tabIndex = 0;
-    onActivate(more, () => {
+    more.addEventListener("click", () => {
+      const firstNew = visibleCount;
       visibleCount += PAGE_SIZE;
       renderRankingsList();
+      resultsList.children[firstNew]?.focus();
     });
     resultsList.appendChild(more);
   }
@@ -362,7 +374,10 @@ function dataNoteHTML(c) {
 
 function renderDetails() {
   const entry = rankings.find(r => r.item.id === activeId);
-  if (!entry) return;
+  if (!entry) {
+    detailsView.innerHTML = `<div class="empty-state"><p>No country matches your search or filter.</p></div>`;
+    return;
+  }
   const { item: c, score, breakdown } = entry;
   const isTemplate = c.quality === "template";
   const persona = activePersona !== "custom" && c.personas?.[activePersona];
@@ -482,14 +497,14 @@ let currentQuizSlide = 1;
 const priorities = [
   { key: "cost_tax", label: "💰 Cost & Tax", desc: "Cost of living, housing costs, taxes" },
   { key: "climate_nature", label: "☀️ Climate & Nature", desc: "Temperatures, mountains, beaches, forests" },
-  { key: "safety_health", label: "🛡️ Safety & Health", desc: "Crime rate, air quality, healthcare" },
-  { key: "work_business", label: "💻 Work & Tech", desc: "Internet speed, local job market, business ease" },
+  { key: "safety_health", label: "🛡️ Safety & Health", desc: "Homicide rate, air quality, life expectancy" },
+  { key: "work_business", label: "💻 Work & Tech", desc: "Internet access, income level, business ease" },
   { key: "culture_lifestyle", label: "🗣️ Culture & Lifestyle", desc: "Pace of life, friendliness, English level" },
 ];
 
 const PRIORITY_METRICS = {
   cost_tax: ["cost_of_living", "housing_affordability", "tax_burden", "childcare_education_cost", "dining_food_cost"],
-  climate_nature: ["warm_weather", "seasonal_variety", "nature_mountains", "nature_lakes_rivers", "nature_sea_beaches", "nature_forests_greenery", "humidity_level", "air_quality", "sunshine_hours"],
+  climate_nature: ["warm_weather", "seasonal_variety", "nature_mountains", "nature_lakes_rivers", "nature_sea_beaches", "nature_forests_greenery", "humidity_level", "sunshine_hours"],
   safety_health: ["safety", "healthcare_quality", "air_quality", "happiness_index"],
   work_business: ["internet_speed", "local_job_market", "ease_of_doing_business", "road_quality"],
   culture_lifestyle: ["pace_of_life", "english_barrier", "social_tolerance", "bureaucracy_difficulty", "foreigner_friendliness"],
@@ -556,7 +571,7 @@ function buildQuizSlides() {
         <input type="text" id="quiz-country-search" class="quiz-disc-search" placeholder="Search current country..." aria-label="Search countries">
       </div>
       <div class="quiz-options quiz-options-scrollable" id="quiz-country-options">
-        ${optionCards("q-current-country", names.map(n => [n, "📍", n]), { compact: true })}
+        ${optionCards("q-current-country", names.map(n => [n, "📍", n]), { compact: true, checkFirst: false })}
       </div>`),
     slide(3, `${quizQuestion("Rank the five pillars in order of importance to you (use ▲/▼ to sort):")}
       <div class="quiz-options" id="quiz-priorities-list" style="gap: 6px;"></div>`),
@@ -578,9 +593,12 @@ function buildQuizSlides() {
 function renderPrioritiesList() {
   const list = $("quiz-priorities-list");
   list.innerHTML = "";
-  const swap = (a, b) => {
+  const swap = (a, b, direction) => {
     [priorities[a], priorities[b]] = [priorities[b], priorities[a]];
     renderPrioritiesList();
+    const moved = list.children[b];
+    const next = moved.querySelector(direction === "up" ? ".btn-swap-up" : ".btn-swap-down");
+    (next.disabled ? moved.querySelector("button:not([disabled])") : next).focus();
   };
   priorities.forEach((item, idx) => {
     const card = document.createElement("div");
@@ -595,30 +613,33 @@ function renderPrioritiesList() {
         </div>
       </div>
       <div style="display: flex; gap: 4px;">
-        <button type="button" class="btn secondary btn-swap-up" style="padding: 4px 8px; font-size: 11px;" ${idx === 0 ? "disabled" : ""}>▲</button>
-        <button type="button" class="btn secondary btn-swap-down" style="padding: 4px 8px; font-size: 11px;" ${idx === priorities.length - 1 ? "disabled" : ""}>▼</button>
+        <button type="button" class="btn secondary btn-swap-up" style="padding: 4px 8px; font-size: 11px;" aria-label="Move ${escapeHTML(item.label)} up" ${idx === 0 ? "disabled" : ""}>▲</button>
+        <button type="button" class="btn secondary btn-swap-down" style="padding: 4px 8px; font-size: 11px;" aria-label="Move ${escapeHTML(item.label)} down" ${idx === priorities.length - 1 ? "disabled" : ""}>▼</button>
       </div>`;
-    card.querySelector(".btn-swap-up").addEventListener("click", () => swap(idx, idx - 1));
-    card.querySelector(".btn-swap-down").addEventListener("click", () => swap(idx, idx + 1));
+    card.querySelector(".btn-swap-up").addEventListener("click", () => swap(idx, idx - 1, "up"));
+    card.querySelector(".btn-swap-down").addEventListener("click", () => swap(idx, idx + 1, "down"));
     list.appendChild(card);
   });
 }
 
 function populateAdaptiveSlide4() {
   const checked = quizForm.querySelector('input[name="q-current-country"]:checked');
-  const name = checked ? checked.value : "your country";
-  const country = allCountries.find(c => c.name === name);
+  const country = checked ? allCountries.find(c => c.name === checked.value) : null;
+  const name = country?.name;
   const cost = country?.metrics?.cost_of_living ?? 5;
   const warm = country?.metrics?.warm_weather ?? 5;
+  // Without a home country, ask neutral questions instead of assuming one.
+  const costQuestion = !country ? "What is your primary objective regarding finances?"
+    : cost >= 7 ? `You currently live in ${name}, which is rated as relatively expensive here. What is your priority for your next destination?`
+    : `You live in ${name}, which is rated as relatively affordable here. What is your primary objective regarding finances?`;
+  const climateQuestion = !country ? "What weather profile do you prefer next?"
+    : warm >= 7 ? `${name} is rated as a warm climate. What weather profile are you looking for next?`
+    : `${name} is rated as a cool or seasonal climate. What weather profile do you prefer next?`;
 
   $("quiz-slide-4").innerHTML = `
-    ${quizQuestion(cost >= 7
-      ? `You currently live in ${name}, which is rated as relatively expensive here. What is your priority for your next destination?`
-      : `You live in ${name}, which is rated as relatively affordable here. What is your primary objective regarding finances?`)}
+    ${quizQuestion(costQuestion)}
     <div class="quiz-options">${optionCards("q-adaptive-financial", cost >= 7 ? QUIZ_COST_HIGH : QUIZ_COST_LOW)}</div>
-    ${quizQuestion(warm >= 7
-      ? `${name} is rated as a warm climate. What weather profile are you looking for next?`
-      : `${name} is rated as a cool or seasonal climate. What weather profile do you prefer next?`, "margin-top: 20px;")}
+    ${quizQuestion(climateQuestion, "margin-top: 20px;")}
     <div class="quiz-options">${optionCards("q-adaptive-climate", warm >= 7 ? QUIZ_CLIMATE_WARM : QUIZ_CLIMATE_COOL)}</div>`;
 }
 
@@ -668,7 +689,37 @@ function finishQuiz() {
 
   setActivePersonaButton(activePersona);
   updateCompatibility();
+  closeQuiz();
+}
+
+// The quiz is a modal dialog: focus moves in, Tab stays inside, focus returns on close.
+function openQuiz() {
+  buildQuizSlides();
+  currentQuizSlide = 1;
+  showQuizSlide(1);
+  quizModal.hidden = false;
+  $("close-quiz-btn").focus();
+}
+
+function closeQuiz() {
+  if (quizModal.hidden) return;
   quizModal.hidden = true;
+  $("open-quiz-btn").focus();
+}
+
+function trapQuizFocus(e) {
+  if (e.key !== "Tab" || quizModal.hidden) return;
+  const focusable = [...quizModal.querySelectorAll("button, input, [tabindex]")]
+    .filter(el => !el.disabled && el.offsetParent !== null);
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
 }
 
 // ---------- Event wiring ----------
@@ -691,10 +742,13 @@ function setupEventListeners() {
   });
   form.querySelectorAll(".info-btn").forEach(btn => {
     const box = $(`info-${btn.dataset.info}`);
+    btn.setAttribute("aria-label", `About ${METRICS[btn.dataset.info]?.label ?? "this metric"}`);
+    btn.setAttribute("aria-expanded", "false");
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       box.hidden = !box.hidden;
       btn.classList.toggle("active", !box.hidden);
+      btn.setAttribute("aria-expanded", String(!box.hidden));
     });
   });
 
@@ -710,15 +764,11 @@ function setupEventListeners() {
     });
   });
 
-  $("open-quiz-btn").addEventListener("click", () => {
-    buildQuizSlides();
-    currentQuizSlide = 1;
-    showQuizSlide(1);
-    quizModal.hidden = false;
-  });
-  $("close-quiz-btn").addEventListener("click", () => { quizModal.hidden = true; });
-  quizModal.addEventListener("click", (e) => { if (e.target === quizModal) quizModal.hidden = true; });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") quizModal.hidden = true; });
+  $("open-quiz-btn").addEventListener("click", openQuiz);
+  $("close-quiz-btn").addEventListener("click", closeQuiz);
+  quizModal.addEventListener("click", (e) => { if (e.target === quizModal) closeQuiz(); });
+  quizModal.addEventListener("keydown", trapQuizFocus);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeQuiz(); });
   quizPrevBtn.addEventListener("click", () => {
     if (currentQuizSlide > 1) showQuizSlide(--currentQuizSlide);
   });

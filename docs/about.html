@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How It Works</title>
-  <link rel="stylesheet" href="style.css?v=11">
-  <link rel="stylesheet" href="pages.css">
+  <meta name="description" content="How Country Compass scores countries, where the data comes from, how old it is, and what it gets wrong.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How It Works">
+  <meta property="og:description" content="How Country Compass scores countries, where the data comes from, how old it is, and what it gets wrong.">
+  <meta property="og:url" content="https://kazulak.github.io/country-compatibility/about.html">
+  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="pages.css?v=2">
 </head>
 <body class="page">
   <nav class="page-nav" aria-label="Site">
@@ -37,7 +43,7 @@
     </ul>
     <p>The total is the weighted average of those scores, times 100, rounded:</p>
     <span class="formula">total = 100 &times; sum(score &times; weight) / sum(weight)</span>
-    <p>Metrics that are Off, or that have no data for a country, are skipped rather than guessed. If every metric is skipped the total is 100.</p>
+    <p>Metrics that are Off, or that have no data for a country, are skipped rather than guessed. If every metric is Off, everything scores 100. If you turned metrics on but none of them has data for an item (only possible for Hong Kong universities, which have just a rank), it shows "n/a" and is listed last instead of scoring 100.</p>
 
     <p><strong>Worked example.</strong> You set Warm Weather (preference) to a target of 8 with High importance, and Safety (maximize) with Med importance. A country has warm weather 6 and safety 9.</p>
     <ul>
@@ -92,26 +98,27 @@
     <ul>
       <li><strong>Templates fit some countries badly.</strong> China, South Korea, Uzbekistan and Azerbaijan use the "Temperate Europe" template. Kenya, Nigeria and Ethiopia use "Tropical (Latin America)". The "Gulf / Desert" template claims zero income tax and high safety for Egypt, Algeria, Libya and others.</li>
       <li><strong>Template countries ignore current events.</strong> Their estimates do not reflect conflicts, travel advisories or sanctions.</li>
-      <li><strong>Countries sharing a template tie exactly</strong>, because their scores are identical.</li>
+      <li><strong>Countries sharing a template have identical estimates</strong> for the 25 metrics without World Bank data, so they tie when only those metrics are switched on.</li>
       <li><strong>Visa rules change often.</strong> The visa text on curated countries may be out of date, and template visa text is generic.</li>
       <li><strong>Scores are integers from 0 to 10 written by one person.</strong> There is no second opinion and no inter-rater check.</li>
       <li><strong>Several universities share an approximate rank</strong>, and ranks beyond 100 are only bands.</li>
       <li><strong>University scores describe the country, not the university.</strong></li>
       <li><strong>The quiz presets are arbitrary.</strong> They are convenient starting points, not findings.</li>
-      <li><strong>Homicide rate ignores war, terrorism and petty crime</strong>, and the data can be years old. Ukraine's value is from 2021, before the war shows up (it scores about 6.0). Egypt's is from 2017.</li>
+      <li><strong>Homicide rate ignores war, terrorism and petty crime</strong>, and the data can be years old. Ukraine's value is from 2021, before the war shows up (it scores about 6.0). Eleven countries' latest values are from 2015–2019, including Egypt (2017), Senegal and Turkmenistan (2015); the data table shows each year.</li>
       <li><strong>PM2.5 is a modelled national average</strong>, not what you breathe in a given city.</li>
       <li><strong>Internet measures access</strong> (share of people online), not speed.</li>
-      <li><strong>GDP per capita is an average</strong>, not wages for your job.</li>
+      <li><strong>GDP per capita is an average</strong>, not wages for your job. It is also inflated where multinationals book profits, so Ireland and Luxembourg look richer than local wages suggest.</li>
       <li><strong>The price level is economy-wide</strong> and misses expat rents in expensive cities. Singapore scores mid-range despite very high rents.</li>
       <li><strong>Life expectancy is a health outcome</strong> shaped by much more than healthcare quality.</li>
       <li><strong>Forest cover is not all nature</strong>: it ignores grassland, wetlands, mountains and desert landscapes, and includes plantations.</li>
       <li><strong>Taiwan has no World Bank data</strong>, and a few microstates miss some metrics. They fall back to the old estimates.</li>
       <li><strong>The 0&ndash;10 conversions use anchor points chosen by hand</strong>, which is itself a judgement call.</li>
-      <li>Labels like "Happiness" or "Safety" do not match any official index.</li>
+      <li>Labels of the hand-made metrics, such as "Happiness" or "Ease of Doing Business", do not match any official index.</li>
     </ul>
 
     <h2 id="changelog">7. Changelog</h2>
     <ul>
+      <li><strong>2026-09:</strong> audit fixes: universities with no data for your chosen factors show "n/a" instead of 100%; the CSV now labels visa, English and bureaucracy columns as ease; keyboard and screen-reader improvements; the quiz no longer assumes a home country.</li>
       <li><strong>2026-09:</strong> 7 metrics now use World Bank data (safety, air quality, internet access, income level, life expectancy, price level, forest cover) with per-value source and year.</li>
       <li><strong>2026-09:</strong> removed generated research groups and invented universities, removed fabricated country facts and city statistics, fixed inverted bureaucracy scoring, labelled template countries.</li>
     </ul>

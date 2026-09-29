@@ -132,11 +132,13 @@ function setupCountries(data) {
     cell: r => factCell(r[key]),
   });
 
+  // Values are shown as ease for the inverted keys, so CSV headers must say so too.
+  const csvName = key => (INVERTED.includes(key) ? `${key.replace(/_(difficulty|barrier)$/, "")}_ease` : key);
   const metricCols = Object.entries(METRICS).flatMap(([key, def]) => [
     {
       id: key,
       label: def.label.replace(/\s*\(.*\)\s*$/, ""),
-      csvLabel: key,
+      csvLabel: csvName(key),
       title: def.label,
       numeric: true,
       get: r => r.metrics[key],
@@ -151,7 +153,7 @@ function setupCountries(data) {
       },
     },
     {
-      id: `${key}_source`, label: `${key}_source`, csvOnly: true,
+      id: `${key}_source`, label: `${csvName(key)}_source`, csvOnly: true,
       get: r => sourceLabel(r.country, key),
     },
   ]);
