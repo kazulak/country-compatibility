@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works</title>
+  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="page">
+  <nav class="page-nav" aria-label="Site">
+    <a href="index.html">&larr; Country Compass</a>
+    <a href="academic.html">University Compass</a>
+    <a href="table.html">Data table</a>
+  </nav>
+
+  <main class="doc">
+    <h1>How it works &amp; limitations</h1>
+    <p class="muted">Everything this site does, and everything it gets wrong, in one place.</p>
+
+    <h2 id="what">1. What this is</h2>
+    <p>Country Compass is a just-for-fun side project. You say what matters to you, and it ranks countries (and a list of well-known universities) by how well they match. It is <strong>not a research tool</strong>. The numbers are hand-written guesses, not measurements.</p>
+    <div class="disclaimer-banner"><strong>Please don't use this for real decisions.</strong> For visas, safety and money, use official government portals, travel advisories and the institutions themselves.</div>
+
+    <h2 id="score">2. How the score works</h2>
+    <p>Each country has a 0&ndash;10 number for each of 32 metrics. For every metric you set an importance, which becomes a weight:</p>
+    <ul>
+      <li><strong>Off</strong> = 0 (ignored)</li>
+      <li><strong>Low</strong> = 3</li>
+      <li><strong>Med</strong> = 6</li>
+      <li><strong>High</strong> = 10</li>
+    </ul>
+    <p>Each metric then gets a match score between 0 and 1, depending on its type:</p>
+    <ul>
+      <li><strong>Maximize</strong> metrics (higher is better): <code>score = value / 10</code></li>
+      <li><strong>Preference</strong> metrics (you pick a target): <code>score = 1 &minus; |target &minus; value| / 10</code></li>
+    </ul>
+    <p>The total is the weighted average of those scores, times 100, rounded:</p>
+    <span class="formula">total = 100 &times; sum(score &times; weight) / sum(weight)</span>
+    <p>Metrics that are Off, or that have no data for a country, are skipped rather than guessed. If every metric is skipped the total is 100.</p>
+
+    <p><strong>Worked example.</strong> You set Warm Weather (preference) to a target of 8 with High importance, and Safety (maximize) with Med importance. A country has warm weather 6 and safety 9.</p>
+    <ul>
+      <li>Warm weather: 1 &minus; |8 &minus; 6| / 10 = 0.80, weight 10</li>
+      <li>Safety: 9 / 10 = 0.90, weight 6</li>
+      <li>Total: (0.80 &times; 10 + 0.90 &times; 6) / (10 + 6) = 13.4 / 16 = 0.8375, so <strong>84</strong></li>
+    </ul>
+
+    <div class="data-note">The model is simple and has not been validated against anything. It is linear, has no interactions between metrics, uses arbitrary weights (3/6/10), and "preference" metrics treat being over your target exactly the same as being under it (a country 2 points too hot scores the same as one 2 points too cold).</div>
+
+    <h2 id="metrics">3. Metrics</h2>
+    <p>Generated from <code>js/metrics.js</code>, the same list the site scores with.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Metric</th><th>Type</th><th>Direction</th></tr></thead>
+        <tbody id="metrics-body"><tr><td colspan="3" class="muted">Loading&hellip;</td></tr></tbody>
+      </table>
+    </div>
+    <p class="muted">Three metrics are stored in the data as <em>difficulty</em> (higher is worse) and shown inverted as <em>ease</em> (10 minus the stored value). An earlier version scored bureaucracy the wrong way round; that is fixed.</p>
+
+    <h2 id="data">4. Where the data comes from, and how old it is</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Source</th><th>Age / status</th></tr></thead>
+        <tbody>
+          <tr><td>Curated country scores and text (20 countries)</td><td>Hand-written by one person</td><td>About 2025. Subjective.</td></tr>
+          <tr><td>Template countries (100 countries)</td><td>A generic regional template copied onto each country</td><td>No year. Not researched individually.</td></tr>
+          <tr><td>Capitals, currencies, languages</td><td>Reference facts</td><td>Checked 2026</td></tr>
+          <tr><td>City lists</td><td>A few major cities per country</td><td>No city-level scores</td></tr>
+          <tr><td>ARWU university ranks</td><td>Shanghai Ranking, recalled from memory</td><td>Approximate, about the 2023 edition. Not re-verified. Beyond 100 shown as bands.</td></tr>
+          <tr><td>University metrics other than rank</td><td>Copied from the host country's estimate</td><td>Nothing describes the university itself. Hong Kong has only the rank.</td></tr>
+          <tr><td>Map shapes</td><td>Natural Earth via world-atlas (50m)</td><td>Boundaries are simplified and not a political statement</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>See every number on the <a href="table.html">data table</a>.</p>
+
+    <h2 id="problems">5. Known problems and likely errors</h2>
+    <ul>
+      <li><strong>Templates fit some countries badly.</strong> China, South Korea, Uzbekistan and Azerbaijan use the "Temperate Europe" template. Kenya, Nigeria and Ethiopia use "Tropical (Latin America)". The "Gulf / Desert" template claims zero income tax and high safety for Egypt, Algeria, Libya and others. Ukraine inherits "high public safety".</li>
+      <li><strong>Template countries ignore current events.</strong> They do not reflect conflicts, travel advisories or sanctions.</li>
+      <li><strong>Countries sharing a template tie exactly</strong>, because their scores are identical.</li>
+      <li><strong>Visa rules change often.</strong> The visa text on curated countries may be out of date, and template visa text is generic.</li>
+      <li><strong>Scores are integers from 0 to 10 written by one person.</strong> There is no second opinion and no inter-rater check.</li>
+      <li><strong>Several universities share an approximate rank</strong>, and ranks beyond 100 are only bands.</li>
+      <li><strong>University scores describe the country, not the university.</strong></li>
+      <li><strong>The quiz presets are arbitrary.</strong> They are convenient starting points, not findings.</li>
+      <li>Labels like "Happiness" or "Safety" do not match any official index.</li>
+    </ul>
+
+    <h2 id="changelog">6. Changelog</h2>
+    <ul>
+      <li><strong>2026-09:</strong> removed generated research groups and invented universities, removed fabricated country facts and city statistics, fixed inverted bureaucracy scoring, labelled template countries.</li>
+    </ul>
+
+    <h2 id="mistake">7. Found a mistake?</h2>
+    <p>Please <a href="https://github.com/kazulak/country-compatibility/issues/new">open an issue</a> (the <a href="https://github.com/kazulak/country-compatibility">repo is here</a>). A correction with a source is the most helpful kind: tell me which country or university, which number, what it should be, and where you found it.</p>
+  </main>
+
+  <script type="module">
+    import { METRICS, INVERTED } from "./js/metrics.js";
+    import { escapeHTML } from "./js/engine.js";
+
+    const body = document.getElementById("metrics-body");
+    body.innerHTML = Object.entries(METRICS).map(([key, m]) => {
+      const inverted = INVERTED.includes(key);
+      const direction = m.type === "preference"
+        ? "Closest to your target wins"
+        : "Higher is better";
+      const note = inverted ? `${direction}. Stored as difficulty, shown inverted as ease.` : direction;
+      return `<tr><td>${escapeHTML(m.label)}</td><td>${escapeHTML(m.type)}</td><td>${escapeHTML(note)}</td></tr>`;
+    }).join("");
+  </script>
+</body>
+</html>

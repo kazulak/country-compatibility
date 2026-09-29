@@ -8,8 +8,12 @@ A small, just-for-fun static website: move a few sliders and it ranks countries 
 
 ## Pages
 
-- **Country Compass** (`docs/index.html`): ranks countries on 32 lifestyle metrics (climate, cost, safety, visas, work culture…), with persona presets and a short quiz.
+- **Country Compass** (`docs/index.html`): ranks countries on 32 lifestyle metrics (climate, cost, safety, visas, work culture…), with persona presets, a short quiz and a world map coloured by your match.
 - **University Compass** (`docs/academic.html`): ranks 94 real universities using their approximate Shanghai (ARWU) rank plus the host country's scores.
+- **How it works** (`docs/about.html`): the scoring formula, what every metric means, how old the data is, and known errors.
+- **All data** (`docs/table.html`): every number the site uses, sortable, with CSV download.
+
+Settings are kept in the page URL, so **Copy link** shares your exact setup. Every country has a **Report an error** link that opens a pre-filled GitHub issue.
 
 ## Limitations
 
@@ -34,18 +38,24 @@ A small, just-for-fun static website: move a few sliders and it ranks countries 
 docs/                    # the whole site (served by GitHub Pages from /docs)
 ├── index.html           # Country Compass
 ├── academic.html        # University Compass
-├── style.css
+├── about.html           # How it works & limitations
+├── table.html           # All data
+├── style.css            # app pages
+├── pages.css            # about + table pages
 ├── js/
-│   ├── engine.js        # shared scoring + helpers
+│   ├── engine.js        # shared scoring, URL state, helpers
+│   ├── metrics.js       # country metric definitions
+│   ├── map.js           # world map (d3 + world-atlas, loaded from jsDelivr)
 │   ├── life.js          # country page
-│   └── academic.js      # university page
+│   ├── academic.js      # university page
+│   └── table.js         # data table page
 └── data/
     ├── countries.json   # source of truth: 20 curated countries, 100 template countries, templates
     └── universities.json
 tests/test_data.py       # data integrity checks
 ```
 
-There is no build step and there are no dependencies. The JSON files *are* the data, so edit them directly.
+There is no build step and nothing to install. The JSON files *are* the data, so edit them directly. The map loads d3, topojson-client and the Natural Earth 50m atlas from jsDelivr, so it needs an internet connection. Everything else works offline.
 
 ## Running locally
 

@@ -1,4 +1,7 @@
-import { rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry } from "./engine.js";
+import {
+  rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry,
+  readHashState, writeHashState, setupCopyLink,
+} from "./engine.js";
 
 const PAGE_SIZE = 20;
 const IMPORTANCE_LEVELS = [["0", "Off"], ["3", "Low"], ["6", "Med"], ["10", "High"]];
@@ -121,6 +124,28 @@ function setPersonaButton(persona) {
   });
 }
 
+function activePersona() {
+  return document.querySelector(".persona-btn.active")?.dataset.persona || "custom";
+}
+
+// Keep the URL in sync so the current setup can be shared as a link.
+function syncHash() {
+  const persona = activePersona();
+  writeHashState(METRICS, readPrefs(), { p: persona === "custom" ? null : persona, sel: activeId });
+}
+
+function applySharedState() {
+  const shared = readHashState(METRICS);
+  if (!shared) return;
+  for (const key of METRIC_KEYS) {
+    const radio = $(`imp-${key}-${shared.prefs[key].importance}`);
+    if (radio) radio.checked = true;
+  }
+  const persona = shared.params.get("p");
+  setPersonaButton(PERSONA_PRESETS[persona] ? persona : "custom");
+  activeId = shared.params.get("sel");
+}
+
 function applyPreset(persona) {
   const preset = PERSONA_PRESETS[persona];
   for (const key of METRIC_KEYS) {
@@ -135,6 +160,7 @@ function recompute() {
   if (!filtered.some(r => r.item.id === activeId) && filtered.length) activeId = filtered[0].item.id;
   renderList();
   if (activeId) renderDetails(activeId);
+  syncHash();
 }
 
 function filteredRankings() {
@@ -206,6 +232,7 @@ function selectUniversity(id) {
   activeId = id;
   renderList();
   renderDetails(id);
+  syncHash();
 }
 
 function renderDetails(id) {
@@ -291,6 +318,8 @@ async function init() {
 
   buildPreferenceControls();
   populateCountryFilter();
+  applySharedState();
+  setupCopyLink($("copy-link-btn"));
 
   const debouncedRecompute = debounce(recompute, 100);
   form.addEventListener("change", () => {

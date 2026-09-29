@@ -3,7 +3,8 @@
     "description": "Hand-made, subjective 0-10 scores for a fun side project. Not measured data.",
     "curated": "Scores and text written by hand for this project (approx. 2025). Visa details may be outdated.",
     "template": "No individual research. Scores and text are copied from a generic regional template and are identical for every country using that template.",
-    "facts": "Capital, currency and languages are real reference facts (checked 2026); city lists are a few major cities."
+    "facts": "Capital, currency and languages are real reference facts (checked 2026); city lists are a few major cities.",
+    "mapId": "world-atlas 50m feature id (ISO 3166-1 numeric), or the feature name where the map has no id (Kosovo)."
   },
   "templates": {
     "temperate_europe": {
@@ -427,6 +428,7 @@
     {
       "id": "portugal",
       "name": "Portugal",
+      "mapId": "620",
       "quality": "curated",
       "facts": {
         "capital": "Lisbon",
@@ -550,6 +552,7 @@
     {
       "id": "spain",
       "name": "Spain",
+      "mapId": "724",
       "quality": "curated",
       "facts": {
         "capital": "Madrid",
@@ -619,6 +622,7 @@
     {
       "id": "germany",
       "name": "Germany",
+      "mapId": "276",
       "quality": "curated",
       "facts": {
         "capital": "Berlin",
@@ -742,6 +746,7 @@
     {
       "id": "japan",
       "name": "Japan",
+      "mapId": "392",
       "quality": "curated",
       "facts": {
         "capital": "Tokyo",
@@ -811,6 +816,7 @@
     {
       "id": "canada",
       "name": "Canada",
+      "mapId": "124",
       "quality": "curated",
       "facts": {
         "capital": "Ottawa",
@@ -880,6 +886,7 @@
     {
       "id": "australia",
       "name": "Australia",
+      "mapId": "036",
       "quality": "curated",
       "facts": {
         "capital": "Canberra",
@@ -949,6 +956,7 @@
     {
       "id": "thailand",
       "name": "Thailand",
+      "mapId": "764",
       "quality": "curated",
       "facts": {
         "capital": "Bangkok",
@@ -1018,6 +1026,7 @@
     {
       "id": "costa_rica",
       "name": "Costa Rica",
+      "mapId": "188",
       "quality": "curated",
       "facts": {
         "capital": "San José",
@@ -1087,6 +1096,7 @@
     {
       "id": "finland",
       "name": "Finland",
+      "mapId": "246",
       "quality": "curated",
       "facts": {
         "capital": "Helsinki",
@@ -1156,6 +1166,7 @@
     {
       "id": "switzerland",
       "name": "Switzerland",
+      "mapId": "756",
       "quality": "curated",
       "facts": {
         "capital": "Bern",
@@ -1225,6 +1236,7 @@
     {
       "id": "united_states",
       "name": "United States",
+      "mapId": "840",
       "quality": "curated",
       "facts": {
         "capital": "Washington, D.C.",
@@ -1294,6 +1306,7 @@
     {
       "id": "united_kingdom",
       "name": "United Kingdom",
+      "mapId": "826",
       "quality": "curated",
       "facts": {
         "capital": "London",
@@ -1363,6 +1376,7 @@
     {
       "id": "netherlands",
       "name": "Netherlands",
+      "mapId": "528",
       "quality": "curated",
       "facts": {
         "capital": "Amsterdam",
@@ -1432,6 +1446,7 @@
     {
       "id": "singapore",
       "name": "Singapore",
+      "mapId": "702",
       "quality": "curated",
       "facts": {
         "capital": "Singapore",
@@ -1501,6 +1516,7 @@
     {
       "id": "new_zealand",
       "name": "New Zealand",
+      "mapId": "554",
       "quality": "curated",
       "facts": {
         "capital": "Wellington",
@@ -1570,6 +1586,7 @@
     {
       "id": "mexico",
       "name": "Mexico",
+      "mapId": "484",
       "quality": "curated",
       "facts": {
         "capital": "Mexico City",
@@ -1639,6 +1656,7 @@
     {
       "id": "italy",
       "name": "Italy",
+      "mapId": "380",
       "quality": "curated",
       "facts": {
         "capital": "Rome",
@@ -1708,6 +1726,7 @@
     {
       "id": "france",
       "name": "France",
+      "mapId": "250",
       "quality": "curated",
       "facts": {
         "capital": "Paris",
@@ -1777,6 +1796,7 @@
     {
       "id": "vietnam",
       "name": "Vietnam",
+      "mapId": "704",
       "quality": "curated",
       "facts": {
         "capital": "Hanoi",
@@ -1846,6 +1866,7 @@
     {
       "id": "norway",
       "name": "Norway",
+      "mapId": "578",
       "quality": "curated",
       "facts": {
         "capital": "Oslo",
@@ -1915,6 +1936,7 @@
     {
       "id": "austria",
       "name": "Austria",
+      "mapId": "040",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -1936,6 +1958,7 @@
     {
       "id": "belgium",
       "name": "Belgium",
+      "mapId": "056",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -1957,6 +1980,7 @@
     {
       "id": "sweden",
       "name": "Sweden",
+      "mapId": "752",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -1978,6 +2002,7 @@
     {
       "id": "denmark",
       "name": "Denmark",
+      "mapId": "208",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -1999,6 +2024,7 @@
     {
       "id": "ireland",
       "name": "Ireland",
+      "mapId": "372",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2020,6 +2046,7 @@
     {
       "id": "iceland",
       "name": "Iceland",
+      "mapId": "352",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -2041,6 +2068,7 @@
     {
       "id": "greece",
       "name": "Greece",
+      "mapId": "300",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2062,6 +2090,7 @@
     {
       "id": "croatia",
       "name": "Croatia",
+      "mapId": "191",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2083,6 +2112,7 @@
     {
       "id": "czechia",
       "name": "Czech Republic",
+      "mapId": "203",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2104,6 +2134,7 @@
     {
       "id": "poland",
       "name": "Poland",
+      "mapId": "616",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2125,6 +2156,7 @@
     {
       "id": "hungary",
       "name": "Hungary",
+      "mapId": "348",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2146,6 +2178,7 @@
     {
       "id": "romania",
       "name": "Romania",
+      "mapId": "642",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2167,6 +2200,7 @@
     {
       "id": "estonia",
       "name": "Estonia",
+      "mapId": "233",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -2188,6 +2222,7 @@
     {
       "id": "latvia",
       "name": "Latvia",
+      "mapId": "428",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -2209,6 +2244,7 @@
     {
       "id": "lithuania",
       "name": "Lithuania",
+      "mapId": "440",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -2230,6 +2266,7 @@
     {
       "id": "cyprus",
       "name": "Cyprus",
+      "mapId": "196",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -2251,6 +2288,7 @@
     {
       "id": "malta",
       "name": "Malta",
+      "mapId": "470",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -2272,6 +2310,7 @@
     {
       "id": "south_korea",
       "name": "South Korea",
+      "mapId": "410",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2293,6 +2332,7 @@
     {
       "id": "taiwan",
       "name": "Taiwan",
+      "mapId": "158",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -2314,6 +2354,7 @@
     {
       "id": "malaysia",
       "name": "Malaysia",
+      "mapId": "458",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -2335,6 +2376,7 @@
     {
       "id": "indonesia",
       "name": "Indonesia",
+      "mapId": "360",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -2356,6 +2398,7 @@
     {
       "id": "philippines",
       "name": "Philippines",
+      "mapId": "608",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -2377,6 +2420,7 @@
     {
       "id": "india",
       "name": "India",
+      "mapId": "356",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -2398,6 +2442,7 @@
     {
       "id": "turkey",
       "name": "Turkey",
+      "mapId": "792",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2419,6 +2464,7 @@
     {
       "id": "uae",
       "name": "United Arab Emirates",
+      "mapId": "784",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -2440,6 +2486,7 @@
     {
       "id": "south_africa",
       "name": "South Africa",
+      "mapId": "710",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2461,6 +2508,7 @@
     {
       "id": "kenya",
       "name": "Kenya",
+      "mapId": "404",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2482,6 +2530,7 @@
     {
       "id": "morocco",
       "name": "Morocco",
+      "mapId": "504",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2503,6 +2552,7 @@
     {
       "id": "egypt",
       "name": "Egypt",
+      "mapId": "818",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -2524,6 +2574,7 @@
     {
       "id": "brazil",
       "name": "Brazil",
+      "mapId": "076",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2545,6 +2596,7 @@
     {
       "id": "argentina",
       "name": "Argentina",
+      "mapId": "032",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2566,6 +2618,7 @@
     {
       "id": "chile",
       "name": "Chile",
+      "mapId": "152",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2587,6 +2640,7 @@
     {
       "id": "colombia",
       "name": "Colombia",
+      "mapId": "170",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2608,6 +2662,7 @@
     {
       "id": "peru",
       "name": "Peru",
+      "mapId": "604",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2629,6 +2684,7 @@
     {
       "id": "uruguay",
       "name": "Uruguay",
+      "mapId": "858",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2650,6 +2706,7 @@
     {
       "id": "panama",
       "name": "Panama",
+      "mapId": "591",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2671,6 +2728,7 @@
     {
       "id": "ecuador",
       "name": "Ecuador",
+      "mapId": "218",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -2692,6 +2750,7 @@
     {
       "id": "dominican_republic",
       "name": "Dominican Republic",
+      "mapId": "214",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -2713,6 +2772,7 @@
     {
       "id": "georgia",
       "name": "Georgia",
+      "mapId": "268",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2734,6 +2794,7 @@
     {
       "id": "armenia",
       "name": "Armenia",
+      "mapId": "051",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2755,6 +2816,7 @@
     {
       "id": "kazakhstan",
       "name": "Kazakhstan",
+      "mapId": "398",
       "quality": "template",
       "template": "eurasia_steppe_mountain",
       "facts": {
@@ -2776,6 +2838,7 @@
     {
       "id": "israel",
       "name": "Israel",
+      "mapId": "376",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2797,6 +2860,7 @@
     {
       "id": "saudi_arabia",
       "name": "Saudi Arabia",
+      "mapId": "682",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -2818,6 +2882,7 @@
     {
       "id": "qatar",
       "name": "Qatar",
+      "mapId": "634",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -2839,6 +2904,7 @@
     {
       "id": "bulgaria",
       "name": "Bulgaria",
+      "mapId": "100",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2860,6 +2926,7 @@
     {
       "id": "slovakia",
       "name": "Slovakia",
+      "mapId": "703",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2881,6 +2948,7 @@
     {
       "id": "slovenia",
       "name": "Slovenia",
+      "mapId": "705",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2902,6 +2970,7 @@
     {
       "id": "montenegro",
       "name": "Montenegro",
+      "mapId": "499",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2923,6 +2992,7 @@
     {
       "id": "albania",
       "name": "Albania",
+      "mapId": "008",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -2944,6 +3014,7 @@
     {
       "id": "sri_lanka",
       "name": "Sri Lanka",
+      "mapId": "144",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -2965,6 +3036,7 @@
     {
       "id": "luxembourg",
       "name": "Luxembourg",
+      "mapId": "442",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -2986,6 +3058,7 @@
     {
       "id": "liechtenstein",
       "name": "Liechtenstein",
+      "mapId": "438",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -3007,6 +3080,7 @@
     {
       "id": "andorra",
       "name": "Andorra",
+      "mapId": "020",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3028,6 +3102,7 @@
     {
       "id": "monaco",
       "name": "Monaco",
+      "mapId": "492",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -3049,6 +3124,7 @@
     {
       "id": "san_marino",
       "name": "San Marino",
+      "mapId": "674",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -3070,6 +3146,7 @@
     {
       "id": "serbia",
       "name": "Serbia",
+      "mapId": "688",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3091,6 +3168,7 @@
     {
       "id": "bosnia_herzegovina",
       "name": "Bosnia & Herzegovina",
+      "mapId": "070",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3112,6 +3190,7 @@
     {
       "id": "north_macedonia",
       "name": "North Macedonia",
+      "mapId": "807",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3133,6 +3212,7 @@
     {
       "id": "kosovo",
       "name": "Kosovo",
+      "mapId": "Kosovo",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3154,6 +3234,7 @@
     {
       "id": "ukraine",
       "name": "Ukraine",
+      "mapId": "804",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3175,6 +3256,7 @@
     {
       "id": "belarus",
       "name": "Belarus",
+      "mapId": "112",
       "quality": "template",
       "template": "cold_europe",
       "facts": {
@@ -3196,6 +3278,7 @@
     {
       "id": "moldova",
       "name": "Moldova",
+      "mapId": "498",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3217,6 +3300,7 @@
     {
       "id": "jordan",
       "name": "Jordan",
+      "mapId": "400",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3238,6 +3322,7 @@
     {
       "id": "lebanon",
       "name": "Lebanon",
+      "mapId": "422",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -3259,6 +3344,7 @@
     {
       "id": "oman",
       "name": "Oman",
+      "mapId": "512",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3280,6 +3366,7 @@
     {
       "id": "bahrain",
       "name": "Bahrain",
+      "mapId": "048",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3301,6 +3388,7 @@
     {
       "id": "kuwait",
       "name": "Kuwait",
+      "mapId": "414",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3322,6 +3410,7 @@
     {
       "id": "azerbaijan",
       "name": "Azerbaijan",
+      "mapId": "031",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3343,6 +3432,7 @@
     {
       "id": "uzbekistan",
       "name": "Uzbekistan",
+      "mapId": "860",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3364,6 +3454,7 @@
     {
       "id": "kyrgyzstan",
       "name": "Kyrgyzstan",
+      "mapId": "417",
       "quality": "template",
       "template": "eurasia_steppe_mountain",
       "facts": {
@@ -3385,6 +3476,7 @@
     {
       "id": "tajikistan",
       "name": "Tajikistan",
+      "mapId": "762",
       "quality": "template",
       "template": "eurasia_steppe_mountain",
       "facts": {
@@ -3406,6 +3498,7 @@
     {
       "id": "turkmenistan",
       "name": "Turkmenistan",
+      "mapId": "795",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3427,6 +3520,7 @@
     {
       "id": "china",
       "name": "China",
+      "mapId": "156",
       "quality": "template",
       "template": "temperate_europe",
       "facts": {
@@ -3448,6 +3542,7 @@
     {
       "id": "nepal",
       "name": "Nepal",
+      "mapId": "524",
       "quality": "template",
       "template": "eurasia_steppe_mountain",
       "facts": {
@@ -3469,6 +3564,7 @@
     {
       "id": "bangladesh",
       "name": "Bangladesh",
+      "mapId": "050",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3490,6 +3586,7 @@
     {
       "id": "pakistan",
       "name": "Pakistan",
+      "mapId": "586",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3511,6 +3608,7 @@
     {
       "id": "maldives",
       "name": "Maldives",
+      "mapId": "462",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3532,6 +3630,7 @@
     {
       "id": "cambodia",
       "name": "Cambodia",
+      "mapId": "116",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3553,6 +3652,7 @@
     {
       "id": "laos",
       "name": "Laos",
+      "mapId": "418",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3574,6 +3674,7 @@
     {
       "id": "brunei",
       "name": "Brunei",
+      "mapId": "096",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3595,6 +3696,7 @@
     {
       "id": "myanmar",
       "name": "Myanmar",
+      "mapId": "104",
       "quality": "template",
       "template": "asia_tropical",
       "facts": {
@@ -3616,6 +3718,7 @@
     {
       "id": "tunisia",
       "name": "Tunisia",
+      "mapId": "788",
       "quality": "template",
       "template": "warm_europe",
       "facts": {
@@ -3637,6 +3740,7 @@
     {
       "id": "algeria",
       "name": "Algeria",
+      "mapId": "012",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3658,6 +3762,7 @@
     {
       "id": "libya",
       "name": "Libya",
+      "mapId": "434",
       "quality": "template",
       "template": "desert_gulf",
       "facts": {
@@ -3679,6 +3784,7 @@
     {
       "id": "senegal",
       "name": "Senegal",
+      "mapId": "686",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3700,6 +3806,7 @@
     {
       "id": "ghana",
       "name": "Ghana",
+      "mapId": "288",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3721,6 +3828,7 @@
     {
       "id": "nigeria",
       "name": "Nigeria",
+      "mapId": "566",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3742,6 +3850,7 @@
     {
       "id": "ethiopia",
       "name": "Ethiopia",
+      "mapId": "231",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3763,6 +3872,7 @@
     {
       "id": "tanzania",
       "name": "Tanzania",
+      "mapId": "834",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3784,6 +3894,7 @@
     {
       "id": "uganda",
       "name": "Uganda",
+      "mapId": "800",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3805,6 +3916,7 @@
     {
       "id": "rwanda",
       "name": "Rwanda",
+      "mapId": "646",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3826,6 +3938,7 @@
     {
       "id": "mauritius",
       "name": "Mauritius",
+      "mapId": "480",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3847,6 +3960,7 @@
     {
       "id": "seychelles",
       "name": "Seychelles",
+      "mapId": "690",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3868,6 +3982,7 @@
     {
       "id": "madagascar",
       "name": "Madagascar",
+      "mapId": "450",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3889,6 +4004,7 @@
     {
       "id": "fiji",
       "name": "Fiji",
+      "mapId": "242",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3910,6 +4026,7 @@
     {
       "id": "samoa",
       "name": "Samoa",
+      "mapId": "882",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3931,6 +4048,7 @@
     {
       "id": "tonga",
       "name": "Tonga",
+      "mapId": "776",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3952,6 +4070,7 @@
     {
       "id": "papua_new_guinea",
       "name": "Papua New Guinea",
+      "mapId": "598",
       "quality": "template",
       "template": "latam_tropical",
       "facts": {
@@ -3973,6 +4092,7 @@
     {
       "id": "vanuatu",
       "name": "Vanuatu",
+      "mapId": "548",
       "quality": "template",
       "template": "warm_island",
       "facts": {
@@ -3994,6 +4114,7 @@
     {
       "id": "mongolia",
       "name": "Mongolia",
+      "mapId": "496",
       "quality": "template",
       "template": "eurasia_steppe_mountain",
       "facts": {

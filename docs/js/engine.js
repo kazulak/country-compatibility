@@ -79,3 +79,50 @@ export function resolveCountry(country, templates) {
   const t = templates[country.template];
   return { ...t, templateLabel: t.label, ...country };
 }
+
+// Shareable state in the URL hash: #w=safety.10,warm_weather.6.7&sel=portugal
+// w lists metric.importance[.target] for every metric that counts; anything not listed is off.
+const IMPORTANCES = [0, 3, 6, 10];
+
+export function writeHashState(metricDefs, prefs, extra = {}) {
+  const weights = Object.entries(prefs)
+    .filter(([key, p]) => metricDefs[key] && p.importance > 0)
+    .map(([key, p]) => (metricDefs[key].type === "preference" ? `${key}.${p.importance}.${p.value}` : `${key}.${p.importance}`));
+  const params = new URLSearchParams({ w: weights.join(",") || "none" });
+  for (const [k, v] of Object.entries(extra)) {
+    if (v != null && v !== false && v !== "") params.set(k, v === true ? "1" : v);
+  }
+  history.replaceState(null, "", `#${params.toString().replace(/%2C/g, ",")}`);
+}
+
+// Returns { prefs, params } from the URL hash, or null when the URL carries no shared state.
+// prefs[key] = { importance, value? }; value is only present when the link set a target.
+export function readHashState(metricDefs) {
+  const params = new URLSearchParams(location.hash.slice(1));
+  if (!params.has("w")) return null;
+  const prefs = Object.fromEntries(Object.keys(metricDefs).map(key => [key, { importance: 0 }]));
+  for (const part of params.get("w").split(",")) {
+    const [key, imp, target] = part.split(".");
+    const importance = Number(imp);
+    if (!metricDefs[key] || !IMPORTANCES.includes(importance)) continue;
+    prefs[key] = { importance };
+    const value = Number(target);
+    if (target != null && Number.isInteger(value) && value >= 0 && value <= 10) prefs[key].value = value;
+  }
+  return { prefs, params };
+}
+
+// Wires a "copy link" button: copies the current URL (which always holds the live state).
+export function setupCopyLink(button) {
+  if (!button) return;
+  const label = button.textContent;
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      button.textContent = "✓ Link copied";
+    } catch {
+      button.textContent = "Copy the address bar URL";
+    }
+    setTimeout(() => { button.textContent = label; }, 2000);
+  });
+}

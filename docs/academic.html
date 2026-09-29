@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Compass</title>
   <meta name="description" content="A just-for-fun comparison of real universities by approximate Shanghai (ARWU) rank plus rough country estimates.">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <div class="app-container">
@@ -17,7 +17,12 @@
         </div>
         <h1>🎓 University Compass</h1>
         <p>Set how much each factor matters to you.</p>
-        <div class="disclaimer-banner" role="note"><strong>Just for fun — not real data.</strong> Lists real universities only, with approximate Shanghai (ARWU) ranks recalled from ~2023. All other scores are copied from rough, hand-made country estimates — nothing here measures a specific university, department or research group. Check <a href="https://www.shanghairanking.com/">shanghairanking.com</a> and the university itself. <a href="https://github.com/kazulak/country-compatibility#limitations">Limitations</a></div>
+        <div class="disclaimer-banner" role="note"><strong>Just for fun — not real data.</strong> Lists real universities only, with approximate Shanghai (ARWU) ranks recalled from ~2023. All other scores are copied from rough, hand-made country estimates — nothing here measures a specific university, department or research group. Check <a href="https://www.shanghairanking.com/">shanghairanking.com</a> and the university itself. <a href="about.html">Read the limitations</a></div>
+        <nav class="page-links" aria-label="About this site">
+          <a href="about.html">How it works &amp; limitations</a>
+          <a href="table.html">All data</a>
+          <a href="https://github.com/kazulak/country-compatibility/issues/new" target="_blank" rel="noopener noreferrer">Report an error</a>
+        </nav>
       </header>
 
       <div class="persona-panel">
@@ -46,6 +51,7 @@
           <div class="results-header">
             <h2>University Rankings</h2>
             <span class="results-count" id="results-count">Loading...</span>
+            <button type="button" class="share-btn" id="copy-link-btn" title="Copy a link to these settings">🔗 Copy link</button>
           </div>
           <div class="search-filter-controls">
             <input type="text" id="search-input" class="search-input" placeholder="Search name, city or country..." aria-label="Search">

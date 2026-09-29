@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table</title>
+  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="page">
+  <nav class="page-nav" aria-label="Site">
+    <a href="index.html">&larr; Country Compass</a>
+    <a href="academic.html">University Compass</a>
+    <a href="table.html" aria-current="page">Data table</a>
+  </nav>
+
+  <main class="wide">
+    <h1>All the data</h1>
+    <p>Every number the site uses. Scores are subjective 0&ndash;10 estimates, see <a href="about.html">How it works</a>.</p>
+    <p>Metrics are shown exactly as the site scores them (visa, English and bureaucracy as ease). Cell shading only shows the size of the number, not whether it is good: for "preference" metrics such as cost of living, higher is not better.</p>
+    <p class="downloads">Raw files: <a href="data/countries.json">countries.json</a> &middot; <a href="data/universities.json">universities.json</a></p>
+
+    <div class="tabs" role="tablist" aria-label="Table">
+      <button type="button" class="tab-btn" role="tab" id="tab-countries" aria-controls="panel-countries" aria-selected="true">Countries</button>
+      <button type="button" class="tab-btn" role="tab" id="tab-universities" aria-controls="panel-universities" aria-selected="false">Universities</button>
+    </div>
+
+    <div id="load-error" class="data-note" hidden></div>
+
+    <section id="panel-countries" role="tabpanel" aria-labelledby="tab-countries">
+      <div class="controls">
+        <input type="search" id="country-search" placeholder="Search countries" aria-label="Search countries">
+        <select id="country-filter" aria-label="Quality filter">
+          <option value="all">All countries</option>
+          <option value="curated">Curated only</option>
+        </select>
+        <button type="button" id="country-csv">Download CSV</button>
+        <span class="row-count" id="country-count" aria-live="polite"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr id="country-head"></tr></thead>
+          <tbody id="country-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="panel-universities" role="tabpanel" aria-labelledby="tab-universities" hidden>
+      <div class="controls">
+        <input type="search" id="uni-search" placeholder="Search universities" aria-label="Search universities">
+        <button type="button" id="uni-csv">Download CSV</button>
+        <span class="row-count" id="uni-count" aria-live="polite"></span>
+      </div>
+      <p class="muted">ARWU ranks are approximate, recalled from about the 2023 edition and not re-verified.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr id="uni-head"></tr></thead>
+          <tbody id="uni-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/table.js"></script>
+</body>
+</html>

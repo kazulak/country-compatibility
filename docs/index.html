@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country Compass</title>
   <meta name="description" content="A just-for-fun country matcher: set your priorities and see which of 20 hand-written country profiles fit. Scores are subjective estimates, not real data.">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <div class="app-container">
@@ -19,7 +19,12 @@
         </div>
         <h1>🌏 Country Compass</h1>
         <p>Adjust the core metrics or enable each section's advanced toggle for extra ones.</p>
-        <div class="disclaimer-banner" role="note"><strong>Just for fun — not real data.</strong> Scores are subjective 0–10 estimates made by hand for a side project, not measured statistics. Only 20 countries were written individually; the other 100 use generic regional templates. Check official sources (government visa portals, travel advisories) before making real decisions. <a href="https://github.com/kazulak/country-compatibility#limitations">Limitations</a></div>
+        <div class="disclaimer-banner" role="note"><strong>Just for fun — not real data.</strong> Scores are subjective 0–10 estimates made by hand for a side project, not measured statistics. Only 20 countries were written individually; the other 100 use generic regional templates. Check official sources (government visa portals, travel advisories) before making real decisions. <a href="about.html">Read the limitations</a></div>
+        <nav class="page-links" aria-label="About this site">
+          <a href="about.html">How it works &amp; limitations</a>
+          <a href="table.html">All data</a>
+          <a href="https://github.com/kazulak/country-compatibility/issues/new" target="_blank" rel="noopener noreferrer">Report an error</a>
+        </nav>
       </header>
 
       <!-- Persona Presets Bar -->
@@ -992,6 +997,7 @@
           <div class="results-header">
             <h2>Country Rankings</h2>
             <span class="results-count" id="results-count">Loading...</span>
+            <button type="button" class="share-btn" id="copy-link-btn" title="Copy a link to these settings">🔗 Copy link</button>
           </div>
                     <div class="search-filter-controls">
             <input type="text" id="search-country" class="search-input" placeholder="Search country by name..." aria-label="Search country">
@@ -1014,7 +1020,13 @@
       </section>
 
       <!-- Details Panel: Clicked Country Details -->
-      <section id="details-panel" class="details-panel" aria-label="Country Details">
+      <section id="details-panel" class="details-panel panel-with-tabs" aria-label="Country map and details">
+        <div class="rankings-tabs" role="tablist" aria-label="Right panel view">
+          <button type="button" class="tab-btn active" id="tab-map" role="tab" aria-selected="true" aria-controls="map-view">🗺 Map</button>
+          <button type="button" class="tab-btn" id="tab-details" role="tab" aria-selected="false" aria-controls="details-view">📄 Details</button>
+        </div>
+        <div id="map-view" class="map-view" role="tabpanel" aria-labelledby="tab-map"></div>
+        <div id="details-view" class="details-view" role="tabpanel" aria-labelledby="tab-details" hidden>
         <div class="empty-state">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
@@ -1023,6 +1035,7 @@
           </svg>
           <p>Select a country from the rankings list to see how it matches your priorities, with pros &amp; cons and visa notes.</p>
         </div>
+      </div>
       </section>
       
     </main>
@@ -1056,6 +1069,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/life.js?v=3"></script>
+  <script type="module" src="js/life.js?v=6"></script>
 </body>
 </html>

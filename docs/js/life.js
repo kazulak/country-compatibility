@@ -3,52 +3,12 @@
  * Reads sliders/importance pills, ranks countries with the shared engine, renders cards + details,
  * and runs the persona quiz. All data comes from data/countries.json (hand-made, subjective scores).
  */
-import { rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry } from "./engine.js";
-
-// One metric table. type: "preference" = closest to your target wins, "maximize" = higher is better.
-const METRICS = {
-  warm_weather: { label: "Warm Weather", type: "preference" },
-  seasonal_variety: { label: "Seasonal Variety", type: "preference" },
-  nature_mountains: { label: "Mountains & Alpine hiking", type: "maximize" },
-  nature_lakes_rivers: { label: "Lakes & Rivers", type: "maximize" },
-  nature_sea_beaches: { label: "Sea & Beaches", type: "maximize" },
-  nature_forests_greenery: { label: "Forests & Greenery", type: "maximize" },
-  humidity_level: { label: "Humidity Level", type: "preference" },
-  air_quality: { label: "Air Quality", type: "maximize" },
-  sunshine_hours: { label: "Sunshine Hours", type: "maximize" },
-  cost_of_living: { label: "Cost of Living", type: "preference" },
-  housing_affordability: { label: "Housing Affordability", type: "maximize" },
-  tax_burden: { label: "Tax Burden", type: "preference" },
-  visa_difficulty: { label: "Visa & Residency Ease", type: "maximize" },
-  childcare_education_cost: { label: "Childcare & School Affordability", type: "maximize" },
-  dining_food_cost: { label: "Cheap Food & Dining Costs", type: "maximize" },
-  pace_of_life: { label: "Pace of Life", type: "preference" },
-  safety: { label: "Safety & Low Crime", type: "maximize" },
-  healthcare_quality: { label: "Healthcare Quality", type: "maximize" },
-  english_barrier: { label: "English-Friendly (No local language needed)", type: "maximize" },
-  social_tolerance: { label: "Social Tolerance & Progressiveness", type: "maximize" },
-  bureaucracy_difficulty: { label: "Bureaucracy Ease (Digital/Simple)", type: "maximize" },
-  foreigner_friendliness: { label: "Friendliness to Foreigners", type: "maximize" },
-  walkability_transit: { label: "Walkability & Public Transit", type: "maximize" },
-  internet_speed: { label: "Internet Speed & Connectivity", type: "maximize" },
-  work_culture: { label: "Work Culture", type: "preference" },
-  road_quality: { label: "Road & Infrastructure Quality", type: "maximize" },
-  local_job_market: { label: "Local Job Market Strength", type: "maximize" },
-  phd_stipend_ppp: { label: "PhD Stipend Value (PPP)", type: "maximize" },
-  academic_satisfaction: { label: "Academic & Research Satisfaction", type: "maximize" },
-  happiness_index: { label: "Happiness (subjective estimate)", type: "maximize" },
-  ease_of_doing_business: { label: "Ease of Doing Business (estimate)", type: "maximize" },
-  childcare_quality: { label: "Childcare & Schooling Quality", type: "maximize" },
-};
-
-// The data stores these as DIFFICULTY (high = worse) but the UI labels/maximizes them as EASE.
-const INVERTED = ["visa_difficulty", "english_barrier", "bureaucracy_difficulty"];
-
-function getMetrics(country) {
-  const m = { ...country.metrics };
-  for (const key of INVERTED) if (m[key] != null) m[key] = 10 - m[key];
-  return m;
-}
+import {
+  rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry,
+  readHashState, writeHashState, setupCopyLink,
+} from "./engine.js";
+import { METRICS, countryMetrics } from "./metrics.js";
+import { createWorldMap } from "./map.js";
 
 // Advanced metrics: hidden behind a section toggle, ignored (importance 0) while it is off.
 const ADVANCED_METRIC_SECTIONS = {
@@ -139,7 +99,8 @@ const $ = (id) => document.getElementById(id);
 const form = $("preferences-form");
 const resultsList = $("results-list");
 const resultsCount = $("results-count");
-const detailsPanel = $("details-panel");
+const detailsView = $("details-view");
+const mapView = $("map-view");
 const searchInput = $("search-country");
 const scoreFilter = $("filter-score");
 const includeTemplates = $("include-templates");
@@ -208,6 +169,43 @@ function setActivePersonaButton(persona) {
   });
 }
 
+// Keep the URL in sync so the current setup can be shared as a link.
+function syncHash() {
+  writeHashState(METRICS, getPreferences(), {
+    p: activePersona === "custom" ? null : activePersona,
+    all: includeTemplates.checked,
+    sel: activeId,
+  });
+}
+
+// Restores a shared link's settings. Returns true when the URL carried state.
+function applySharedState() {
+  const shared = readHashState(METRICS);
+  if (!shared) return false;
+  for (const id of ALL_TOGGLES) setToggle(id, false);
+  for (const [key, p] of Object.entries(shared.prefs)) setPref(key, p.value, p.importance);
+  const persona = shared.params.get("p");
+  activePersona = PERSONA_PRESETS[persona] ? persona : "custom";
+  setActivePersonaButton(activePersona);
+  includeTemplates.checked = shared.params.get("all") === "1";
+  activeId = shared.params.get("sel");
+  return Boolean(activeId);
+}
+
+const REPO = "https://github.com/kazulak/country-compatibility";
+
+function reportErrorURL(c) {
+  const body = [
+    `Country: ${c.name} (${c.id}, ${c.quality}${c.templateLabel ? `, template "${c.templateLabel}"` : ""})`,
+    "",
+    "Which number or text is wrong:",
+    "What it should be:",
+    "Source (link):",
+  ].join("\n");
+  const params = new URLSearchParams({ title: `Data error: ${c.name}`, body });
+  return `${REPO}/issues/new?${params}`;
+}
+
 function markCustom() {
   activePersona = "custom";
   setActivePersonaButton("custom");
@@ -217,12 +215,14 @@ function markCustom() {
 // ---------- Ranking & list ----------
 function updateCompatibility() {
   const pool = allCountries.filter(c => includeTemplates.checked || c.quality === "curated");
-  rankings = rank(pool, getMetrics, METRICS, getPreferences());
+  rankings = rank(pool, countryMetrics, METRICS, getPreferences());
   visibleCount = PAGE_SIZE;
   renderRankingsList();
   const filtered = getFilteredRankings();
   if (!filtered.some(r => r.item.id === activeId) && filtered.length) activeId = filtered[0].item.id;
   renderDetails();
+  updateMap();
+  syncHash();
 }
 
 function getFilteredRankings() {
@@ -235,7 +235,7 @@ function onFilterChange() {
   visibleCount = PAGE_SIZE;
   renderRankingsList();
   const filtered = getFilteredRankings();
-  if (filtered.length && !filtered.some(r => r.item.id === activeId)) selectCountry(filtered[0].item.id);
+  if (filtered.length && !filtered.some(r => r.item.id === activeId)) selectCountry(filtered[0].item.id, false);
 }
 
 function onActivate(el, handler) {
@@ -290,11 +290,55 @@ function renderRankingsList() {
   }
 }
 
-function selectCountry(id) {
+function selectCountry(id, openDetails = true) {
   activeId = id;
   renderRankingsList();
   renderDetails();
-  detailsPanel.scrollTop = 0;
+  updateMap();
+  syncHash();
+  if (openDetails) showTab("details");
+  detailsView.scrollTop = 0;
+  // In the single-column layout the details sit below the list; bring them into view.
+  if (openDetails && window.matchMedia("(max-width: 1024px)").matches) {
+    $("details-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+// ---------- Map ----------
+let worldMap = null;
+
+function initMap() {
+  worldMap = createWorldMap(mapView, { countries: allCountries, onSelect: selectFromMap });
+  $("tab-map").addEventListener("click", () => showTab("map"));
+  $("tab-details").addEventListener("click", () => showTab("details"));
+}
+
+function showTab(name) {
+  const isMap = name === "map";
+  mapView.hidden = !isMap;
+  detailsView.hidden = isMap;
+  for (const [id, on] of [["tab-map", isMap], ["tab-details", !isMap]]) {
+    $(id).classList.toggle("active", on);
+    $(id).setAttribute("aria-selected", String(on));
+  }
+}
+
+function updateMap() {
+  worldMap?.update(rankings.map(r => ({ country: r.item, score: r.score })), { activeId });
+}
+
+function selectFromMap(id) {
+  const country = allCountries.find(c => c.id === id);
+  if (country?.quality === "template" && !includeTemplates.checked) {
+    includeTemplates.checked = true;
+    updateCompatibility(); // adds template countries to the ranked pool
+  }
+  // Clear filters that would hide the pick from the list.
+  if (!getFilteredRankings().some(r => r.item.id === id)) {
+    searchInput.value = "";
+    scoreFilter.value = "0";
+  }
+  selectCountry(id);
 }
 
 // ---------- Details ----------
@@ -348,7 +392,7 @@ function renderDetails() {
 
   const icon = (d) => `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 
-  detailsPanel.innerHTML = `
+  detailsView.innerHTML = `
     <header class="details-header">
       <div class="details-title">
         <h2>${escapeHTML(c.name)} ${qualityBadge(c)}</h2>
@@ -398,6 +442,11 @@ function renderDetails() {
       <h3 class="detail-section-title" id="detail-title-breakdown">Metric-by-Metric Compatibility</h3>
       <div class="breakdown-grid">${breakdownHTML}</div>
     </section>
+
+    <p class="detail-links">
+      <a href="${escapeHTML(reportErrorURL(c))}" target="_blank" rel="noopener noreferrer">Report an error for ${escapeHTML(c.name)}</a>
+      · <a href="about.html">How the score works</a>
+    </p>
   `;
 }
 
@@ -660,11 +709,15 @@ function setupEventListeners() {
 }
 
 setupEventListeners();
+setupCopyLink($("copy-link-btn"));
 loadJSON("data/countries.json")
   .then(data => {
     meta = data.meta;
     allCountries = data.countries.map(c => resolveCountry(c, data.templates));
+    const openShared = applySharedState();
+    initMap();
     updateCompatibility();
+    if (openShared) showTab("details");
   })
   .catch(err => {
     console.error("Failed to load countries.json:", err);

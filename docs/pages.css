@@ -1,0 +1,336 @@
+/* Styles for about.html and table.html only. Loaded after style.css. */
+
+body.page {
+  overflow: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel-bg);
+  font-size: 13px;
+}
+
+.page-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.page-nav a:hover,
+.page-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.page-nav a[aria-current="page"] {
+  border-bottom: 1px solid var(--accent-blue);
+}
+
+.doc {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.doc h1 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.doc h2 {
+  font-size: 20px;
+  margin: 36px 0 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.doc p,
+.doc ul,
+.doc ol {
+  margin: 10px 0;
+}
+
+.doc ul,
+.doc ol {
+  padding-left: 22px;
+}
+
+.doc li {
+  margin: 6px 0;
+}
+
+.doc a,
+.wide a {
+  color: var(--accent-blue);
+}
+
+.doc code,
+.formula {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.formula {
+  display: block;
+  padding: 10px 12px;
+  margin: 10px 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.doc table,
+.wide table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+.doc th,
+.doc td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc th {
+  color: var(--text-muted);
+  font-weight: 600;
+  background: var(--panel-bg);
+}
+
+.doc tr:last-child td {
+  border-bottom: none;
+}
+
+.doc .muted,
+.wide .muted {
+  color: var(--text-muted);
+}
+
+/* ---- data table page ---- */
+
+.wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  line-height: 1.55;
+}
+
+.wide h1 {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.wide > p {
+  margin: 6px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0 10px;
+}
+
+.tab-btn {
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.tab-btn[aria-selected="true"] {
+  color: var(--text);
+  border-color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.tab-btn:focus-visible,
+.controls button:focus-visible,
+.data-table th button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 1px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 10px 0;
+}
+
+.controls input[type="search"],
+.controls select {
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  min-width: 0;
+}
+
+.controls input[type="search"] {
+  flex: 1 1 200px;
+  max-width: 320px;
+}
+
+.controls button {
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--panel-bg);
+  border: 1px solid var(--border-focus);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  border-color: var(--text-muted);
+}
+
+.row-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.table-wrap {
+  overflow: auto;
+  max-height: 72vh;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: max-content;
+  min-width: 100%;
+  font-size: 13px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  text-align: left;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--panel-bg);
+  padding: 0;
+  border-bottom: 1px solid var(--border-focus);
+}
+
+.data-table th button {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.data-table th button:hover,
+.data-table th[aria-sort="ascending"] button,
+.data-table th[aria-sort="descending"] button {
+  color: var(--text);
+}
+
+.data-table th[aria-sort="ascending"] button::after {
+  content: " \25B2";
+  font-size: 9px;
+}
+
+.data-table th[aria-sort="descending"] button::after {
+  content: " \25BC";
+  font-size: 9px;
+}
+
+.data-table .sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--panel-bg);
+  border-right: 1px solid var(--border-focus);
+  font-weight: 500;
+}
+
+.data-table thead th.sticky-col {
+  z-index: 3;
+}
+
+.data-table td.num {
+  text-align: center;
+  font-family: var(--font-mono);
+  min-width: 44px;
+}
+
+.data-table td.na {
+  color: var(--text-dark);
+}
+
+.data-table tbody tr:hover td:not(.num) {
+  background: #202024;
+}
+
+.data-table tbody tr:hover td.sticky-col {
+  background: #202024;
+}
+
+.downloads {
+  margin: 12px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.downloads a {
+  color: var(--accent-blue);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .doc h1 { font-size: 24px; }
+  .table-wrap { max-height: 65vh; }
+}
