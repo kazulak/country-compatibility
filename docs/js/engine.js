@@ -112,6 +112,12 @@ export function readHashState(metricDefs) {
   return { prefs, params };
 }
 
+// A shared link pasted into an already-open tab only changes the hash; reload so it gets applied.
+// (writeHashState uses replaceState, which does not fire hashchange.)
+export function reloadOnExternalHashChange() {
+  window.addEventListener("hashchange", () => location.reload());
+}
+
 // Wires a "copy link" button: copies the current URL (which always holds the live state).
 export function setupCopyLink(button) {
   if (!button) return;

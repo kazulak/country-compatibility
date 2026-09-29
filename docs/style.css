@@ -1778,3 +1778,19 @@ input[type=range]:disabled::-webkit-slider-thumb {
     margin: 6px 10px;
   }
 }
+
+/* World Bank data */
+.metric-source-wb {
+  color: var(--accent-blue);
+}
+
+.wb-pill {
+  display: inline-block;
+  padding: 0 4px;
+  margin-right: 2px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-blue);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}

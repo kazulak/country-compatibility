@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country Compass</title>
-  <meta name="description" content="A just-for-fun country matcher: set your priorities and see which of 20 hand-written country profiles fit. Scores are subjective estimates, not real data.">
-  <link rel="stylesheet" href="style.css?v=11">
+  <meta name="description" content="A just-for-fun country matcher: set your priorities and see which of 20 hand-written country profiles fit. Most scores are subjective estimates; 7 of 32 metrics use World Bank data.">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
   <div class="app-container">
@@ -19,7 +19,7 @@
         </div>
         <h1>🌏 Country Compass</h1>
         <p>Adjust the core metrics or enable each section's advanced toggle for extra ones.</p>
-        <div class="disclaimer-banner" role="note"><strong>Just for fun — not real data.</strong> Scores are subjective 0–10 estimates made by hand for a side project, not measured statistics. Only 20 countries were written individually; the other 100 use generic regional templates. Check official sources (government visa portals, travel advisories) before making real decisions. <a href="about.html">Read the limitations</a></div>
+        <div class="disclaimer-banner" role="note"><strong>Just for fun — mostly estimates.</strong> 7 of 32 metrics (safety, air, internet access, income, life expectancy, price level, forest cover) use real World Bank data; the rest are subjective 0–10 estimates made by hand. Only 20 countries were written individually; the other 100 use generic regional templates. Check official sources before making real decisions. <a href="about.html">Read the limitations</a></div>
         <nav class="page-links" aria-label="About this site">
           <a href="about.html">How it works &amp; limitations</a>
           <a href="table.html">All data</a>
@@ -194,13 +194,13 @@
           <div class="preference-item">
             <div class="pref-label-row">
               <span class="pref-name" id="label-nature_forests_greenery">
-                Forests &amp; Woods
+                Forest Cover
                 <button type="button" class="info-btn" data-info="nature_forests_greenery" aria-label="Show description">i</button>
               </span>
-              <span class="pref-desc">Green cover, hiking paths</span>
+              <span class="pref-desc">Share of land forested</span>
             </div>
             <div class="metric-info-box" id="info-nature_forests_greenery" hidden>
-              Importance of dense tree cover, national parks, pine forests, and quiet woodland hikes (like Finland/Canada/Norway).
+              World Bank forest area as a share of land. Counts forest only, not parks, lakes, mountains or other nature.
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
@@ -253,13 +253,13 @@
             <div class="preference-item">
               <div class="pref-label-row">
                 <span class="pref-name" id="label-air_quality">
-                  Pristine Air Quality
+                  Air Quality (PM2.5)
                   <button type="button" class="info-btn" data-info="air_quality" aria-label="Show description">i</button>
                 </span>
-                <span class="pref-desc">Purity, lack of pollution</span>
+                <span class="pref-desc">Low PM2.5 pollution</span>
               </div>
               <div class="metric-info-box" id="info-air_quality" hidden>
-                Importance of low air pollution levels and high purity index. Clean air ranks highest in places like Finland/Norway/Canada.
+                World Bank national average PM2.5 exposure (modelled). Lower is cleaner, but city and seasonal air can differ a lot from the national average.
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
@@ -319,13 +319,13 @@
           <div class="preference-item">
             <div class="pref-label-row">
               <span class="pref-name" id="label-cost_of_living">
-                Cost of Living
+                Cost of Living (price level)
                 <button type="button" class="info-btn" data-info="cost_of_living" aria-label="Show description">i</button>
               </span>
               <span class="pref-desc">0 = Cheap, 10 = Expensive</span>
             </div>
             <div class="metric-info-box" id="info-cost_of_living" hidden>
-              Your budget profile. High scores match expensive locations (Switzerland/Singapore) where quality of life is premium. Low scores target budget-friendly locations (Vietnam/Thailand).
+              World Bank price level ratio (economy-wide). Your budget profile: high matches expensive countries. It does not capture expat rents in expensive cities (e.g. Singapore).
             </div>
             <div class="pref-controls">
               <div class="slider-container">
@@ -556,13 +556,13 @@
           <div class="preference-item">
             <div class="pref-label-row">
               <span class="pref-name" id="label-safety">
-                Safety &amp; Low Crime
+                Safety (low homicide rate)
                 <button type="button" class="info-btn" data-info="safety" aria-label="Show description">i</button>
               </span>
-              <span class="pref-desc">Street safety, low crime</span>
+              <span class="pref-desc">Low homicide rate</span>
             </div>
             <div class="metric-info-box" id="info-safety" hidden>
-              Importance of low crime rates, safety walking at night, and overall public order (like Japan/Singapore/Finland/Switzerland).
+              World Bank homicide rate per 100k people. It counts homicides only, not war, terrorism or petty crime, and some data is old (Ukraine is 2021).
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
@@ -582,13 +582,13 @@
           <div class="preference-item">
             <div class="pref-label-row">
               <span class="pref-name" id="label-healthcare_quality">
-                Healthcare Quality
+                Health (life expectancy)
                 <button type="button" class="info-btn" data-info="healthcare_quality" aria-label="Show description">i</button>
               </span>
-              <span class="pref-desc">Medical systems, speed</span>
+              <span class="pref-desc">Longer life expectancy</span>
             </div>
             <div class="metric-info-box" id="info-healthcare_quality" hidden>
-              Importance of having access to a high-quality medical system, featuring cutting-edge treatments and reasonable access speeds (like Spain/Switzerland/Japan).
+              World Bank life expectancy at birth. It is an outcome influenced by many factors, not a direct measure of healthcare quality.
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
@@ -781,13 +781,13 @@
           <div class="preference-item">
             <div class="pref-label-row">
               <span class="pref-name" id="label-internet_speed">
-                Internet Speed &amp; Tech
+                Internet Access
                 <button type="button" class="info-btn" data-info="internet_speed" aria-label="Show description">i</button>
               </span>
-              <span class="pref-desc">Fiber connections, tech ecosystem</span>
+              <span class="pref-desc">Share of people online</span>
             </div>
             <div class="metric-info-box" id="info-internet_speed" hidden>
-              Importance of fast and reliable internet speed, gigabit connections, and coworking access for remote jobs (like Singapore/Japan/USA).
+              World Bank share of the population using the internet. This measures access, not connection speed or reliability.
             </div>
             <div class="pref-controls">
               <div class="importance-select" style="width: 100%;">
@@ -866,13 +866,13 @@
             <div class="preference-item">
               <div class="pref-label-row">
                 <span class="pref-name" id="label-local_job_market">
-                  Local Job Market Strength
+                  Income Level (GDP per capita)
                   <button type="button" class="info-btn" data-info="local_job_market" aria-label="Show description">i</button>
                 </span>
-                <span class="pref-desc">Low unemployment, local jobs</span>
+                <span class="pref-desc">GDP per capita</span>
               </div>
               <div class="metric-info-box" id="info-local_job_market" hidden>
-                Importance of strong local economic prospects, low local unemployment, and high job availability for foreign workers (highest in USA/Germany/Switzerland).
+                World Bank GDP per capita (PPP). An economy-wide average, not the wages or job prospects for your own field.
               </div>
               <div class="pref-controls">
                 <div class="importance-select" style="width: 100%;">
@@ -1069,6 +1069,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/life.js?v=6"></script>
+  <script type="module" src="js/life.js?v=8"></script>
 </body>
 </html>

@@ -98,5 +98,41 @@ class UniversitiesTest(unittest.TestCase):
                 self.assertTrue(lo <= u["arwuRank"] <= hi, u["id"])
 
 
+class WorldBankTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = load("worldbank.json")
+        cls.meta = cls.doc["meta"]
+        cls.country_ids = {c["id"] for c in load("countries.json")["countries"]}
+
+    def test_every_scored_metric_is_a_site_metric_and_documented(self):
+        for key, m in self.meta["metrics"].items():
+            self.assertIn(key, METRIC_KEYS)
+            for field in ("indicators", "measure", "unit", "transform"):
+                self.assertTrue(m[field], f"{key}.{field}")
+
+    def test_values_are_recent_and_in_range(self):
+        min_year = self.meta["minYear"]
+        for cid, entry in self.doc["countries"].items():
+            self.assertIn(cid, self.country_ids)
+            for key, v in entry["metrics"].items():
+                self.assertIn(key, self.meta["metrics"], f"{cid}.{key}")
+                self.assertTrue(0 <= v["score"] <= 10, f"{cid}.{key}")
+                self.assertGreaterEqual(v["year"], min_year, f"{cid}.{key}")
+                self.assertIsInstance(v["raw"], (int, float))
+            for key, f in entry["facts"].items():
+                self.assertIn(key, self.meta["facts"])
+                self.assertGreaterEqual(f["year"], min_year)
+
+    def test_coverage_is_high(self):
+        values = sum(len(e["metrics"]) for e in self.doc["countries"].values())
+        possible = len(self.country_ids) * len(self.meta["metrics"])
+        self.assertGreater(values / possible, 0.9)
+
+    def test_source_is_attributed(self):
+        self.assertEqual(self.meta["license"], "CC BY 4.0")
+        self.assertTrue(self.meta["retrieved"])
+
+
 if __name__ == "__main__":
     unittest.main()

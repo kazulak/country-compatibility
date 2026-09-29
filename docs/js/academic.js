@@ -1,7 +1,8 @@
 import {
-  rank, loadJSON, escapeHTML, matchClass, debounce, resolveCountry,
-  readHashState, writeHashState, setupCopyLink,
+  rank, loadJSON, escapeHTML, matchClass, debounce,
+  readHashState, writeHashState, setupCopyLink, reloadOnExternalHashChange,
 } from "./engine.js";
+import { loadCountryData } from "./metrics.js";
 
 const PAGE_SIZE = 20;
 const IMPORTANCE_LEVELS = [["0", "Off"], ["3", "Low"], ["6", "Med"], ["10", "High"]];
@@ -11,9 +12,9 @@ const METRICS = {
   stipend:       { label: "PhD stipend (PPP)",        type: "maximize", info: "Rough estimate of doctoral stipends relative to local purchasing power, for the country." },
   visa_ease:     { label: "Visa ease",                type: "maximize", info: "10 minus the country's estimated visa difficulty." },
   work_life:     { label: "Work-life balance",        type: "maximize", info: "10 minus the country's estimated work-culture intensity." },
-  affordability: { label: "Affordability",            type: "maximize", info: "10 minus the country's estimated cost of living." },
+  affordability: { label: "Affordability",            type: "maximize", info: "10 minus the country's price level (World Bank, where available; otherwise an estimate)." },
   english:       { label: "English-friendliness",     type: "maximize", info: "10 minus the country's estimated language barrier without the local language." },
-  safety:        { label: "Safety",                   type: "maximize", info: "Rough country-level safety estimate." },
+  safety:        { label: "Safety",                   type: "maximize", info: "Based on the country homicide rate (World Bank, where available; otherwise a rough estimate)." },
 };
 const METRIC_KEYS = Object.keys(METRICS);
 
@@ -26,6 +27,9 @@ const COUNTRY_METRICS = {
   english:       ["english_barrier", true],
   safety:        ["safety", false],
 };
+
+// what the World Bank value measures, shown after the year
+const WB_WHAT = { safety: "homicides, country-wide", cost_of_living: "price level, country-wide" };
 
 const PERSONA_PRESETS = {
   undergrad:  { ranking: 6, stipend: 0, visa_ease: 3, work_life: 6, affordability: 10, english: 6, safety: 10 },
@@ -44,7 +48,6 @@ const countryFilter = $("filter-country");
 
 let universities = [];
 let countriesById = new Map();
-let templates = {};
 let rankings = [];
 let activeId = null;
 let visibleCount = PAGE_SIZE;
@@ -64,13 +67,19 @@ function universityProfile(uni) {
   if (!raw) {
     return { metrics, sources, hostNote: "No country estimates are available for this location, so only the ranking metric is scored." };
   }
-  const country = resolveCountry(raw, templates);
-  const sourceText = raw.quality === "template" ? "Country template estimate (rough)" : "Country estimate";
+  const country = raw; // already template-resolved, with sources
+  const estimateText = country.quality === "template" ? "Country template estimate (rough)" : "Country estimate";
   for (const [key, [cKey, invert]] of Object.entries(COUNTRY_METRICS)) {
     const v = country.metrics ? country.metrics[cKey] : undefined;
     if (v == null) continue;
     metrics[key] = invert ? 10 - v : v;
-    sources[key] = sourceText;
+    const src = country.sources?.[cKey];
+    if (src?.kind === "worldbank") {
+      const what = WB_WHAT[cKey];
+      sources[key] = `World Bank ${src.year}${what ? ` (${what})` : ""}`;
+    } else {
+      sources[key] = estimateText;
+    }
   }
   return { metrics, sources, hostNote: "" };
 }
@@ -277,7 +286,7 @@ function renderDetails(id) {
       </div>
     </header>
 
-    <div class="data-note">This score is a weighted average of the factors you rated as important. Only the ranking factor is specific to this university, and it comes from an approximate rank. The other factors are rough country-level estimates shared by every university in the same country. It says nothing about any department, supervisor or research group.</div>
+    <div class="data-note">This score is a weighted average of the factors you rated as important. Only the ranking factor is specific to this university, and it comes from an approximate rank. The other factors are country-level values (safety and price level from World Bank data, the rest hand-made estimates) shared by every university in the same country. It says nothing about any department, supervisor or research group.</div>
     ${skippedNote}
 
     <section class="detail-section" aria-labelledby="detail-title-breakdown">
@@ -305,10 +314,9 @@ async function init() {
   try {
     const [uniData, countryData] = await Promise.all([
       loadJSON("data/universities.json"),
-      loadJSON("data/countries.json"),
+      loadCountryData(),
     ]);
     universities = uniData.universities;
-    templates = countryData.templates || {};
     countriesById = new Map(countryData.countries.map(c => [c.id, c]));
   } catch (err) {
     console.error(err);
@@ -320,6 +328,7 @@ async function init() {
   populateCountryFilter();
   applySharedState();
   setupCopyLink($("copy-link-btn"));
+  reloadOnExternalHashChange();
 
   const debouncedRecompute = debounce(recompute, 100);
   form.addEventListener("change", () => {
